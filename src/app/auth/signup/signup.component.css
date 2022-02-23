@@ -1,3 +1,12 @@
+.signup-form{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
 mat-form-field{
     width: 300px;
 }
