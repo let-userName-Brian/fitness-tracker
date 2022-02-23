@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ExerciseService } from '../exercise.service';
 import { Exercise } from '../exercise.model';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-new-training',
@@ -16,8 +17,7 @@ availableExercises: Exercise[] = []
     this.availableExercises = this.exerciseService.getAvailableExercises()
   }
 
-  onStartTraining(): void{
-    this.exerciseService.startExercise(this.availableExercises[0].id)
+  onStartTraining(form: NgForm): void{
+    this.exerciseService.startExercise(form.value.exam)
   }
-
 }

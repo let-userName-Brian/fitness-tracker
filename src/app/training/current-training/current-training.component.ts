@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ExerciseService } from '../exercise.service';
 import { StopTrainingComponent } from './stop-training.component';
 
 @Component({
@@ -11,63 +12,45 @@ import { StopTrainingComponent } from './stop-training.component';
 //most of this comonent will need to be restructured to show the curernt test thats being taken and the progress bar
 export class CurrentTrainingComponent implements OnInit {
   @Output() trainingExit = new EventEmitter();
-  timerVal: number = 0;
-  min: number = 0;
-  seconds: number= 0;
-  secondTimer: any; 
-  minTimer: any;
+  progress = 0;
+  timer: any;
 
-  constructor(private dialog: MatDialog) { }
-
+  constructor(private dialog: MatDialog, private exerciseService: ExerciseService) { }
 
   ngOnInit(): void {
-    //opens the time is up after 10 min
-    setInterval(()=>{
-      this.openDialog();
-      this.onReset();
-    }, 600000);
+    this.onStart();
   }
 
-  onStart(){
-    this.secondTimer = setInterval(()=>{
-      this.seconds = this.seconds + 1;
-      this.timerVal = this.timerVal + 0.1;
-      if(this.seconds === 60){
-        this.seconds = this.seconds -60;
+  onStart() {
+    const step = this.exerciseService.getRunningExercise().duration / 95 * 1000;
+    this.timer = setInterval(() => {
+      this.progress = this.progress + 1;
+      if (this.progress >= 100) {
+        this.progress = 0;
       }
-    }, 1000)  
-
-    this.minTimer = setInterval(()=>{
-      this.min = this.min +1;
-    }, 60000)
+    }, step);
   }
 
-  onStop(){
-    clearInterval(this.minTimer);
-    clearInterval(this.secondTimer);
-    clearInterval(this.timerVal);
+  onStop() {
+    clearInterval(this.timer);
     this.openDialog();
   }
 
-  onReset(){
-    clearInterval(this.minTimer);
-    clearInterval(this.secondTimer);
-    clearInterval(this.timerVal);
-    this.timerVal = 0;
-    this.seconds = 0;
-    this.min = 0;
+  onReset() {
+    clearInterval(this.timer);
+    this.progress = 0;
   }
 
-  openDialog(){
-    const dialogRef = this.dialog.open(StopTrainingComponent,{
+  openDialog() {
+    const dialogRef = this.dialog.open(StopTrainingComponent, {
       data: {
-        timerVal: this.timerVal
+        progress: this.progress
       }
     })
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(result);
-      if(result){
+      if (result) {
         this.trainingExit.emit(null);
       }
     })
