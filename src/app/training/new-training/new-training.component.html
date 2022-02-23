@@ -3,13 +3,10 @@
     <mat-card-title fxLayoutAlign="center">Ready to start?</mat-card-title>
     <mat-card-content fxLayoutAlign="center">
       <mat-form-field appearance="fill">
-        <mat-label>Favorite food</mat-label>
+        <mat-label>Exams</mat-label>
         <mat-select>
-          <mat-option value="crunches">
-            Crunches
-          </mat-option>
-          <mat-option value="pushups">
-            Pushups
+          <mat-option value={{ exams.id }} *ngFor="let exams of availableExercises">
+           {{ exams.name }}
           </mat-option>
         </mat-select>
       </mat-form-field>
