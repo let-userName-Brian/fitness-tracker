@@ -1,1 +1,11 @@
-<p>current-training works!</p>
+<section class="current-training" fxLayout="column" fxLayoutAlign="center center">
+  <mat-progress-spinner mode="determinate" [value]="timerVal" class="spinner"></mat-progress-spinner>
+  <h1 *ngIf="seconds <= 60 && min == 0">{{ seconds }} sec</h1>
+  <h1 *ngIf="min >= 1">{{ min }}: {{seconds}} min</h1>
+  <p>Keep going idiot!</p>
+  <section fxLayoutGap="10px">
+    <button mat-raised-button color="primary" (click)="onStart()">Start</button>
+    <button mat-raised-button color="primary" (click)="onStop()">Stop</button>
+    <button mat-raised-button color="primary" (click)="onReset()">Reset</button>
+  </section>
+</section>
