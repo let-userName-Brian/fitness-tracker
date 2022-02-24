@@ -1,10 +1,12 @@
 <section class="current-training" fxLayout="column" fxLayoutAlign="center center">
   <mat-progress-spinner mode="determinate" [value]="progress" class="spinner"></mat-progress-spinner>
   <!-- <h1>{{ progress }}%</h1> -->
-  <p>Keep going idiot</p>
+  <p>{{ exam?.name }} QC</p>
+  <p>You have {{ exam?.duration }}min to complete the QC</p>
+  <p>You have {{ exam?.questions }} questions in total</p>
   <section fxLayoutGap="10px">
     <button mat-raised-button color="primary" (click)="onStart()">Start</button>
-    <button mat-raised-button color="primary" (click)="onStop()">Stop</button>
-    <button mat-raised-button color="primary" (click)="onReset()">Reset</button>
+    <button mat-raised-button color="primary" (click)="onStop()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="onReset()">Done</button>
   </section>
 </section>

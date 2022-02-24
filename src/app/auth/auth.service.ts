@@ -13,6 +13,7 @@ export class AuthService {
   registerUser(authData: AuthData) {
     this.user = {
       email: authData.email,
+      name: authData.name,
       userId: Math.round(Math.random() * 10000).toString()
     };
     this.authSuccessfully();
@@ -21,6 +22,7 @@ export class AuthService {
   login(authData: AuthData) {
     this.user = {
       email: authData.email,
+      name: authData.name,
       userId: Math.round(Math.random() * 10000).toString()
     };
     this.authSuccessfully();

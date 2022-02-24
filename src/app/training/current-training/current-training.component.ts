@@ -1,5 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Exercise } from '../exercise.model';
 import { ExerciseService } from '../exercise.service';
 import { StopTrainingComponent } from './stop-training.component';
 
@@ -11,13 +12,13 @@ import { StopTrainingComponent } from './stop-training.component';
 
 //most of this comonent will need to be restructured to show the curernt test thats being taken and the progress bar
 export class CurrentTrainingComponent implements OnInit {
-  @Output() trainingExit = new EventEmitter();
   progress = 0;
   timer: any;
-
+  exam: Exercise;
   constructor(private dialog: MatDialog, private exerciseService: ExerciseService) { }
 
   ngOnInit(): void {
+    this.exam = this.exerciseService.getRunningExercise();
     this.onStart();
   }
 
@@ -29,6 +30,11 @@ export class CurrentTrainingComponent implements OnInit {
         this.progress = 0;
       }
     }, step);
+  }
+
+  onDone(){
+    this.exerciseService.completeExercise();
+    this.onReset();
   }
 
   onStop() {
@@ -51,7 +57,7 @@ export class CurrentTrainingComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log(result);
       if (result) {
-        this.trainingExit.emit(null);
+        this.exerciseService.cancelExercise(this.progress);
       }
     })
   }

@@ -1,6 +1,11 @@
 <section class="signup-form">
   <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)">
     <mat-form-field>
+      <input type="name" matInput placeholder="Name" ngModel name="name" name required #nameInput="ngModel">
+      <mat-error *ngIf="!nameInput.hasError('required')">Name is invalid</mat-error>
+      <mat-error *ngIf="nameInput.hasError('required')">Name is required</mat-error>
+    </mat-form-field>
+    <mat-form-field>
       <input type="email" matInput placeholder="Email" ngModel name="email" email required #emailInput="ngModel">
       <mat-error *ngIf="!emailInput.hasError('required')">Email is invalid</mat-error>
       <mat-error *ngIf="emailInput.hasError('required')">Email is required</mat-error>
@@ -11,7 +16,7 @@
       <mat-hint align="end">{{ pwInput.value?.length }} / 6</mat-hint>
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="When's your birthday?" [matDatepicker]="datePicker" ngModel name="birthdate"
+      <input matInput placeholder="Todays Date?" [matDatepicker]="datePicker" ngModel name="date"
         required>
       <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
       <mat-datepicker #datePicker></mat-datepicker>

@@ -1,4 +1,5 @@
 export interface User {
-email: string;
-userId: string;
+  email: string;
+  name: string;
+  userId: string;
 }

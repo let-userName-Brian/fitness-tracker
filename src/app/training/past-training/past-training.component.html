@@ -1,1 +1,29 @@
-<p>past-training works!</p>
+<mat-table [dataSource]="dataSource">
+  <ng-container matColumnDef="date">
+    <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.date | date}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="ExamName">
+    <mat-header-cell *matHeaderCellDef> QC Name </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="UserName">
+    <mat-header-cell *matHeaderCellDef> Member </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.user?.name }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="passOrFail">
+    <mat-header-cell *matHeaderCellDef> Pass | Fail </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.state }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Eamil">
+    <mat-header-cell *matHeaderCellDef> Member's Email </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{ element.user?.email }} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
