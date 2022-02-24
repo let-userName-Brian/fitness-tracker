@@ -10,7 +10,7 @@ export class ExerciseService {
   user: User = this.authService.getUser();
   availableExercises: Exercise[] = [
      { id: "patrolman", name: "Patrolman", duration: 30, questions: 50, user: { email: "yurik.Garcia.4@spaceforce.mil", name: "Yurik", userId: "12345632342345"} }, 
-     { id: "flight-chief", name: "Flight Chief", duration: 45, questions: 50,  user: null },
+     { id: "flight-chief", name: "Flight Chief", duration: 45, questions: 50,  user: { email: "Kiley.Davilla.5@spaceforce.mil", name: "Kiley", userId: "12345632390082348"} },
      { id: "BDOC", name: "Desk Sgt", duration: 30, questions: 55,  user: { email: "brian.hardy.4@spaceforce.mil", name: "Brian", userId: "12312342345"} },
   ];
   constructor(private authService: AuthService) {}
