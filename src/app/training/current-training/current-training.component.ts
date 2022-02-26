@@ -23,13 +23,13 @@ export class CurrentTrainingComponent implements OnInit {
   }
 
   onStart() {
-    const step = this.exerciseService.getRunningExercise().duration / 95 * 1000;
-    this.timer = setInterval(() => {
-      this.progress = this.progress + 1;
-      if (this.progress >= 100) {
-        this.progress = 0;
-      }
-    }, step);
+    // const step = this.exerciseService.getRunningExercise().duration / 95 * 1000;
+    // this.timer = setInterval(() => {
+    //   this.progress = this.progress + 1;
+    //   if (this.progress >= 100) {
+    //     this.progress = 0;
+    //   }
+    // }, step);
   }
 
   onDone(){
