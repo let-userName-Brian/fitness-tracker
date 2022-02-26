@@ -9,14 +9,14 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 @Injectable({ providedIn: "root" })
 export class ExerciseService {
   exerciseChanged = new Subject<Exercise>();
-  qcChanged= new Subject<Exercise[]>();
+  qcChanged = new Subject<Exercise[]>();
+  finishedQCsChanged = new Subject<Exercise[]>();
+  private availableExercises: Exercise[] = [];
+  private runningExercise: Exercise;
+  
   user: User = this.authService.getUser();
 
   constructor(private authService: AuthService, private dataBase: AngularFirestore) { }
-
-  private availableExercises: Exercise[] = [];
-  private runningExercise: Exercise;
-  private qc: Exercise[] = [];
 
   fetchAvailableExercises() {
     this.dataBase.collection<Exercise>("QC's")
@@ -40,6 +40,10 @@ export class ExerciseService {
   }
 
   startExercise(selectedId: string) {
+    // console.log('modifying DB')
+    // this.dataBase.doc("QC's/" + selectedId).update({
+    //   member: this.user.name,
+    // })
     this.runningExercise = this.availableExercises.find(
       (ex) => ex.id === selectedId);
     this.exerciseChanged.next({ ...this.runningExercise })
@@ -50,7 +54,7 @@ export class ExerciseService {
   }
 
   completeExercise() {
-    this.qc.push({
+    this.addToDatabase({
       ...this.runningExercise,
       date: new Date(),
       state: "completed",
@@ -60,7 +64,7 @@ export class ExerciseService {
   }
 
   cancelExercise(questions: number) {
-    this.qc.push({
+    this.addToDatabase({
       ...this.runningExercise,
       questions: this.runningExercise.questions - questions,
       date: new Date(),
@@ -71,10 +75,18 @@ export class ExerciseService {
     console.log(this.user)
   }
 
-  getCompletedOrCancelledExercises() {
-    let user = this.user
-    let completedExams = this.qc.slice();
-    let payload = user && completedExams
-    return payload;
+  fetchCompletedOrCancelledExercises() {
+    this.dataBase.collection("pastQC's").valueChanges().subscribe((qcs : Exercise[]) => {
+      this.finishedQCsChanged.next(qcs);
+    })
   }
+
+  private addToDatabase(exercise: Exercise) {
+    this.dataBase.collection("pastQC's").add(exercise).then(() => {
+      console.log("added to database")
+    }).catch(err => {
+      console.log(err)
+    })
+  }
+
 }
