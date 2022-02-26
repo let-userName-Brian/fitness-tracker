@@ -19,7 +19,7 @@ export class CurrentTrainingComponent implements OnInit {
 
   ngOnInit(): void {
     this.exam = this.exerciseService.getRunningExercise();
-    this.onStart();
+    console.log(this.exam);
   }
 
   onStart() {
@@ -50,14 +50,14 @@ export class CurrentTrainingComponent implements OnInit {
   openDialog() {
     const dialogRef = this.dialog.open(StopTrainingComponent, {
       data: {
-        progress: this.progress
+        questions: this.exam.questions
       }
     })
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(result);
       if (result) {
-        this.exerciseService.cancelExercise(this.progress);
+        this.exerciseService.cancelExercise(this.exam.questions);
       }
     })
   }

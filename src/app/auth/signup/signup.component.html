@@ -1,7 +1,7 @@
 <section class="signup-form">
   <form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)">
     <mat-form-field>
-      <input type="name" matInput placeholder="Name" ngModel name="name" name required #nameInput="ngModel">
+      <input type="name" matInput placeholder="Name" ngModel name="name" name required #nameInput="ngModel" [ngModelOptions]="{standalone: true}">
       <mat-error *ngIf="!nameInput.hasError('required')">Name is invalid</mat-error>
       <mat-error *ngIf="nameInput.hasError('required')">Name is required</mat-error>
     </mat-form-field>

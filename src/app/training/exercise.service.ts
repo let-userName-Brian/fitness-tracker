@@ -3,28 +3,46 @@ import { Subject } from "rxjs";
 import { AuthService } from "../auth/auth.service";
 import { User } from "../auth/user.model";
 import { Exercise } from "./exercise.model"
+import { map } from 'rxjs/operators';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Injectable({ providedIn: "root" })
 export class ExerciseService {
   exerciseChanged = new Subject<Exercise>();
+  qcChanged= new Subject<Exercise[]>();
   user: User = this.authService.getUser();
-  availableExercises: Exercise[] = [
-     { id: "patrolman", name: "Patrolman", duration: 30, questions: 50, user: { email: "yurik.Garcia.4@spaceforce.mil", name: "Yurik", userId: "12345632342345"} }, 
-     { id: "flight-chief", name: "Flight Chief", duration: 45, questions: 50,  user: { email: "Kiley.Davilla.5@spaceforce.mil", name: "Kiley", userId: "12345632390082348"} },
-     { id: "BDOC", name: "Desk Sgt", duration: 30, questions: 55,  user: { email: "brian.hardy.4@spaceforce.mil", name: "Brian", userId: "12312342345"} },
-  ];
-  constructor(private authService: AuthService) {}
-  private runningExercise: Exercise;
-  private exercises: Exercise[] = [];
 
-  getAvailableExercises() {
-    return this.availableExercises.slice();
+  constructor(private authService: AuthService, private dataBase: AngularFirestore) { }
+
+  private availableExercises: Exercise[] = [];
+  private runningExercise: Exercise;
+  private qc: Exercise[] = [];
+
+  fetchAvailableExercises() {
+    this.dataBase.collection<Exercise>("QC's")
+      .snapshotChanges()
+      .pipe(
+        map((docArray) => {
+          return docArray.map((doc) => {
+            const data: any = doc.payload.doc.data();
+            return {
+              id: doc.payload.doc.id,
+              ...data
+            }
+          })
+        })
+      )
+      .subscribe((exercises: Exercise[]) => {
+        this.availableExercises = exercises;
+        this.qcChanged.next([...this.availableExercises]);
+      })
+
   }
 
   startExercise(selectedId: string) {
     this.runningExercise = this.availableExercises.find(
       (ex) => ex.id === selectedId);
-    this.exerciseChanged.next({ ...this.runningExercise})
+    this.exerciseChanged.next({ ...this.runningExercise })
   }
 
   getRunningExercise() {
@@ -32,7 +50,7 @@ export class ExerciseService {
   }
 
   completeExercise() {
-    this.exercises.push({
+    this.qc.push({
       ...this.runningExercise,
       date: new Date(),
       state: "completed",
@@ -41,10 +59,10 @@ export class ExerciseService {
     this.exerciseChanged.next(null);
   }
 
-  cancelExercise(progress: number) {
-    this.exercises.push({
+  cancelExercise(questions: number) {
+    this.qc.push({
       ...this.runningExercise,
-      duration: this.runningExercise.duration * (progress / 100),
+      questions: this.runningExercise.questions - questions,
       date: new Date(),
       state: "cancelled",
     });
@@ -53,9 +71,9 @@ export class ExerciseService {
     console.log(this.user)
   }
 
-  getCompletedOrCancelledExercises(){
+  getCompletedOrCancelledExercises() {
     let user = this.user
-    let completedExams = this.exercises.slice();
+    let completedExams = this.qc.slice();
     let payload = user && completedExams
     return payload;
   }
