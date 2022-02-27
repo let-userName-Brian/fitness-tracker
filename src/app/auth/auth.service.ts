@@ -22,8 +22,6 @@ export class AuthService {
   }
 
   login(authData: AuthData) {
-    console.log(authData);
-    let username = authData.name
     this.afAuth.signInWithEmailAndPassword(authData.email, authData.password)
     .then(() => {
      console.log('logged in');

@@ -10,7 +10,7 @@
   </ng-container>
 
   <ng-container matColumnDef="ExamName">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> QC Name </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> QC Name </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{ element.name }} </mat-cell>
   </ng-container>
 
@@ -20,7 +20,7 @@
   </ng-container>
 
   <ng-container matColumnDef="passOrFail">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> Pass | Fail </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef> Pass | Fail </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{ element.state }} </mat-cell>
   </ng-container>
 

@@ -1,11 +1,33 @@
 <section class="current-training" fxLayout="column" fxLayoutAlign="center center">
-  <!-- <h1>{{ progress }}%</h1> -->
   <p>{{ exam.name }} QC</p>
-  <p>You have {{ exam.duration }}min to complete the QC</p>
-  <p>You have {{ exam.questions }} questions in total</p>
+  <p>You have 25 questions in total</p>
   <section fxLayoutGap="10px">
     <button mat-raised-button color="primary" (click)="onStart()">Start</button>
-    <button mat-raised-button color="primary" (click)="onStop()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="onStop()">Terminate/Cancel</button>
+    <button mat-raised-button color="primary" (click)="onDone()">Done</button>
+  </section>
+</section>
+
+<section *ngIf="questionsHaveBeenFetched">
+  <hr style="margin-bottom: 1rem">
+  <div *ngFor="let questions of currentQuestions; let i = index">
+    <mat-card>
+      <mat-card-subtitle>Question {{ i + 1 }}</mat-card-subtitle>
+      <mat-card-title>{{ questions.question }}</mat-card-title>
+      <mat-card-content>
+        <p style="font-size: medium;">{{ questions.answer }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <form>
+          <mat-form-field>
+            <input matInput type="number" placeholder="Points awarded">
+          </mat-form-field>
+        </form>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <section fxLayoutGap="10px" fxLayout="row" fxLayoutAlign="center center" style="margin-bottom: 1rem;">
+    <button mat-raised-button color="primary" (click)="onStop()">Terminate/Cancel</button>
     <button mat-raised-button color="primary" (click)="onDone()">Done</button>
   </section>
 </section>

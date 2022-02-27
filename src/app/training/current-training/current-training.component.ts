@@ -16,22 +16,19 @@ export class CurrentTrainingComponent implements OnInit {
   progress = 0;
   timer: any;
   exam: Exercise;
+  currentQuestions: any;
+  questionsHaveBeenFetched: boolean = false;
   constructor(private dialog: MatDialog, private exerciseService: ExerciseService, private questionService: QuestionsService) { }
 
   ngOnInit(): void {
     this.exam = this.exerciseService.getRunningExercise();
-    console.log(this.exam.name);
+    console.log(this.exam);
     this.questionService.getQuestions()
   }
 
   onStart() {
-    // const step = this.exerciseService.getRunningExercise().duration / 95 * 1000;
-    // this.timer = setInterval(() => {
-    //   this.progress = this.progress + 1;
-    //   if (this.progress >= 100) {
-    //     this.progress = 0;
-    //   }
-    // }, step);
+    this.questionsHaveBeenFetched = true;
+    this.currentQuestions = this.questionService.fetchedQuestions;
   }
 
   onDone(){

@@ -4,6 +4,7 @@ import { Injectable } from "@angular/core";
 @Injectable({ providedIn: "root" })
 export class QuestionsService {
   private databank: string;
+  fetchedQuestions: any;
   constructor(private http: HttpClient) { }
 
   getNameofQuestionBank(qc: string) {
@@ -27,7 +28,7 @@ export class QuestionsService {
     return this.http.get(
       `https://qc-database-aee15-default-rtdb.firebaseio.com/${params}.json`
     ).subscribe((response: any) => {
-      console.log(response);
+      this.fetchedQuestions = response;
     });
   }
 }

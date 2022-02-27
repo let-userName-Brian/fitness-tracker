@@ -1,3 +1,17 @@
 .current-training{
   padding: 30px;
 }
+
+mat-card{
+  margin-bottom: 1rem;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+mat-card-actions{
+  display: flex;
+  justify-content: right;
+  margin-right: 1rem;
+}
