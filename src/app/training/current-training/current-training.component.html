@@ -20,13 +20,14 @@
       <mat-card-actions>
         <form>
           <mat-form-field>
-            <input matInput type="number" placeholder="Points awarded">
+            <input matInput type="number" placeholder="Points awarded" (change)="pointsAdded($event.target.value)">
           </mat-form-field>
         </form>
       </mat-card-actions>
     </mat-card>
   </div>
   <section fxLayoutGap="10px" fxLayout="row" fxLayoutAlign="center center" style="margin-bottom: 1rem;">
+    <h3>Score: {{ this.score }}</h3>
     <button mat-raised-button color="primary" (click)="onStop()">Terminate/Cancel</button>
     <button mat-raised-button color="primary" (click)="onDone()">Done</button>
   </section>

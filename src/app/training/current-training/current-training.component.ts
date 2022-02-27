@@ -10,20 +10,21 @@ import { QuestionsService } from '../questions.service';
   templateUrl: './current-training.component.html',
   styleUrls: ['./current-training.component.css']
 })
-
-//most of this comonent will need to be restructured to show the curernt test thats being taken and the progress bar
 export class CurrentTrainingComponent implements OnInit {
-  progress = 0;
-  timer: any;
   exam: Exercise;
-  currentQuestions: any;
+  currentQuestions: any; 
   questionsHaveBeenFetched: boolean = false;
+  score: number = 0;
+
   constructor(private dialog: MatDialog, private exerciseService: ExerciseService, private questionService: QuestionsService) { }
 
   ngOnInit(): void {
     this.exam = this.exerciseService.getRunningExercise();
-    console.log(this.exam);
     this.questionService.getQuestions()
+  }
+
+  pointsAdded(points: number){
+    this.score += +points;
   }
 
   onStart() {
@@ -33,30 +34,21 @@ export class CurrentTrainingComponent implements OnInit {
 
   onDone(){
     this.exerciseService.completeExercise();
-    this.onReset();
   }
 
   onStop() {
-    clearInterval(this.timer);
     this.openDialog();
-  }
-
-  onReset() {
-    clearInterval(this.timer);
-    this.progress = 0;
   }
 
   openDialog() {
     const dialogRef = this.dialog.open(StopTrainingComponent, {
       data: {
-        questions: this.exam.questions
+        score: this.score
       }
     })
-
     dialogRef.afterClosed().subscribe(result => {
-      console.log(result);
       if (result) {
-        this.exerciseService.cancelExercise(this.exam.questions);
+        this.exerciseService.cancelExercise(this.score);
       }
     })
   }
