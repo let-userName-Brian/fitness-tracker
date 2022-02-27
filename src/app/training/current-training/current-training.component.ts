@@ -24,6 +24,8 @@ export class CurrentTrainingComponent implements OnInit {
   }
 
   pointsAdded(points: number){
+    //TODO: refactor to subtract if it changes after being set 
+    // ---might have to use checkboxes and set point values 
     this.score += +points;
   }
 
