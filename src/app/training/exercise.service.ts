@@ -4,6 +4,7 @@ import { Exercise } from "./exercise.model"
 import { map } from 'rxjs/operators';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Subscription } from "rxjs";
+import { QuestionsService } from "./questions.service";
 
 @Injectable({ providedIn: "root" })
 export class ExerciseService {
@@ -12,11 +13,11 @@ export class ExerciseService {
   finishedQCsChanged = new Subject<Exercise[]>();
   userName: string;
   private availableExercises: Exercise[] = [];
-  private runningExercise: Exercise;
+  private runningExercise: any;
   private firebaseSubscription: Subscription[] = [];
   
 
-  constructor( private dataBase: AngularFirestore) { }
+  constructor( private dataBase: AngularFirestore, private questionService: QuestionsService) { }
 
   fetchAvailableExercises() {
     this.firebaseSubscription.push(this.dataBase.collection<Exercise>("QC's")
@@ -40,14 +41,11 @@ export class ExerciseService {
   }
 
   startExercise(selectedId: string, membersName: string) {
-    // console.log('modifying DB')
-    // this.dataBase.doc("pastQC's/" + selectedId).update({
-    //   member: this.user.name,
-    // })
     this.userName = membersName;
     this.runningExercise = this.availableExercises.find(
       (ex) => ex.id === selectedId);
     this.exerciseChanged.next({ ...this.runningExercise })
+    this.questionService.getNameofQuestionBank(this.runningExercise.name);
   }
 
   getRunningExercise() {

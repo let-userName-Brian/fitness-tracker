@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Exercise } from '../exercise.model';
 import { ExerciseService } from '../exercise.service';
 import { StopTrainingComponent } from './stop-training.component';
+import { QuestionsService } from '../questions.service';
 
 @Component({
   selector: 'app-current-training',
@@ -15,11 +16,12 @@ export class CurrentTrainingComponent implements OnInit {
   progress = 0;
   timer: any;
   exam: Exercise;
-  constructor(private dialog: MatDialog, private exerciseService: ExerciseService) { }
+  constructor(private dialog: MatDialog, private exerciseService: ExerciseService, private questionService: QuestionsService) { }
 
   ngOnInit(): void {
     this.exam = this.exerciseService.getRunningExercise();
-    console.log(this.exam);
+    console.log(this.exam.name);
+    this.questionService.getQuestions()
   }
 
   onStart() {
