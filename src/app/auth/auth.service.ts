@@ -1,4 +1,3 @@
-import { User } from "./user.model";
 import { AuthData } from "./auth-data.model";
 import { Injectable } from "@angular/core";
 import { Subject } from "rxjs";
@@ -8,7 +7,6 @@ import { ExerciseService } from "../training/exercise.service";
 
 @Injectable({ providedIn: "root" })
 export class AuthService {
-  private user: User;
   private isUser = false;
   authChange = new Subject<boolean>();
   constructor(private router: Router, private afAuth: AngularFireAuth, private exerciseService: ExerciseService) { }
@@ -28,22 +26,15 @@ export class AuthService {
     let username = authData.name
     this.afAuth.signInWithEmailAndPassword(authData.email, authData.password)
     .then(() => {
-      this.user = {
-        name: username,
-      }
+     console.log('logged in');
     })
     .catch(error => {
       console.log(error);
     });
-    console.log(this.user);
   }
 
   logout() {
     this.afAuth.signOut();
-  }
-
-  getUser() {
-    return { ...this.user };
   }
 
   initAuthListener() {

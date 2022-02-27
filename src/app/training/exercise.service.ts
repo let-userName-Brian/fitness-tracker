@@ -1,7 +1,5 @@
 import { Injectable } from "@angular/core";
 import { Subject } from "rxjs";
-import { AuthService } from "../auth/auth.service";
-import { User } from "../auth/user.model";
 import { Exercise } from "./exercise.model"
 import { map } from 'rxjs/operators';
 import { AngularFirestore } from '@angular/fire/compat/firestore';

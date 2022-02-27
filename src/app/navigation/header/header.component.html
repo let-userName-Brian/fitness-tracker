@@ -7,7 +7,7 @@
   <div><a routerLink="/">QC</a></div>
   <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
     <ul fxLayout fxLayoutGap="10px" class="nav-items">
-      <li *ngIf="!isAuth"><a routerLink="/signup">Signup</a></li>
+      <!-- <li *ngIf="!isAuth"><a routerLink="/signup">Signup</a></li> -->
       <li *ngIf="!isAuth"><a routerLink="/login">Login</a></li>
       <li *ngIf="isAuth"><a routerLink="/training">QC's</a></li>
       <li *ngIf="isAuth"><a (click)="onLogout()">Logout</a></li>

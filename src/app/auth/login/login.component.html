@@ -4,7 +4,7 @@
       <input type="name" matInput placeholder="Name" ngModel name="userName " required #nameInput="ngModel" [ngModelOptions]="{standalone: true}">
     </mat-form-field> -->
     <mat-form-field>
-      <input type="email" matInput placeholder="Email" ngModel name="email" email required #emailInput="ngModel" [ngModelOptions]="{standalone: true}">
+      <input type="email" matInput placeholder="Email" ngModel name="email" email required #emailInput="ngModel">
       <mat-error *ngIf="!emailInput.hasError('required')">Email is invalid</mat-error>
       <mat-error *ngIf="emailInput.hasError('required')">Email is required</mat-error>
     </mat-form-field>
