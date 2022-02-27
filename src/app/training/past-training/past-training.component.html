@@ -16,7 +16,7 @@
 
   <ng-container matColumnDef="UserName">
     <mat-header-cell *matHeaderCellDef> Member </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{ element.user?.name }} </mat-cell>
+    <mat-cell *matCellDef="let element"> {{ element.user }} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="passOrFail">
@@ -26,7 +26,7 @@
 
   <ng-container matColumnDef="Eamil">
     <mat-header-cell *matHeaderCellDef> Member's Email </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{ element.user?.email }} </mat-cell>
+    <mat-cell *matCellDef="let element"> {{ element?.email }} </mat-cell>
   </ng-container>
 
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

@@ -12,6 +12,7 @@ export class ExerciseService {
   exerciseChanged = new Subject<Exercise>();
   qcChanged = new Subject<Exercise[]>();
   finishedQCsChanged = new Subject<Exercise[]>();
+  userName: string;
   private availableExercises: Exercise[] = [];
   private runningExercise: Exercise;
   private firebaseSubscription: Subscription[] = [];
@@ -40,11 +41,12 @@ export class ExerciseService {
     )
   }
 
-  startExercise(selectedId: string) {
+  startExercise(selectedId: string, membersName: string) {
     // console.log('modifying DB')
-    // this.dataBase.doc("QC's/" + selectedId).update({
+    // this.dataBase.doc("pastQC's/" + selectedId).update({
     //   member: this.user.name,
     // })
+    this.userName = membersName;
     this.runningExercise = this.availableExercises.find(
       (ex) => ex.id === selectedId);
     this.exerciseChanged.next({ ...this.runningExercise })
@@ -58,6 +60,7 @@ export class ExerciseService {
     this.addToDatabase({
       ...this.runningExercise,
       date: new Date(),
+      user: this.userName,
       state: "completed",
     });
     this.runningExercise = null;
@@ -69,6 +72,7 @@ export class ExerciseService {
       ...this.runningExercise,
       questions: this.runningExercise.questions - questions,
       date: new Date(),
+      user: this.userName,
       state: "cancelled",
     });
     this.runningExercise = null;
@@ -84,7 +88,7 @@ export class ExerciseService {
 
   private addToDatabase(exercise: Exercise) {
     this.dataBase.collection("pastQC's").add(exercise).then(() => {
-      console.log("added to database")
+      console.log("added to database:", exercise.user);
     }).catch(err => {
       console.log(err)
     })
