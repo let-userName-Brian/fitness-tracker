@@ -11,13 +11,13 @@ export class QuestionsService {
     this.databank = qc;
     switch (qc) {
       case "Flight Sargent":
-       return this.databank = "FCQuestionBank";
-      case "QC2":
-        return this.databank = "QC2";
-      case "QC3":
-        return this.databank = "QC3";
-      case "QC4":
-        return this.databank = "QC4";
+       return this.databank = "FS";
+      case "RFL - Patrol":
+        return this.databank = "RFL";
+      case "IEC/RFM":
+        return this.databank = "RFM";
+      case "Security Controller":
+        return this.databank = "SC";
       case "QC5":
         return this.databank = "QC5";
     }
@@ -43,7 +43,7 @@ export class QuestionsService {
   getQuestions() {
     let params = this.databank;
     return this.http.get(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/${params}.json`).subscribe((response: any) => {
+      `https://qc-database-aee15-default-rtdb.firebaseio.com/${params}/${params}.json`).subscribe((response: any) => {
       this.fetchedQuestions = response;
       this.filterQuestions();
     });
