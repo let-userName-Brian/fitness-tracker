@@ -441,65 +441,121 @@
       "asked": 0
     },
     {
-      "question": "",
-      "answer": "",
-      "ref": "",
+      "question": "How is the duress activated utilizing a RA card reader?",
+      "answer": "When using card readers, adding one number to the Personal Identification Number (PIN) will automatically signal a duress situation to the BDOC.",
+      "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
       "correct": 0,
       "wrong": 0,
       "asked": 0
     },
     {
-      "question": "",
-      "answer": "",
-      "ref": "",
+      "question": "What technique is used to facilitate emergency entry into an SF posted RA?",
+      "answer": "Sign/countersign",
+      "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
       "correct": 0,
       "wrong": 0,
       "asked": 0
     },
     {
-      "question": "",
-      "answer": "",
-      "ref": "",
+      "question": "What is the maximum response time to the NAOC when notified by BDOC?",
+      "answer": "10 minutes",
+      "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
       "correct": 0,
       "wrong": 0,
       "asked": 0
     },
     {
-      "question": "",
-      "answer": "",
-      "ref": "",
+      "question": "Explain response time by the ISRT to a PL2 resource?",
+      "answer": "5 minutes",
+      "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
       "correct": 0,
       "wrong": 0,
       "asked": 0
     },
     {
-      "question": "",
-      "answer": "",
-      "ref": "",
+      "question": "What is the maximum response time to a PL-3 resource on CCSFS by an ESRT?",
+      "answer": "15 minutes",
+      "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
       "correct": 0,
       "wrong": 0,
       "asked": 0
     },
     {
-      "question": "",
-      "answer": "",
-      "ref": "",
+      "question": "What is the maximum response time to a PL-3 resource on PSFB by a patrol?",
+      "answer": "10 minutes",
+      "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
       "correct": 0,
       "wrong": 0,
       "asked": 0
     },
     {
-      "question": "",
-      "answer": "",
-      "ref": "",
+      "question": "What is the area designator on the RAB for the 750 Ramp?",
+      "answer": "3",
+      "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
       "correct": 0,
       "wrong": 0,
       "asked": 0
     },
     {
-      "question": "",
-      "answer": "",
-      "ref": "",
+      "question": "What is the area designator on the RAB for Skid Strip (when posted)",
+      "answer": "25",
+      "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "What Act/Law prevents Air Force personnel from executing the laws of the states or the laws of the U.S. except when acting under the authority of the U.S. Constitution, an Act of Congress or under the direction of the President of the United States.",
+      "answer": "The Posse Comitatus Act",
+      "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 51 Posse Comitatus Act",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Define the term 'Hearsay.'",
+      "answer": "'Hearsay' is a statement, other than the one made by the declarant while testifying at the trial or hearing, offered in evidence to prove the truth of the matter asserted.",
+      "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 54 RULES OF EVIDENCE.",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Define the term 'declarant.'",
+      "answer": "A 'declarant' is a person who makes a statement.",
+      "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 54 RULES OF EVIDENCE.",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Define the term 'search.'",
+      "answer": "A search is an examination of a person, property or premises to uncover evidence of a crime or criminal intent, such as stolen goods, burglary tools and weapons.",
+      "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 54",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Define the term 'statement.'",
+      "answer": "A 'statement' is (1) an oral or written assertion or (2) nonverbal conduct of a person, if it is intended by the person as an assertion.",
+      "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 54 RULES OF EVIDENCE.",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Define the term 'Protective Frisk.'",
+      "answer": "A Defender may perform a protective frisk during a lawful stop when the member reasonably believes a person is armed and presently dangerous to the member or others.",
+      "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 54 RULES OF EVIDENCE.",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Define the term 'Covered Wagon.'",
+      "answer": "COVERED WAGON reports inform HHQ that an unusual incident affecting PL 1, 2, or 3 resources, probably or actually hostile, occurred at an installation or dispersed site.",
+      "ref": "SFTRG 2 Operations VOL 2 Resource Security, CH2. SECURITY REPORTING AND ALERTING SYSTEM.",
       "correct": 0,
       "wrong": 0,
       "asked": 0

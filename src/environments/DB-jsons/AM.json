@@ -33,9 +33,9 @@
       "asked": 0
     },
     {
-      "question": "",
-      "answer": "",
-      "ref": "",
+      "question": "How is the duress activated utilizing a RA card reader?",
+      "answer": "When using card readers, adding one number to the Personal Identification Number (PIN) will automatically signal a duress situation to the BDOC.",
+      "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
       "correct": 0,
       "wrong": 0,
       "asked": 0
