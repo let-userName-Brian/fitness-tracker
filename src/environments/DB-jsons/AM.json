@@ -1,0 +1,116 @@
+{
+  "AM": [
+    {
+      "question": "Define the term 'Code 12'",
+      "answer": "Duress - Refers to any duress situation.",
+      "ref": "EXPLAIN CODES FOR RADIO COMMUNICATIONS - 45 SFS OI 31-1 V3 Chap 2 Para 2.9",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Define the term 'Code 16'",
+      "answer": "Alarm Activation - Used to initiate an alarm activation.",
+      "ref": "EXPLAIN CODES FOR RADIO COMMUNICATIONS - 45 SFS OI 31-1 V3 Chap 2 Para 2.9",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Define an Active Duress",
+      "answer": "Active duress may be indicated by the use of electronic duress alarms to covertly advise another location/unit of a duress situation. Without alerting the person(s) causing the duress, that the alarm has been sounded. Other examples of active duress indicators include the passing of the wing duress word or failing to properly authenticate via the authentication code.",
+      "ref": "EXPLAIN DURESS PROCEDURES - 45 SFS OI 31-1 V3 Chap 2 Para 2.10",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Define a Passive Duress",
+      "answer": "Passive Duress. Passive duress is three consecutive failures to respond to your radio call sign.",
+      "ref": "EXPLAIN DURESS PROCEDURES - 45 SFS OI 31-1 V3 Chap 2 Para 2.10",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    }
+  ]
+}

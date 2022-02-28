@@ -1,0 +1,516 @@
+{
+  "FS": [
+    {
+      "question": "Define the term 'Code 4'",
+      "answer": "Request Wants and Warrants - Used to obtain a background check on a specific person or vehicle.",
+      "ref": "EXPLAIN CODES FOR RADIO COMMUNICATIONS - 45 SFS OI 31-1 V3 Chap 2 Para 2.9",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Define the term 'Code 9'",
+      "answer": "Switch Frequencies - Used to direct the switching of radio frequencies.",
+      "ref": "EXPLAIN CODES FOR RADIO COMMUNICATIONS - 45 SFS OI 31-1 V3 Chap 2 Para 2.9",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Define the term 'Code 12'",
+      "answer": "Duress - Refers to any duress situation.",
+      "ref": "EXPLAIN CODES FOR RADIO COMMUNICATIONS - 45 SFS OI 31-1 V3 Chap 2 Para 2.9",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Define the term 'Code 16'",
+      "answer": "Alarm Activation - Used to initiate an alarm activation.",
+      "ref": "EXPLAIN CODES FOR RADIO COMMUNICATIONS - 45 SFS OI 31-1 V3 Chap 2 Para 2.9",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Define an Active Duress",
+      "answer": "Active duress may be indicated by the use of electronic duress alarms to covertly advise another location/unit of a duress situation. Without alerting the person(s) causing the duress, that the alarm has been sounded. Other examples of active duress indicators include the passing of the wing duress word or failing to properly authenticate via the authentication code.",
+      "ref": "EXPLAIN DURESS PROCEDURES - 45 SFS OI 31-1 V3 Chap 2 Para 2.10",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Define a Passive Duress",
+      "answer": "Passive Duress. Passive duress is three consecutive failures to respond to your radio call sign.",
+      "ref": "EXPLAIN DURESS PROCEDURES - 45 SFS OI 31-1 V3 Chap 2 Para 2.10",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "What is the alternate channel used when notified of a Code 9?",
+      "answer": "A Net - Channel 3",
+      "ref": "EXPLAIN DURESS PROCEDURES - 45 SFS OI 31-1 V3 Chap 2 Para 2.10",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Under what jurisdiction does PSFB operate?",
+      "answer": "Exclusive",
+      "ref": "EXPLAIN LEGAL CONSIDERATIONS PROCEDURES - 45 SFS OI 31-1 V3 Chap 3 Para 3.1-Para 3.3",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Under what jurisdiction does CCSFS operate?",
+      "answer": "Exclusive and proprietary",
+      "ref": "EXPLAIN LEGAL CONSIDERATIONS PROCEDURES - 45 SFS OI 31-1 V3 Chap 3 Para 3.1-Para 3.3",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "To what document would you refer to for specific jurisdictional boundaries.",
+      "answer": "SLD 45 Integrated Defense Plan 31-1",
+      "ref": "EXPLAIN LEGAL CONSIDERATIONS PROCEDURES - 45 SFS OI 31-1 V3 Chap 3 Para 3.1-Para 3.3",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "When may a juvenile be issues a CVB 1805?",
+      "answer": "Traffic infractions only",
+      "ref": "EXPLAIN LEGAL CONSIDERATIONS PROCEDURES - 45 SFS OI 31-1 V3 Chap 3 Para 3.1-Para 3.3",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Patrols will issue what form to any person who has suffered direct physical, emotional or financial harm as a result of an offense.",
+      "answer": "DD Form 2701",
+      "ref": "EXPLAIN/PERFORM VICTIM AND WITNESS ASSISTANCE - 45 SFS OI 31-1 V3 Chap 8 Para 8.8",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Bomb Threat: Name three of five types of IED's commonly used.",
+      "answer": "Pyrotechnic, Electrical, Mechanical, Time Mechanism and Chemical",
+      "ref": "EXPLAIN/PERFORM BOMB THREAT/SUSPICIOUS PACKAGE PROCEDURES - 45 SW IDP 31-1 Annex H Appendix 6",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Bomb Threat: If a detonation time is given, do not search within ______ (time) before or after the detonation time.",
+      "answer": "30 minutes",
+      "ref": "EXPLAIN/PERFORM BOMB THREAT/SUSPICIOUS PACKAGE PROCEDURES - 45 SW IDP 31-1 Annex H Appendix 6",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Bomb Threat: An initial evacuation distance of ____________ for items up to box size (large briefcase/package - 2 cubic ft.).",
+      "answer": "500 ft.",
+      "ref": "EXPLAIN/PERFORM BOMB THREAT/SUSPICIOUS PACKAGE PROCEDURES - 45 SW IDP 31-1 Annex H Appendix 6",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Bomb Threat: An initial evacuation distance of _______ for van or small truck.",
+      "answer": "1,500 ft.",
+      "ref": "EXPLAIN/PERFORM BOMB THREAT/SUSPICIOUS PACKAGE PROCEDURES - 45 SW IDP 31-1 Annex H Appendix 6",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Contaminated items generated by incidents involving blood-borne pathogens are disposed where?",
+      "answer": "Biohazard containers are located in the weapons cleaning areas of CCSFS and PSFB",
+      "ref": "EXPLAIN/PERFORM BLOODBOURNE PATHOGEN EXPOSURE CONTROL PRECEDURES - 45 SFS BBP Exposure Control Plan",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Active Shooter - Phase 1",
+      "answer": "Neutralize the threat(s)",
+      "ref": "EXPLAIN/PERFORM ACTIVE SHOOTER RESPONSE - 45 SFS OI 31-1 V3 Chap 13 Para 13.1-Para 13.7.2",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Active Shotter - Phase 2",
+      "answer": "PHASE II - Secure the immediate area (all threats to include IEDs)",
+      "ref": "EXPLAIN/PERFORM ACTIVE SHOOTER RESPONSE - 45 SFS OI 31-1 V3 Chap 13 Para 13.1-Para 13.7.2",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Active Shooter - Phase 5",
+      "answer": "Establish and preserve the crime scene",
+      "ref": "EXPLAIN/PERFORM ACTIVE SHOOTER RESPONSE - 45 SFS OI 31-1 V3 Chap 13 Para 13.1-Para 13.7.2",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Define the term 'Covered Wagon'",
+      "answer": "COVERED WAGON reports inform HHQ that an unusual incident affecting PL 1, 2, or 3 resources, probably or actually hostile, occurred at an installation or dispersed site.",
+      "ref": "EXPLAIN/PERFORM COVERED WAGON PROCEDURES - SFTRG 2v3 Chap 2. Security Reporting and Alerting System",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Whom may cancel a Covered Wagon report?",
+      "answer": "Installation Commander or designee may cancel the COVERED WAGON incident.",
+      "ref": "EXPLAIN/PERFORM COVERED WAGON PROCEDURES - SFTRG 2v3 Chap 2. Security Reporting and Alerting System",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "True or False: SF/DAF CP patrol may assist local authorities as long as they do not engage in enforcement of civil law.",
+      "answer": "True",
+      "ref": "EXPLAIN MUTUAL AID POLICE RESPONSES - 45 SFS OI 31-1 V3 Chap 8 Para 8.14",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "What actions must you take during a launch mishap?",
+      "answer": "Clearing Officers and all others on-duty take immediate cover in assigned vehicle, guard houses or other available shelter. All TCPs must remain hard down unless they feel their life is in danger, at which time they will leave the vehicle barriers in place, proceed to a pre-determined launch shelter, and notify the LOS upon arrival.",
+      "ref": "EXPLAIN LAUNCH OPERATIONS GENERAL INFORMATION - 45 SFS OI 31-1 V3 Chap 4 Para 4.2.1-4.4.2",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "What document is utilized to aid in the purge of the FCA/BDA?",
+      "answer": "Man-load list",
+      "ref": "EXPLAIN/PERFORM LAUNCH CLEARING OFFICER DUTIES - 45 SFS OI 31-1 V3 Chap 4 Para 4.1.3-4.1.3.5",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Flight personnel are only authorized to issue AF IMT Form 75s for what period of time?",
+      "answer": "72 hours",
+      "ref": "EXPLAIN TEMPORARY PASSES - 45 SFS OI 31-1 V3 Chap 9 Para 9.3-9.3.3",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "The term ______ will be used when an individual deliberately drives past the IEC without being properly vetted.",
+      "answer": "gate runner",
+      "ref": "EXPLAIN/PERFORM TURN AROUND/GATE RUNNER PROCEDURES - 45 SFS OI 31-1 V3 Chap 9 Para 9.5-9.5.5.9",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "The deployment of the Stinger Spike System must be authorized by whom?",
+      "answer": "Flight Sergeant",
+      "ref": "EXPLAIN/PERFORM TURN AROUND/GATE RUNNER PROCEDURES - 45 SFS OI 31-1 V3 Chap 9 Para 9.5-9.5.5.9",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Civil Disturbances - Describe PHASE ONE: Periods of Increased Tension.",
+      "answer": "The type of incidents which mark this phase may appear in the form of increased tension in living, dining and work areas.",
+      "ref": "EXPLAIN/PERFORM RESPONSE TO CIVIL DISTURBANCES - 45 SW IDP 31-1 Annex H Appendix 1",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Civil Disturbances - Describe PHASE TWO: Scattered minor incidents of violence.",
+      "answer": "Includes incidents of harassment between individual members of opposing groups.",
+      "ref": "EXPLAIN/PERFORM RESPONSE TO CIVIL DISTURBANCES - 45 SW IDP 31-1 Annex H Appendix 1",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Civil Disturbances - Describe PHASE THREE: Group Oriented Violence.",
+      "answer": "This phase is characterized by roaming assaults on lone individuals and/or fights with opposing groups, or assembly of personnel at base entry points.",
+      "ref": "EXPLAIN/PERFORM RESPONSE TO CIVIL DISTURBANCES - 45 SW IDP 31-1 Annex H Appendix 1",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Civil Disturbances - Describe PHASE FOUR: Full Riot Phase.",
+      "answer": "This phase is characterized by large-scale destruction of property, total defiance of authority, open mob activity, and breaches of peace which result in serious injury/death of innocent people.",
+      "ref": "EXPLAIN/PERFORM RESPONSE TO CIVIL DISTURBANCES - 45 SW IDP 31-1 Annex H Appendix 1",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Where is the primary Secure Hold area for explosive on CCSFS?",
+      "answer": "Within MSA #2",
+      "ref": "EXPLAIN/PERFORM DEPARTMENT OF ENERGY SAFE HAVEN PROCEDURES - 45 SWI 24-602-O Chap 5.1 Para 5.1.1-5.5.4",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "DoD Installations must provide Safe Haven for AA&E shipments during emergency conditions. What areas are designated for Safe Haven at PSFB and CCSFS?",
+      "answer": "PSFB - Hot Cargo Pad (HCP) #1 & CCSFS - MSA #2",
+      "ref": "EXPLAIN/PERFORM DEPARTMENT OF ENERGY SAFE HAVEN PROCEDURES - 45 SWI 24-602-O Chap 5.1 Para 5.1.1-5.5.4",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Where should the Access Control Point (ACP) be established along the cordon of a hazardous incident?",
+      "answer": "The ACP is established upwind or crosswind of the incident site and at the established evacuation distance.",
+      "ref": "EXPLAIN/PERFORM ALARM RESPONSE - SFTRG 2v4 Chap 4. Chap 5. Chap 6.",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Who will assume initial IC (incident Command) for law and order and security related responses.",
+      "answer": "The Senior SF Member",
+      "ref": "EXPLAIN/PERFORM ALARM RESPONSE - SFTRG 2v4 Chap 4. Chap 5. Chap 6.",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Who determines the size of an initial cordon?",
+      "answer": "Incident Commander",
+      "ref": "EXPLAIN/PERFORM ALARM RESPONSE - SFTRG 2v4 Chap 4. Chap 5. Chap 6.",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "Define the CCSFS North Sector",
+      "answer": "From Traffic Control Point (TCP) 25N to the east on Phillips Parkway through Complex 34 to the beach, north along the beach to the north boundary, west to incorporate the entire ITL area, the entire Complex 41 area and support buildings, south along ITL road back to TCP 25 N and all areas in between.",
+      "ref": "EXPLAIN SECURITY FORCE INSTALLATION PATROLLING AND SECTOR PRIORITIZATION - 45 SW IDP 31-1 Annex C Appendix 3",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "question": "",
+      "answer": "",
+      "ref": "",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    }
+  ]
+}
