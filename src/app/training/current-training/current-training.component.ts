@@ -4,6 +4,7 @@ import { Exercise } from '../exercise.model';
 import { ExerciseService } from '../exercise.service';
 import { StopTrainingComponent } from './stop-training.component';
 import { QuestionsService } from '../questions.service';
+import { EditTrainingComponent } from './edit-training.component';
 
 @Component({
   selector: 'app-current-training',
@@ -15,6 +16,7 @@ export class CurrentTrainingComponent implements OnInit {
   currentQuestions: any;
   questionsHaveBeenFetched: boolean = false;
   score: number = 100;
+  editingQuestion: any;
 
   constructor(private dialog: MatDialog, private exerciseService: ExerciseService, private questionService: QuestionsService) { }
 
@@ -34,8 +36,11 @@ export class CurrentTrainingComponent implements OnInit {
     }, 200)
   }
 
-  onEdit(id: number) {
-    console.log(id)
+  onEdit(index: number, questions: any) {
+    console.log("id", index)
+    console.log("qs", questions)
+    this.editingQuestion = questions;
+    this.openEditDialog(index, questions);
   }
   wrongAnswer() {
     this.score -= 4;
@@ -63,6 +68,19 @@ export class CurrentTrainingComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         this.exerciseService.cancelExercise(this.score);
+      }
+    })
+  }
+
+  openEditDialog(index: number, exam: any) {
+    const dialogRef = this.dialog.open(EditTrainingComponent, {
+      data: {
+        exam: this.editingQuestion
+      }
+    })
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.currentQuestions.splice(index, 1, result);
       }
     })
   }
