@@ -1,6 +1,7 @@
 {
   "FS": [
     {
+      "id": 1,
       "question": "Define the term 'Code 4'",
       "answer": "Request Wants and Warrants - Used to obtain a background check on a specific person or vehicle.",
       "ref": "EXPLAIN CODES FOR RADIO COMMUNICATIONS - 45 SFS OI 31-1 V3 Chap 2 Para 2.9",
@@ -9,6 +10,7 @@
       "asked": 0
     },
     {
+      "id": 2,
       "question": "Define the term 'Code 9'",
       "answer": "Switch Frequencies - Used to direct the switching of radio frequencies.",
       "ref": "EXPLAIN CODES FOR RADIO COMMUNICATIONS - 45 SFS OI 31-1 V3 Chap 2 Para 2.9",
@@ -17,6 +19,7 @@
       "asked": 0
     },
     {
+      "id": 3,
       "question": "Define the term 'Code 12'",
       "answer": "Duress - Refers to any duress situation.",
       "ref": "EXPLAIN CODES FOR RADIO COMMUNICATIONS - 45 SFS OI 31-1 V3 Chap 2 Para 2.9",
@@ -25,6 +28,7 @@
       "asked": 0
     },
     {
+      "id": 4,
       "question": "Define the term 'Code 16'",
       "answer": "Alarm Activation - Used to initiate an alarm activation.",
       "ref": "EXPLAIN CODES FOR RADIO COMMUNICATIONS - 45 SFS OI 31-1 V3 Chap 2 Para 2.9",
@@ -33,6 +37,7 @@
       "asked": 0
     },
     {
+      "id": 5,
       "question": "Define an Active Duress",
       "answer": "Active duress may be indicated by the use of electronic duress alarms to covertly advise another location/unit of a duress situation. Without alerting the person(s) causing the duress, that the alarm has been sounded. Other examples of active duress indicators include the passing of the wing duress word or failing to properly authenticate via the authentication code.",
       "ref": "EXPLAIN DURESS PROCEDURES - 45 SFS OI 31-1 V3 Chap 2 Para 2.10",
@@ -41,6 +46,7 @@
       "asked": 0
     },
     {
+      "id": 6,
       "question": "Define a Passive Duress",
       "answer": "Passive Duress. Passive duress is three consecutive failures to respond to your radio call sign.",
       "ref": "EXPLAIN DURESS PROCEDURES - 45 SFS OI 31-1 V3 Chap 2 Para 2.10",
@@ -49,6 +55,7 @@
       "asked": 0
     },
     {
+      "id": 7,
       "question": "What is the alternate channel used when notified of a Code 9?",
       "answer": "A Net - Channel 3",
       "ref": "EXPLAIN DURESS PROCEDURES - 45 SFS OI 31-1 V3 Chap 2 Para 2.10",
@@ -57,6 +64,7 @@
       "asked": 0
     },
     {
+      "id": 8,
       "question": "Under what jurisdiction does PSFB operate?",
       "answer": "Exclusive",
       "ref": "EXPLAIN LEGAL CONSIDERATIONS PROCEDURES - 45 SFS OI 31-1 V3 Chap 3 Para 3.1-Para 3.3",
@@ -65,6 +73,7 @@
       "asked": 0
     },
     {
+      "id": 9,
       "question": "Under what jurisdiction does CCSFS operate?",
       "answer": "Exclusive and proprietary",
       "ref": "EXPLAIN LEGAL CONSIDERATIONS PROCEDURES - 45 SFS OI 31-1 V3 Chap 3 Para 3.1-Para 3.3",
@@ -73,6 +82,7 @@
       "asked": 0
     },
     {
+      "id": 10,
       "question": "To what document would you refer to for specific jurisdictional boundaries.",
       "answer": "SLD 45 Integrated Defense Plan 31-1",
       "ref": "EXPLAIN LEGAL CONSIDERATIONS PROCEDURES - 45 SFS OI 31-1 V3 Chap 3 Para 3.1-Para 3.3",
@@ -81,6 +91,7 @@
       "asked": 0
     },
     {
+      "id": 11,
       "question": "When may a juvenile be issues a CVB 1805?",
       "answer": "Traffic infractions only",
       "ref": "EXPLAIN LEGAL CONSIDERATIONS PROCEDURES - 45 SFS OI 31-1 V3 Chap 3 Para 3.1-Para 3.3",
@@ -89,6 +100,7 @@
       "asked": 0
     },
     {
+      "id": 12,
       "question": "Patrols will issue what form to any person who has suffered direct physical, emotional or financial harm as a result of an offense.",
       "answer": "DD Form 2701",
       "ref": "EXPLAIN/PERFORM VICTIM AND WITNESS ASSISTANCE - 45 SFS OI 31-1 V3 Chap 8 Para 8.8",
@@ -97,6 +109,7 @@
       "asked": 0
     },
     {
+      "id": 13,
       "question": "Bomb Threat: Name three of five types of IED's commonly used.",
       "answer": "Pyrotechnic, Electrical, Mechanical, Time Mechanism and Chemical",
       "ref": "EXPLAIN/PERFORM BOMB THREAT/SUSPICIOUS PACKAGE PROCEDURES - 45 SW IDP 31-1 Annex H Appendix 6",
@@ -105,6 +118,7 @@
       "asked": 0
     },
     {
+      "id": 14,
       "question": "Bomb Threat: If a detonation time is given, do not search within ______ (time) before or after the detonation time.",
       "answer": "30 minutes",
       "ref": "EXPLAIN/PERFORM BOMB THREAT/SUSPICIOUS PACKAGE PROCEDURES - 45 SW IDP 31-1 Annex H Appendix 6",
@@ -113,6 +127,7 @@
       "asked": 0
     },
     {
+      "id": 15,
       "question": "Bomb Threat: An initial evacuation distance of ____________ for items up to box size (large briefcase/package - 2 cubic ft.).",
       "answer": "500 ft.",
       "ref": "EXPLAIN/PERFORM BOMB THREAT/SUSPICIOUS PACKAGE PROCEDURES - 45 SW IDP 31-1 Annex H Appendix 6",
@@ -121,6 +136,7 @@
       "asked": 0
     },
     {
+      "id": 16,
       "question": "Bomb Threat: An initial evacuation distance of _______ for van or small truck.",
       "answer": "1,500 ft.",
       "ref": "EXPLAIN/PERFORM BOMB THREAT/SUSPICIOUS PACKAGE PROCEDURES - 45 SW IDP 31-1 Annex H Appendix 6",
@@ -129,6 +145,7 @@
       "asked": 0
     },
     {
+      "id": 17,
       "question": "Contaminated items generated by incidents involving blood-borne pathogens are disposed where?",
       "answer": "Biohazard containers are located in the weapons cleaning areas of CCSFS and PSFB",
       "ref": "EXPLAIN/PERFORM BLOODBOURNE PATHOGEN EXPOSURE CONTROL PRECEDURES - 45 SFS BBP Exposure Control Plan",
@@ -137,6 +154,7 @@
       "asked": 0
     },
     {
+      "id": 18,
       "question": "Active Shooter - Phase 1",
       "answer": "Neutralize the threat(s)",
       "ref": "EXPLAIN/PERFORM ACTIVE SHOOTER RESPONSE - 45 SFS OI 31-1 V3 Chap 13 Para 13.1-Para 13.7.2",
@@ -145,6 +163,7 @@
       "asked": 0
     },
     {
+      "id": 19,
       "question": "Active Shotter - Phase 2",
       "answer": "PHASE II - Secure the immediate area (all threats to include IEDs)",
       "ref": "EXPLAIN/PERFORM ACTIVE SHOOTER RESPONSE - 45 SFS OI 31-1 V3 Chap 13 Para 13.1-Para 13.7.2",
@@ -153,6 +172,7 @@
       "asked": 0
     },
     {
+      "id": 20,
       "question": "Active Shooter - Phase 5",
       "answer": "Establish and preserve the crime scene",
       "ref": "EXPLAIN/PERFORM ACTIVE SHOOTER RESPONSE - 45 SFS OI 31-1 V3 Chap 13 Para 13.1-Para 13.7.2",
@@ -161,6 +181,7 @@
       "asked": 0
     },
     {
+      "id": 21,
       "question": "Define the term 'Covered Wagon'",
       "answer": "COVERED WAGON reports inform HHQ that an unusual incident affecting PL 1, 2, or 3 resources, probably or actually hostile, occurred at an installation or dispersed site.",
       "ref": "EXPLAIN/PERFORM COVERED WAGON PROCEDURES - SFTRG 2v3 Chap 2. Security Reporting and Alerting System",
@@ -169,6 +190,7 @@
       "asked": 0
     },
     {
+      "id": 22,
       "question": "Whom may cancel a Covered Wagon report?",
       "answer": "Installation Commander or designee may cancel the COVERED WAGON incident.",
       "ref": "EXPLAIN/PERFORM COVERED WAGON PROCEDURES - SFTRG 2v3 Chap 2. Security Reporting and Alerting System",
@@ -177,6 +199,7 @@
       "asked": 0
     },
     {
+      "id": 23,
       "question": "True or False: SF/DAF CP patrol may assist local authorities as long as they do not engage in enforcement of civil law.",
       "answer": "True",
       "ref": "EXPLAIN MUTUAL AID POLICE RESPONSES - 45 SFS OI 31-1 V3 Chap 8 Para 8.14",
@@ -185,6 +208,7 @@
       "asked": 0
     },
     {
+      "id": 24,
       "question": "What actions must you take during a launch mishap?",
       "answer": "Clearing Officers and all others on-duty take immediate cover in assigned vehicle, guard houses or other available shelter. All TCPs must remain hard down unless they feel their life is in danger, at which time they will leave the vehicle barriers in place, proceed to a pre-determined launch shelter, and notify the LOS upon arrival.",
       "ref": "EXPLAIN LAUNCH OPERATIONS GENERAL INFORMATION - 45 SFS OI 31-1 V3 Chap 4 Para 4.2.1-4.4.2",
@@ -193,6 +217,7 @@
       "asked": 0
     },
     {
+      "id": 25,
       "question": "What document is utilized to aid in the purge of the FCA/BDA?",
       "answer": "Man-load list",
       "ref": "EXPLAIN/PERFORM LAUNCH CLEARING OFFICER DUTIES - 45 SFS OI 31-1 V3 Chap 4 Para 4.1.3-4.1.3.5",
@@ -201,6 +226,7 @@
       "asked": 0
     },
     {
+      "id": 26,
       "question": "Flight personnel are only authorized to issue AF IMT Form 75s for what period of time?",
       "answer": "72 hours",
       "ref": "EXPLAIN TEMPORARY PASSES - 45 SFS OI 31-1 V3 Chap 9 Para 9.3-9.3.3",
@@ -209,6 +235,7 @@
       "asked": 0
     },
     {
+      "id": 27,
       "question": "The term ______ will be used when an individual deliberately drives past the IEC without being properly vetted.",
       "answer": "gate runner",
       "ref": "EXPLAIN/PERFORM TURN AROUND/GATE RUNNER PROCEDURES - 45 SFS OI 31-1 V3 Chap 9 Para 9.5-9.5.5.9",
@@ -217,6 +244,7 @@
       "asked": 0
     },
     {
+      "id": 28,
       "question": "The deployment of the Stinger Spike System must be authorized by whom?",
       "answer": "Flight Sergeant",
       "ref": "EXPLAIN/PERFORM TURN AROUND/GATE RUNNER PROCEDURES - 45 SFS OI 31-1 V3 Chap 9 Para 9.5-9.5.5.9",
@@ -225,6 +253,7 @@
       "asked": 0
     },
     {
+      "id": 29,
       "question": "Civil Disturbances - Describe PHASE ONE: Periods of Increased Tension.",
       "answer": "The type of incidents which mark this phase may appear in the form of increased tension in living, dining and work areas.",
       "ref": "EXPLAIN/PERFORM RESPONSE TO CIVIL DISTURBANCES - 45 SW IDP 31-1 Annex H Appendix 1",
@@ -233,6 +262,7 @@
       "asked": 0
     },
     {
+      "id": 30,
       "question": "Civil Disturbances - Describe PHASE TWO: Scattered minor incidents of violence.",
       "answer": "Includes incidents of harassment between individual members of opposing groups.",
       "ref": "EXPLAIN/PERFORM RESPONSE TO CIVIL DISTURBANCES - 45 SW IDP 31-1 Annex H Appendix 1",
@@ -241,6 +271,7 @@
       "asked": 0
     },
     {
+      "id": 31,
       "question": "Civil Disturbances - Describe PHASE THREE: Group Oriented Violence.",
       "answer": "This phase is characterized by roaming assaults on lone individuals and/or fights with opposing groups, or assembly of personnel at base entry points.",
       "ref": "EXPLAIN/PERFORM RESPONSE TO CIVIL DISTURBANCES - 45 SW IDP 31-1 Annex H Appendix 1",
@@ -249,6 +280,7 @@
       "asked": 0
     },
     {
+      "id": 32,
       "question": "Civil Disturbances - Describe PHASE FOUR: Full Riot Phase.",
       "answer": "This phase is characterized by large-scale destruction of property, total defiance of authority, open mob activity, and breaches of peace which result in serious injury/death of innocent people.",
       "ref": "EXPLAIN/PERFORM RESPONSE TO CIVIL DISTURBANCES - 45 SW IDP 31-1 Annex H Appendix 1",
@@ -257,6 +289,7 @@
       "asked": 0
     },
     {
+      "id": 33,
       "question": "Where is the primary Secure Hold area for explosive on CCSFS?",
       "answer": "Within MSA #2",
       "ref": "EXPLAIN/PERFORM DEPARTMENT OF ENERGY SAFE HAVEN PROCEDURES - 45 SWI 24-602-O Chap 5.1 Para 5.1.1-5.5.4",
@@ -265,6 +298,7 @@
       "asked": 0
     },
     {
+      "id": 34,
       "question": "DoD Installations must provide Safe Haven for AA&E shipments during emergency conditions. What areas are designated for Safe Haven at PSFB and CCSFS?",
       "answer": "PSFB - Hot Cargo Pad (HCP) #1 & CCSFS - MSA #2",
       "ref": "EXPLAIN/PERFORM DEPARTMENT OF ENERGY SAFE HAVEN PROCEDURES - 45 SWI 24-602-O Chap 5.1 Para 5.1.1-5.5.4",
@@ -273,6 +307,7 @@
       "asked": 0
     },
     {
+      "id": 35,
       "question": "Where should the Access Control Point (ACP) be established along the cordon of a hazardous incident?",
       "answer": "The ACP is established upwind or crosswind of the incident site and at the established evacuation distance.",
       "ref": "EXPLAIN/PERFORM ALARM RESPONSE - SFTRG 2v4 Chap 4. Chap 5. Chap 6.",
@@ -281,6 +316,7 @@
       "asked": 0
     },
     {
+      "id": 36,
       "question": "Who will assume initial IC (incident Command) for law and order and security related responses.",
       "answer": "The Senior SF Member",
       "ref": "EXPLAIN/PERFORM ALARM RESPONSE - SFTRG 2v4 Chap 4. Chap 5. Chap 6.",
@@ -289,6 +325,7 @@
       "asked": 0
     },
     {
+      "id": 37,
       "question": "Who determines the size of an initial cordon?",
       "answer": "Incident Commander",
       "ref": "EXPLAIN/PERFORM ALARM RESPONSE - SFTRG 2v4 Chap 4. Chap 5. Chap 6.",
@@ -297,6 +334,7 @@
       "asked": 0
     },
     {
+      "id": 38,
       "question": "Define the CCSFS North Sector",
       "answer": "From Traffic Control Point (TCP) 25N to the east on Phillips Parkway through Complex 34 to the beach, north along the beach to the north boundary, west to incorporate the entire ITL area, the entire Complex 41 area and support buildings, south along ITL road back to TCP 25 N and all areas in between.",
       "ref": "EXPLAIN SECURITY FORCE INSTALLATION PATROLLING AND SECTOR PRIORITIZATION - 45 SW IDP 31-1 Annex C Appendix 3",
@@ -305,6 +343,7 @@
       "asked": 0
     },
     {
+      "id": 39,
       "question": "Define the CCSFS Industrial Sector.",
       "answer": "From TCP 25 N east on Phillips Parkway through Complex 34 to the beach, then south along the beach to Camera Road A, west to Pier Road, then south to TCP 7 along Flight Control Road, (not to include NAVSTAR Processing Complex (NPC) area), to Phillips Parkway to TCP 10, west to the Indian River and all areas in between.",
       "ref": "EXPLAIN SECURITY FORCE INSTALLATION PATROLLING AND SECTOR PRIORITIZATION - 45 SW IDP 31-1 Annex C Appendix 3",
@@ -313,6 +352,7 @@
       "asked": 0
     },
     {
+      "id": 40,
       "question": "Define the CCSFS South Sector.",
       "answer": "North boundary of the South Sector is east from the Banana River to TCP 10 at Phillips Parkway, south to Flight Control Road to the east to TCP 7 (to include the NPC area), north to Camera Road A east to the beach, south along the beach to include the entire Navy Port Area, Pass and ID and Deas Gate, from Deas Gate to the north of the Banana River along the shoreline",
       "ref": "EXPLAIN SECURITY FORCE INSTALLATION PATROLLING AND SECTOR PRIORITIZATION - 45 SW IDP 31-1 Annex C Appendix 3",
@@ -321,6 +361,7 @@
       "asked": 0
     },
     {
+      "id": 41,
       "question": "Define PSFB Zone A.",
       "answer": "Zone A is from the stone fence perimeter separating north housing and the suburb of Cocoa Beach, south to the Fire Dept., west to the west side of runway 03/21, southwest to the Banana River south of Famcamp, north along the shoreline to the stone fence. This zone includes the Chevron Park, 750 Ramp, DEOMI, and North Housing and is known as the industrial area.",
       "ref": "EXPLAIN SECURITY FORCE INSTALLATION PATROLLING AND SECTOR PRIORITIZATION - 45 SW IDP 31-1 Annex C Appendix 3",
@@ -329,6 +370,7 @@
       "asked": 0
     },
     {
+      "id": 42,
       "question": "Define PSFB Zone B",
       "answer": "Zone B is from the Fire Department south to the stone wall at the corner of A1A and Pineda Causeway, west to the end of the marina, north up the shoreline to the south of Famcamp, northeast to west of runway 03/21, east to the Fire Department. This includes south gate, central housing, Air Force Technical Application Center",
       "ref": "EXPLAIN SECURITY FORCE INSTALLATION PATROLLING AND SECTOR PRIORITIZATION - 45 SW IDP 31-1 Annex C Appendix 3",
@@ -337,6 +379,7 @@
       "asked": 0
     },
     {
+      "id": 43,
       "question": "Define PSFB Zone C",
       "answer": "Zone C is from the north end of the beach access areas east of the stone fence perimeter separating north housing and the suburb of Cocoa Beach, south to Pineda Beach. This zone also encompasses the Tides Collocated Club and Pelican Coast, south housing area. The Landings at Patrick, which includes the Chapel, Shark Center, Youth Center and ball fields and is bounded by a wall on the north separating the housing area from South Patrick Shores, SR A1A on the east side, the wall on the south side near Satellite High School, and by South Patrick Drive.",
       "ref": "EXPLAIN SECURITY FORCE INSTALLATION PATROLLING AND SECTOR PRIORITIZATION - 45 SW IDP 31-1 Annex C Appendix 3",
@@ -345,6 +388,7 @@
       "asked": 0
     },
     {
+      "id": 44,
       "question": "Define a major traffic accident.",
       "answer": "A major traffic accident is any accident involving a fatality, injury or property damage above the amount established by installation commanders.",
       "ref": "EXPLAIN/PERFORM TRAFFIC ACCIDENT INVESTIGATION - SFTRG 2v4 Chap 29",
@@ -353,6 +397,7 @@
       "asked": 0
     },
     {
+      "id": 45,
       "question": "Workplace Violence Type 1 is defined as __________",
       "answer": "A violent act by criminals who have no other connection with the workplace, but to commit robbery or another crime.",
       "ref": "EXPLAIN/PERFORM WORKPLACE/SCHOOL/CHILD DEVELOPMENT CENTER VIOLENCE RESPONSE - 45 SW IDP 31-1 Annex H Appendix 10",
@@ -361,6 +406,7 @@
       "asked": 0
     },
     {
+      "id": 46,
       "question": "Workplace Violence Type 2 is defined as __________",
       "answer": "Violence is directed at employees by customers, clients, patients, students, inmates, or any others for whom an organization provides services.",
       "ref": "EXPLAIN/PERFORM WORKPLACE/SCHOOL/CHILD DEVELOPMENT CENTER VIOLENCE RESPONSE - 45 SW IDP 31-1 Annex H Appendix 10",
@@ -369,6 +415,7 @@
       "asked": 0
     },
     {
+      "id": 47,
       "question": "Workplace Violence Type 3 is defined as __________",
       "answer": "Violence against coworkers, supervisors, or managers by a present or former employee.",
       "ref": "EXPLAIN/PERFORM WORKPLACE/SCHOOL/CHILD DEVELOPMENT CENTER VIOLENCE RESPONSE - 45 SW IDP 31-1 Annex H Appendix 10",
@@ -377,6 +424,7 @@
       "asked": 0
     },
     {
+      "id": 48,
       "question": "Workplace Violence Type 4 is defined as __________",
       "answer": "Violence is committed in the workplace by someone who doesn't work there, but has a personal relationship with an employee, an abusive spouse, or domestic partner.",
       "ref": "EXPLAIN/PERFORM WORKPLACE/SCHOOL/CHILD DEVELOPMENT CENTER VIOLENCE RESPONSE - 45 SW IDP 31-1 Annex H Appendix 10",
@@ -385,6 +433,7 @@
       "asked": 0
     },
     {
+      "id": 49,
       "question": "If the DD Form 1408 or CVB 1805 contain administrative errors, SFS/S3 has how long to take corrective action?",
       "answer": "72 hrs.",
       "ref": "EXPLAIN TICKET ADMINISTRATION - 45 SFS OI 31-1 V5 Chap 1 Para 1.1-1.3.4",
@@ -393,6 +442,7 @@
       "asked": 0
     },
     {
+      "id": 50,
       "question": "Roadblocks must provide the suspect the opportunity to stop. Roadblocks will not be established where?",
       "answer": "Curves, bridges, or areas where visibility of the roadblock is hindered.",
       "ref": "EXPLAIN/PERFORM ROADBLOCK PROCEDURES - 45 SFS OI 31-1 V3 Chap 9 Para 9.5.5.",
@@ -401,6 +451,7 @@
       "asked": 0
     },
     {
+      "id": 51,
       "question": "The Stinger Spike system will only be deployed in areas that afford the deploying officer what?",
       "answer": "a protected position",
       "ref": "EXPLAIN/PERFORM STINGER SPIKE SYSTEM PROCEDURES - 45 SFS OI 31-1 V3 Chap 9 Para 9.5.4.",
@@ -409,6 +460,7 @@
       "asked": 0
     },
     {
+      "id": 52,
       "question": "How is the duress activated utilizing a RA card reader?",
       "answer": "When using card readers, adding one number to the Personal Identification Number (PIN) will automatically signal a duress situation to the BDOC.",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -417,6 +469,7 @@
       "asked": 0
     },
     {
+      "id": 53,
       "question": "RA duress codes are valid for how long?",
       "answer": "Six months, unless compromised",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -425,6 +478,7 @@
       "asked": 0
     },
     {
+      "id": 54,
       "question": "What is the maximum response time to the NAOC when notified by BDOC?",
       "answer": "10 minutes",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -433,6 +487,7 @@
       "asked": 0
     },
     {
+      "id": 55,
       "question": "What is the area designator on the RAB for Skid Strip (when posted)",
       "answer": "25",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -441,6 +496,7 @@
       "asked": 0
     },
     {
+      "id": 56,
       "question": "At a minimum conduct the following actions during a post check:",
       "answer": "Defenders report their post, ask duty related questions, inspect for cleanliness and required equipment, check health and welfare of defender, end post check.",
       "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 14",
@@ -449,6 +505,7 @@
       "asked": 0
     },
     {
+      "id": 57,
       "question": "What Act/Law prevents Air Force personnel from executing the laws of the states or the laws of the U.S. except when acting under the authority of the U.S. Constitution, an Act of Congress or under the direction of the President of the United States.",
       "answer": "The Posse Comitatus Act",
       "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 51 Posse Comitatus Act",
@@ -457,6 +514,7 @@
       "asked": 0
     },
     {
+      "id": 58,
       "question": "Define the term 'Hearsay.'",
       "answer": "'Hearsay' is a statement, other than the one made by the declarant while testifying at the trial or hearing, offered in evidence to prove the truth of the matter asserted.",
       "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 54 RULES OF EVIDENCE.",
@@ -465,6 +523,7 @@
       "asked": 0
     },
     {
+      "id": 59,
       "question": "Define the term 'declarant.'",
       "answer": "A 'declarant' is a person who makes a statement.",
       "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 54 RULES OF EVIDENCE.",
@@ -473,6 +532,7 @@
       "asked": 0
     },
     {
+      "id": 60,
       "question": "Define the term 'search.'",
       "answer": "A search is an examination of a person, property or premises to uncover evidence of a crime or criminal intent, such as stolen goods, burglary tools and weapons.",
       "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 54",
@@ -481,6 +541,7 @@
       "asked": 0
     },
     {
+      "id": 61,
       "question": "Define the term 'statement.'",
       "answer": "A 'statement' is (1) an oral or written assertion or (2) nonverbal conduct of a person, if it is intended by the person as an assertion.",
       "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 54 RULES OF EVIDENCE.",
@@ -489,6 +550,7 @@
       "asked": 0
     },
     {
+      "id": 62,
       "question": "Define the term 'Protective Frisk.'",
       "answer": "A Defender may perform a protective frisk during a lawful stop when the member reasonably believes a person is armed and presently dangerous to the member or others.",
       "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 54 RULES OF EVIDENCE.",

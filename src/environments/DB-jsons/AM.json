@@ -1,6 +1,7 @@
 {
   "AM": [
     {
+      "id": 1,
       "question": "Define the term 'Code 12'",
       "answer": "Duress - Refers to any duress situation.",
       "ref": "EXPLAIN CODES FOR RADIO COMMUNICATIONS - 45 SFS OI 31-1 V3 Chap 2 Para 2.9",
@@ -9,6 +10,7 @@
       "asked": 0
     },
     {
+      "id": 2,
       "question": "Define the term 'Code 16'",
       "answer": "Alarm Activation - Used to initiate an alarm activation.",
       "ref": "EXPLAIN CODES FOR RADIO COMMUNICATIONS - 45 SFS OI 31-1 V3 Chap 2 Para 2.9",
@@ -17,6 +19,7 @@
       "asked": 0
     },
     {
+      "id": 3,
       "question": "Define an Active Duress",
       "answer": "Active duress may be indicated by the use of electronic duress alarms to covertly advise another location/unit of a duress situation. Without alerting the person(s) causing the duress, that the alarm has been sounded. Other examples of active duress indicators include the passing of the wing duress word or failing to properly authenticate via the authentication code.",
       "ref": "EXPLAIN DURESS PROCEDURES - 45 SFS OI 31-1 V3 Chap 2 Para 2.10",
@@ -25,6 +28,7 @@
       "asked": 0
     },
     {
+      "id": 4,
       "question": "Define a Passive Duress",
       "answer": "Passive Duress. Passive duress is three consecutive failures to respond to your radio call sign.",
       "ref": "EXPLAIN DURESS PROCEDURES - 45 SFS OI 31-1 V3 Chap 2 Para 2.10",
@@ -33,6 +37,7 @@
       "asked": 0
     },
     {
+      "id": 5,
       "question": "How is the duress activated utilizing a RA card reader?",
       "answer": "When using card readers, adding one number to the Personal Identification Number (PIN) will automatically signal a duress situation to the BDOC.",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -41,6 +46,7 @@
       "asked": 0
     },
     {
+      "id": 6,
       "question": "What integrated systems form the CCAFS Electronic Security System?",
       "answer": "Intrusion Detection System, Automated Entry Control System, and Closed Circuit Television System",
       "ref": "EXPLAIN SPECIFIC SYSTEM INFORMATION AND FUNCTIONS - CCAFS ESS Training Plan",
@@ -49,6 +55,7 @@
       "asked": 0
     },
     {
+      "id": 7,
       "question": "Who recommends an individual for the critical duty position of an alarm monitor?",
       "answer": "The individual's supervisor or flight chief",
       "ref": "EXPLAIN SPECIFIC SYSTEM INFORMATION AND FUNCTIONS - CCAFS ESS Training Plan",
@@ -57,6 +64,7 @@
       "asked": 0
     },
     {
+      "id": 8,
       "question": "What should be used to assist alarm monitors and flight leaders in resolving an array of different scenarios and some unique technical situations?",
       "answer": "Quick Reaction Checklist",
       "ref": "EXPLAIN SPECIFIC SYSTEM INFORMATION AND FUNCTIONS - CCAFS ESS Training Plan",
@@ -65,6 +73,7 @@
       "asked": 0
     },
     {
+      "id": 9,
       "question": "Who is authorized to conduct no-notice evaluations on alarm monitors and how often are they conducted?",
       "answer": "Members from Stan-Eval; quarterly",
       "ref": "EXPLAIN SPECIFIC SYSTEM INFORMATION AND FUNCTIONS - CCAFS ESS Training Plan",
@@ -73,6 +82,7 @@
       "asked": 0
     },
     {
+      "id": 10,
       "question": "_________ is a fence mounted sensor system designed to detect intruders attempting to enter a protected area by cutting, climbing or lifting the fence fabric?",
       "answer": "FOIDS",
       "ref": "EXPLAIN TYPES OF SENSORS - CCAFS ESS Training Plan",
@@ -81,6 +91,7 @@
       "asked": 0
     },
     {
+      "id": 11,
       "question": "This sensor is temporarily disabled when someone with valid access enters and area through adoor utilizing the Automated Entry Control System.",
       "answer": "BMS",
       "ref": "EXPLAIN TYPES OF SENSORS - CCAFS ESS Training Plan",
@@ -89,6 +100,7 @@
       "asked": 0
     },
     {
+      "id": 12,
       "question": "What sensors require both a transmitter and a receiver to operate and require 98.5% of asingle beam to be broken before it will alarm?",
       "answer": "IPIDS",
       "ref": "EXPLAIN TYPES OF SENSORS - CCAFS ESS Training Plan",
@@ -97,6 +109,7 @@
       "asked": 0
     },
     {
+      "id": 13,
       "question": "Where are proximity card readers mounted?",
       "answer": "Near doors, turnstiles and vehicle gates",
       "ref": "EXPLAIN TYPES OF SENSORS - CCAFS ESS Training Plan",
@@ -105,6 +118,7 @@
       "asked": 0
     },
     {
+      "id": 14,
       "question": "How many entry attempts are individual(s) authorized before an alarm is generated and apossible security incident is initiated?",
       "answer": "Three",
       "ref": "EXPLAIN TYPES OF SENSORS - CCAFS ESS Training Plan",
@@ -113,6 +127,7 @@
       "asked": 0
     },
     {
+      "id": 15,
       "question": "What are some examples of possible causes of a “Max Retries” alarm?",
       "answer": "1) If an individual's AECC was improperly encoded into the security system 2) If the portalis not in the proper state to allow access i.e. the portal was locked/unlocked by the systemoperator 3) The individual failed to enter their correct PIN 4) The individual entered theirDuress PIN.",
       "ref": "EXPLAIN TYPES OF SENSORS - CCAFS ESS Training Plan",
@@ -121,6 +136,7 @@
       "asked": 0
     },
     {
+      "id": 16,
       "question": "What system is used by alarm monitors to immediately assess alarm activations at PL 2 resources?",
       "answer": "CCTV",
       "ref": "EXPLAIN/PERFORM CAMERA OPERATING PROCEDURES - CCAFS ESS Training Plan",
@@ -129,6 +145,7 @@
       "asked": 0
     },
     {
+      "id": 17,
       "question": "If the alarm monitor is not able to assess an alarm immediately what actions must be taken?",
       "answer": "Dispatch a patrol to assess the alarm",
       "ref": "EXPLAIN/PERFORM CAMERA OPERATING PROCEDURES - CCAFS ESS Training Plan",
@@ -137,6 +154,7 @@
       "asked": 0
     },
     {
+      "id": 18,
       "question": "What is considered an actual alarm?",
       "answer": "An alarm caused by an influence the sensor was designed to detect that is directly related toan intrusion.",
       "ref": "EXPLAIN SPECIFIC SYSTEM INFORMATION AND FUNCTIONS - CCAFS ESS Training Plan",
@@ -145,6 +163,7 @@
       "asked": 0
     },
     {
+      "id": 19,
       "question": "What is the definition of a Partial Failure?",
       "answer": "An intruder can cross only one sensor providing a detection capability without beingdetected, at areas where two or more sensors form a line of detection at the boundary or aportion of the facility or individual resource IDS (a line of detection for PL 1 resources) fails.",
       "ref": "EXPLAIN/PERFORM ALARM FAILURES - CCAFS ESS Training Plan",
@@ -153,6 +172,7 @@
       "asked": 0
     },
     {
+      "id": 20,
       "question": "What is the definition of a Major Malfunction?",
       "answer": "An intruder can penetrate a restricted area boundary without crossing a line of detection, afacility or individual resource IDS component failure that would allow an intruder to gainaccess to a resource without crossing a line of detection or detection capability, or either theprimary or alternate, if required, annunciator equipment fails (becomes inoperable).",
       "ref": "EXPLAIN/PERFORM ALARM FAILURES - CCAFS ESS Training Plan",
@@ -161,6 +181,7 @@
       "asked": 0
     },
     {
+      "id": 21,
       "question": "What is the definition of a Catastrophic Failure?",
       "answer": "The entire system or a major portion of it is inoperative",
       "ref": "EXPLAIN/PERFORM ALARM FAILURES - CCAFS ESS Training Plan",
@@ -169,6 +190,7 @@
       "asked": 0
     },
     {
+      "id": 22,
       "question": "What priority are all catastrophic failures assigned?",
       "answer": "One",
       "ref": "EXPLAIN/PERFORM ALARM FAILURES - CCAFS ESS Training Plan",
@@ -177,6 +199,7 @@
       "asked": 0
     },
     {
+      "id": 23,
       "question": "How many hours are maintenance personnel authorized to respond to a Priority 2 trouble ticket for the MOC",
       "answer": "One hour",
       "ref": "EXPLAIN/PERFORM ALARM FAILURES - CCAFS ESS Training Plan",
@@ -185,6 +208,7 @@
       "asked": 0
     },
     {
+      "id": 24,
       "question": "Who is ultimately responsible to ensure posted personnel are aware of their assigned duties?",
       "answer": "On-duty flight chief",
       "ref": "EXPLAIN/PERFORM ALARM FAILURES - CCAFS ESS Training Plan",
@@ -193,6 +217,7 @@
       "asked": 0
     },
     {
+      "id": 25,
       "question": "What will you follow to be in accordance with your daily sensor test?",
       "answer": "Daily Sensor Matrix",
       "ref": "EXPLAIN/PERFORM ALARM FAILURES - CCAFS ESS Training Plan",
@@ -201,6 +226,7 @@
       "asked": 0
     },
     {
+      "id": 26,
       "question": "Using a _______ tap the fence a maximum of ______ times during a FOID sensor test?",
       "answer": "Screwdriver a maximum of five times",
       "ref": "EXPLAIN/PERFORM ALARM FAILURES - CCAFS ESS Training Plan",
@@ -209,6 +235,7 @@
       "asked": 0
     },
     {
+      "id": 27,
       "question": "Who conducts Quarterly inspections of ESS protected areas?",
       "answer": "ESS personnel along with maintenance",
       "ref": "EXPLAIN/PERFORM ALARM FAILURES - CCAFS ESS Training Plan",
@@ -217,6 +244,7 @@
       "asked": 0
     },
     {
+      "id": 28,
       "question": "How many sensors need to be tested before quarterly inspection are complete?",
       "answer": "ALL",
       "ref": "EXPLAIN/PERFORM ALARM FAILURES - CCAFS ESS Training Plan",
@@ -225,6 +253,7 @@
       "asked": 0
     },
     {
+      "id": 29,
       "question": "How many intrusion attempts must be accomplished per avenue of approach per zone?",
       "answer": "Three",
       "ref": "EXPLAIN/PERFORM ALARM FAILURES - CCAFS ESS Training Plan",
@@ -233,6 +262,7 @@
       "asked": 0
     },
     {
+      "id": 30,
       "question": "What will all quarterly inspections be annotated on?",
       "answer": "CCAFS Form 75",
       "ref": "EXPLAIN/PERFORM ALARM FAILURES - CCAFS ESS Training Plan",
@@ -241,6 +271,7 @@
       "asked": 0
     },
     {
+      "id": 31,
       "question": "Why is adversarial testing done?",
       "answer": "Detects possible vulnerability and mitigates any system vulnerabilities",
       "ref": "EXPLAIN/PERFORM ALARM FAILURES - CCAFS ESS Training Plan",
@@ -249,6 +280,7 @@
       "asked": 0
     },
     {
+      "id": 32,
       "question": "Who, along with maintenance personnel, is in charge of conducting test after IDS has been repaired?",
       "answer": "Security Forces",
       "ref": "EXPLAIN/PERFORM ALARM FAILURES - CCAFS ESS Training Plan",
@@ -257,6 +289,7 @@
       "asked": 0
     },
     {
+      "id": 34,
       "question": "How many phases are required in order to certify new IDS?",
       "answer": "Three",
       "ref": "EXPLAIN/PERFORM ALARM FAILURES - CCAFS ESS Training Plan",
@@ -265,6 +298,7 @@
       "asked": 0
     },
     {
+      "id": 35,
       "question": "How many days are involved in Phase 3 testing?",
       "answer": "30",
       "ref": "EXPLAIN/PERFORM ALARM FAILURES - CCAFS ESS Training Plan",
@@ -273,6 +307,7 @@
       "asked": 0
     },
     {
+      "id": 36,
       "question": "True or False: Alarm Monitors are authorized to share log on information to the Vindicator ACS?",
       "answer": "Flase",
       "ref": "EXPLAIN/PERFORM LOGGING ON AND OFF OF THE VINDICATOR 5 SYSTEM - CCAFS ESS Training Plan",
@@ -281,6 +316,7 @@
       "asked": 0
     },
     {
+      "id": 37,
       "question": "What type of IDS is used at CCAFS and how many systems are there?",
       "answer": "V5. There are two, one for PL 1-3 and the other monitors PL-4/Non-PL resources",
       "ref": "EXPLAIN SPECIFIC SYSTEM INFORMATION AND FUNCTIONS - CCAFS ESS Training Plan",
@@ -289,6 +325,7 @@
       "asked": 0
     },
     {
+      "id": 38,
       "question": "The Vindicator uses five different colors to display the current state of alarms. What does RED mean?",
       "answer": "Red: Unacknowledged (flashing red) or acknowledged (flashing red) alarm",
       "ref": "EXPLAIN TYPES OF ALARMS AND ALARM COLORS - CCAFS ESS Training Plan",
@@ -297,6 +334,7 @@
       "asked": 0
     },
     {
+      "id": 39,
       "question": "How do you acknowledge an alarm on the V-5?",
       "answer": "Acknowledge the alarm by clicking 'Acknowledge'.",
       "ref": "EXPLAIN/PERFORM LOGGING AND TAGGING - CCAFS ESS Training Plan",
@@ -305,6 +343,7 @@
       "asked": 0
     },
     {
+      "id": 40,
       "question": "After you acknowledge the alarm and determine the cause what should you do?",
       "answer": "Tag the alarm",
       "ref": "EXPLAIN/PERFORM LOGGING AND TAGGING - CCAFS ESS Training Plan",
@@ -313,6 +352,7 @@
       "asked": 0
     },
     {
+      "id": 41,
       "question": "What symbol alerts the operator an alarm, which has not been secured, is alarming again?",
       "answer": "An asterisk next to the event",
       "ref": "EXPLAIN/PERFORM LOGGING AND TAGGING - CCAFS ESS Training Plan",
@@ -321,6 +361,7 @@
       "asked": 0
     },
     {
+      "id": 42,
       "question": "What are the minimum requirements to conduct a proper changeover?",
       "answer": "Pass on status of equipment, work orders, conduct a status check of all systems, and recordthe information in the SF Blotter.",
       "ref": "EXPLAIN/DEMONSTRATE ALARM MONITOR CHANGEOVER PROCEDURES - CCAFS ESS Training Plan",
@@ -329,6 +370,7 @@
       "asked": 0
     },
     {
+      "id": 43,
       "question": "True or False: Alarm Monitors are authorized to give an authorized individual the alarmcode over the phone?",
       "answer": "False",
       "ref": "EXPLAIN/PERFORM AUTHENTICATION - CCAFS ESS Training Plan",
@@ -337,6 +379,7 @@
       "asked": 0
     },
     {
+      "id": 44,
       "question": "Who should you notify immediately of a second mis-authentication?",
       "answer": "BDOC",
       "ref": "EXPLAIN/PERFORM AUTHENTICATION - CCAFS ESS Training Plan",
@@ -345,6 +388,7 @@
       "asked": 0
     },
     {
+      "id": 45,
       "question": "What forms are used to document sensor testing?",
       "answer": "EXPLAIN/PERFORM LOGGING AND TAGGING - CCAFS ESS Training Plan",
       "ref": "CCAFS 75 and the Blotter",
@@ -353,6 +397,7 @@
       "asked": 0
     },
     {
+      "id": 46,
       "question": "What form is used to document opening and closing of facilities?",
       "answer": "SF 95",
       "ref": "EXPLAIN/PERFORM AUTHENTICATION - CCAFS ESS Training Plan",
@@ -361,6 +406,7 @@
       "asked": 0
     },
     {
+      "id": 47,
       "question": "Which event is a higher response priority? Individual resource or facility intrusion alarms or Individual resource or facility tamper alarms",
       "answer": "Individual resource or facility intrusion alarms",
       "ref": "EXPLAIN/DEMONSTRATE ALARM EVENT PRIORTY - CCAFS ESS Training Plan",
@@ -369,6 +415,7 @@
       "asked": 0
     },
     {
+      "id": 48,
       "question": "Which event is a higher response priority? Boundary intrusion alarms or Individual resource or duress alarms?",
       "answer": "Boundary intrusion alarms",
       "ref": "EXPLAIN/DEMONSTRATE ALARM EVENT PRIORTY - CCAFS ESS Training Plan",
@@ -377,6 +424,7 @@
       "asked": 0
     },
     {
+      "id": 49,
       "question": "Which event is a higher response priority? Boundary tamper alarms or AECS alarms?",
       "answer": "Boundary tamper alarms",
       "ref": "EXPLAIN/DEMONSTRATE ALARM EVENT PRIORTY - CCAFS ESS Training Plan",
@@ -385,6 +433,7 @@
       "asked": 0
     },
     {
+      "id": 50,
       "question": "The Vindicator uses five different colors to display the current state of alarms. What does GREEN mean?",
       "answer": "Green: Secure pending or alarm point has been secured",
       "ref": "EXPLAIN/DEMONSTRATE ALARM EVENT PRIORTY - CCAFS ESS Training Plan",
@@ -393,6 +442,7 @@
       "asked": 0
     },
     {
+      "id": 51,
       "question": "The Vindicator uses five different colors to display the current state of alarms. What does YELLOW mean?",
       "answer": "Yellow: Access pending or alarm point in access",
       "ref": "EXPLAIN/DEMONSTRATE ALARM EVENT PRIORTY - CCAFS ESS Training Plan",
@@ -401,6 +451,7 @@
       "asked": 0
     },
     {
+      "id": 52,
       "question": "The Vindicator uses five different colors to display the current state of alarms. What does MAGENTA mean?",
       "answer": "Magenta: Unacknowledged or acknowledged Tamper",
       "ref": "EXPLAIN/DEMONSTRATE ALARM EVENT PRIORTY - CCAFS ESS Training Plan",
@@ -409,6 +460,7 @@
       "asked": 0
     },
     {
+      "id": 53,
       "question": "The Vindicator uses five different colors to display the current state of alarms. What does BLUE mean?",
       "answer": "Unacknowledged or acknowledged trouble, communications failure or test failure",
       "ref": "EXPLAIN/DEMONSTRATE ALARM EVENT PRIORTY - CCAFS ESS Training Plan",

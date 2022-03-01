@@ -1,6 +1,7 @@
 {
   "RFM": [
     {
+      "id": 1,
       "question": "Define the term 'Code 4'",
       "answer": "Request Wants and Warrants - Used to obtain a background check on a specific person or vehicle.",
       "ref": "EXPLAIN CODES FOR RADIO COMMUNICATIONS - 45 SFS OI 31-1 V3 Chap 2 Para 2.9",
@@ -9,6 +10,7 @@
       "asked": 0
     },
     {
+      "id": 2,
       "question": "Define the term 'Code 9'",
       "answer": "Switch Frequencies - Used to direct the switching of radio frequencies.",
       "ref": "EXPLAIN CODES FOR RADIO COMMUNICATIONS - 45 SFS OI 31-1 V3 Chap 2 Para 2.9",
@@ -17,6 +19,7 @@
       "asked": 0
     },
     {
+      "id": 3,
       "question": "Define the term 'Code 12'",
       "answer": "Duress - Refers to any duress situation.",
       "ref": "EXPLAIN CODES FOR RADIO COMMUNICATIONS - 45 SFS OI 31-1 V3 Chap 2 Para 2.9",
@@ -25,6 +28,7 @@
       "asked": 0
     },
     {
+      "id": 4,
       "question": "Define the term 'Code 16'",
       "answer": "Alarm Activation - Used to initiate an alarm activation.",
       "ref": "EXPLAIN CODES FOR RADIO COMMUNICATIONS - 45 SFS OI 31-1 V3 Chap 2 Para 2.9",
@@ -33,6 +37,7 @@
       "asked": 0
     },
     {
+      "id": 5,
       "question": "Define an Active Duress",
       "answer": "Active duress may be indicated by the use of electronic duress alarms to covertly advise another location/unit of a duress situation. Without alerting the person(s) causing the duress, that the alarm has been sounded. Other examples of active duress indicators include the passing of the wing duress word or failing to properly authenticate via the authentication code.",
       "ref": "EXPLAIN DURESS PROCEDURES - 45 SFS OI 31-1 V3 Chap 2 Para 2.10",
@@ -41,6 +46,7 @@
       "asked": 0
     },
     {
+      "id": 6,
       "question": "Define a Passive Duress",
       "answer": "Passive Duress. Passive duress is three consecutive failures to respond to your radio call sign.",
       "ref": "EXPLAIN DURESS PROCEDURES - 45 SFS OI 31-1 V3 Chap 2 Para 2.10",
@@ -49,6 +55,7 @@
       "asked": 0
     },
     {
+      "id": 7,
       "question": "Where does the CCSFS BDOC duress alarm annunciate?",
       "answer": "XY Facility",
       "ref": "EXPLAIN DURESS PROCEDURES - 45 SFS OI 31-1 V3 Chap 2 Para 2.10",
@@ -57,6 +64,7 @@
       "asked": 0
     },
     {
+      "id": 8,
       "question": "Where does the PSFB ECC duress alarm annunciate?",
       "answer": "PSFB Command Post",
       "ref": "EXPLAIN DURESS PROCEDURES - 45 SFS OI 31-1 V3 Chap 2 Para 2.10",
@@ -65,6 +73,7 @@
       "asked": 0
     },
     {
+      "id": 9,
       "question": "What is the alternate channel used when notified of a Code 9?",
       "answer": "A Net - Channel 3",
       "ref": "EXPLAIN DURESS PROCEDURES - 45 SFS OI 31-1 V3 Chap 2 Para 2.10",
@@ -73,6 +82,7 @@
       "asked": 0
     },
     {
+      "id": 10,
       "question": "What form is utilized to assist in capturing vital information during a telephone bomb threat?",
       "answer": "AF Form 440, Bomb Threat Aid",
       "ref": "EXPLAIN/PERFORM BOMB THREAT/SUSPICIOUS PACKAGE PROCEDURES - 45 SW IDP 31-1 Annex H Appendix 6",
@@ -81,6 +91,7 @@
       "asked": 0
     },
     {
+      "id": 11,
       "question": "Bomb Threat: Ensure radio transmissions are not made within _______ (distance) of the affected area.",
       "answer": "50 feet",
       "ref": "EXPLAIN/PERFORM BOMB THREAT/SUSPICIOUS PACKAGE PROCEDURES - 45 SW IDP 31-1 Annex H Appendix 6",
@@ -89,6 +100,7 @@
       "asked": 0
     },
     {
+      "id": 12,
       "question": "Active Shooter - Phase 1",
       "answer": "Neutralize the threat(s)",
       "ref": "EXPLAIN/PERFORM ACTIVE SHOOTER RESPONSE - 45 SFS OI 31-1 V3 Chap 13 Para 13.1-Para 13.7.2",
@@ -97,6 +109,7 @@
       "asked": 0
     },
     {
+      "id": 13,
       "question": "Define the term 'Covered Wagon'",
       "answer": "COVERED WAGON reports inform HHQ that an unusual incident affecting PL 1, 2, or 3 resources, probably or actually hostile, occurred at an installation or dispersed site.",
       "ref": "EXPLAIN/PERFORM COVERED WAGON PROCEDURES - SFTRG 2v3 Chap 2. Security Reporting and Alerting System",
@@ -105,6 +118,7 @@
       "asked": 0
     },
     {
+      "id": 14,
       "question": "What actions must you take during a launch mishap?",
       "answer": "Clearing Officers and all others on-duty take immediate cover in assigned vehicle, guard houses or other available shelter. All TCPs must remain hard down unless they feel their life is in danger, at which time they will leave the vehicle barriers in place, proceed to a pre-determined launch shelter, and notify the LOS upon arrival.",
       "ref": "XPLAIN LAUNCH OPERATIONS GENERAL INFORMATION - 45 SFS OI 31-1 V3 Chap 4 Para 4.2.1-4.4.2",
@@ -113,6 +127,7 @@
       "asked": 0
     },
     {
+      "id": 15,
       "question": "What document is utilized to aid in the purge of the FCA/BDA?",
       "answer": "Man-load list",
       "ref": "EXPLAIN/PERFORM LAUNCH CLEARING OFFICER DUTIES - 45 SFS OI 31-1 V3 Chap 4 Para 4.1.3-4.1.3.5",
@@ -121,6 +136,7 @@
       "asked": 0
     },
     {
+      "id": 16,
       "question": "Define the term 'Hard Down'",
       "answer": "Ensure no one enters the area unless they are cleared through BDOC, Whiskey Control, and/or the LOS or the SL.",
       "ref": "EXPLAIN/PERFORM LAUNCH OPERATIONS POSTED TCP DUTIES - 45 SFS OI 31-1 V3 Chap 4 Para 4.1.5-4.1.5.6",
@@ -129,6 +145,7 @@
       "asked": 0
     },
     {
+      "id": 17,
       "question": "CCSFS Taxi Cab Entry: Explain",
       "answer": "Taxi cabs are not authorized unless approved by the Det-1 CC.",
       "ref": "EXPLAIN/PERFORM INSTALLATION ACCESS GENERAL REQUIREMENTS - 45 SFS OI 31-1 V3 Chap 9 Para 9.7-9.7.3.2",
@@ -137,6 +154,7 @@
       "asked": 0
     },
     {
+      "id": 18,
       "question": "PSFB: Explain Taxi, food delivery, and courtesy vehicles.",
       "answer": "Delivery, courtesy, and taxi drivers shall have sponsor's name, phone number, and address prior to requesting entry. All delivery personnel must have a current NCIC/DBIDS background check and valid reason for entry before access can authorized. Once verified, the driver's information and vehicle is annotated on the AF Form 1109, Visitor Register Log.",
       "ref": "EXPLAIN/PERFORM INSTALLATION ACCESS GENERAL REQUIREMENTS - 45 SFS OI 31-1 V3 Chap 9 Para 9.7-9.7.3.2",
@@ -145,6 +163,7 @@
       "asked": 0
     },
     {
+      "id": 19,
       "question": "Explain Civilian Law Enforcement Entry (non-emergency).",
       "answer": "All federal, state and local agencies acting in an official capacity are authorized entry with their agency credential. This includes, but not limited to, law enforcement, medical and fire departments.",
       "ref": "EXPLAIN/PERFORM INSTALLATION PERIMETER ACCESS CONTROL DUTIES - 45 SW IDP 31-1 Annex C Appendix 4",
@@ -153,6 +172,7 @@
       "asked": 0
     },
     {
+      "id": 20,
       "question": "Explain Escorting Policy (installation access) on CCSFS.",
       "answer": "Escorting is currently not allowed on CCSFS, unless pre-coordinated with 45 SFS, typically in the form of an Installation Access List, or proper use of a CCSFS placard.",
       "ref": "EXPLAIN/PERFORM INSTALLATION PERIMETER ACCESS CONTROL DUTIES - 45 SW IDP 31-1 Annex C Appendix 4",
@@ -161,6 +181,7 @@
       "asked": 0
     },
     {
+      "id": 21,
       "question": "Explain Escorting Policy (installation access) on PSFB.",
       "answer": "Military, DoD civilians, military retirees and adult dependents with a valid credential have escort authority. Dependent minors, age 17 and below, may escort visitors upon approval of the on-duty 45 SFS Flight Sergeant or higher authority.",
       "ref": "EXPLAIN/PERFORM INSTALLATION PERIMETER ACCESS CONTROL DUTIES - 45 SW IDP 31-1 Annex C Appendix 4",
@@ -169,6 +190,7 @@
       "asked": 0
     },
     {
+      "id": 22,
       "question": "British Visiting Vessels - Allow entry to crew members of visiting British vessels utilizing their Military ID Card which is checked against the _________",
       "answer": "Installation Access List (IAL), Crew List, or visiting vessel badge.",
       "ref": "EXPLAIN/PERFORM INSTALLATION ENTRY REQUIREMENTS - 45 SFS OI 31-1 V3 Chap 9 Para 9.7-9.8.9",
@@ -177,6 +199,7 @@
       "asked": 0
     },
     {
+      "id": 23,
       "question": "Flight personnel are only authorized to issue AF IMT Form 75s for what period of time?",
       "answer": "72 hours",
       "ref": "EXPLAIN TEMPORARY PASSES - 45 SFS OI 31-1 V3 Chap 9 Para 9.3-9.3.3",
@@ -185,6 +208,7 @@
       "asked": 0
     },
     {
+      "id": 24,
       "question": "Prior to issuing any temporary pass, IECs shall request or accomplish what two activities?",
       "answer": "a NCIC/DBIDS background check from BDOC and check the 45 SW debarment, suspension and revocation listing.",
       "ref": "EXPLAIN TEMPORARY PASSES - 45 SFS OI 31-1 V3 Chap 9 Para 9.3-9.3.3",
@@ -193,6 +217,7 @@
       "asked": 0
     },
     {
+      "id": 25,
       "question": "Police, fire, or ambulance vehicles responding ______ or ______ will be allowed entry and validation for entry will be ascertained.",
       "answer": "'Code 2' or 'Code 3'",
       "ref": "EXPLAIN/PERFORM EMERGENCY VEHICLE RESPONSE - 45 SFS OI 31-1 V3 Chap 9 Para 9.9",
@@ -201,6 +226,7 @@
       "asked": 0
     },
     {
+      "id": 26,
       "question": "The term ______ will be used when an individual deliberately drives past the IEC without being properly vetted.",
       "answer": "gate runner",
       "ref": "EXPLAIN/PERFORM TURN AROUND/GATE RUNNER PROCEDURES - 45 SFS OI 31-1 V3 Chap 9 Para 9.5-9.5.5.9",
@@ -209,6 +235,7 @@
       "asked": 0
     },
     {
+      "id": 27,
       "question": "When an individual deliberately drives past the IEC without being properly vetted, the IEC will immediately do what?",
       "answer": "For gates equipped with AVBs the IEC will immediately activate the EFO button.",
       "ref": "EXPLAIN/PERFORM TURN AROUND/GATE RUNNER PROCEDURES - 45 SFS OI 31-1 V3 Chap 9 Para 9.5-9.5.5.9",
@@ -217,6 +244,7 @@
       "asked": 0
     },
     {
+      "id": 28,
       "question": "The deployment of the Stinger Spike System must be authorized by whom?",
       "answer": "Flight Sergeant",
       "ref": "EXPLAIN/PERFORM TURN AROUND/GATE RUNNER PROCEDURES - 45 SFS OI 31-1 V3 Chap 9 Para 9.5-9.5.5.9",
@@ -225,6 +253,7 @@
       "asked": 0
     },
     {
+      "id": 29,
       "question": "Civil Disturbances - Describe PHASE ONE: Periods of Increased Tension.",
       "answer": "The type of incidents which mark this phase may appear in the form of increased tension in living, dining and work areas.",
       "ref": "EXPLAIN/PERFORM RESPONSE TO CIVIL DISTURBANCES - 45 SW IDP 31-1 Annex H Appendix 1",
@@ -233,6 +262,7 @@
       "asked": 0
     },
     {
+      "id": 30,
       "question": "Civil Disturbances - Describe PHASE TWO: Scattered minor incidents of violence.",
       "answer": "Includes incidents of harassment between individual members of opposing groups.",
       "ref": "EXPLAIN/PERFORM RESPONSE TO CIVIL DISTURBANCES - 45 SW IDP 31-1 Annex H Appendix 1",
@@ -241,6 +271,7 @@
       "asked": 0
     },
     {
+      "id": 31,
       "question": "Civil Disturbances - Describe PHASE THREE: Group Oriented Violence.",
       "answer": "This phase is characterized by roaming assaults on lone individuals and/or fights with opposing groups, or assembly of personnel at base entry points.",
       "ref": "EXPLAIN/PERFORM RESPONSE TO CIVIL DISTURBANCES - 45 SW IDP 31-1 Annex H Appendix 1",
@@ -249,6 +280,7 @@
       "asked": 0
     },
     {
+      "id": 32,
       "question": "Civil Disturbances - Describe PHASE FIVE: After-Confrontation Phase.",
       "answer": "This phase is characterized by the cessation of confrontational activities and close out of all administrative and legal actions regarding the disturbance.",
       "ref": "EXPLAIN/PERFORM RESPONSE TO CIVIL DISTURBANCES - 45 SW IDP 31-1 Annex H Appendix 1",
@@ -257,6 +289,7 @@
       "asked": 0
     },
     {
+      "id": 33,
       "question": "At CCSFS, when would you deploy the Active Vehicle Barriers?",
       "answer": "Individual fails to stop for credential check; individual enters installation through outbound lane; individual fails to turn around and exit installation as directed (if determined to be a threat)",
       "ref": "EXPLAIN/PERFORM VEHICLE BARRIER OPERATIONS - 45 SFS OI 31-1 V3 Chap 9 Para 9.4-9.4.3",
@@ -265,6 +298,7 @@
       "asked": 0
     },
     {
+      "id": 34,
       "question": "What are the inspection procedures for vehicles carrying sealed flight hardware?",
       "answer": "For vehicles carrying sealed flight hardware, inspect inside the cab and unsealed areas. Sealed compartments are exempt from inspection.",
       "ref": "EXPLAIN/PERFORM COMMERCIAL VEHICLE INSPECTION GATE PROCEDURES - 45 SFS OI 31-1 V3 Chap 11 Para 11.1-11.2.4.7",
@@ -273,6 +307,7 @@
       "asked": 0
     },
     {
+      "id": 35,
       "question": "What documents will be considered when allowing the removal of government property from the installation?",
       "answer": "Bill of Lading, AF IMT 1297, other shipping documents",
       "ref": "EXPLAIN/PERFORM GOVERNMENT PROPERTY AND CARGO CLEARANCE FORMS - 45 SFS OI 31-1 V3 Chap 9 Para 9.6-9.6.4",
@@ -281,6 +316,7 @@
       "asked": 0
     },
     {
+      "id": 36,
       "question": "If a non-military members entering or exiting the installation refuses to consent to a RIEVC, what must you do?",
       "answer": "Advise individual that refusal will result in denial of base access and may result in the loss of base driving privileges and/or debarment action and conduct a walk around inspection for signs of contraband in plain view.",
       "ref": "EXPLAIN/PERFORM RANDOM INSTALLATION ENTRY/EXIT VEHICLE CHECKS - 45 SFS OI 31-1 V3 Chap 8 Para 8.2-8.2.2.2",
@@ -289,6 +325,7 @@
       "asked": 0
     },
     {
+      "id": 37,
       "question": "If RIEVC consent is not secured and contraband is discovered during a walkaround inspection of a vehicle, what must you do?",
       "answer": "If contraband is found, detain personnel, seize the contraband as evidence, secure the vehicle, and seek search authority.",
       "ref": "EXPLAIN/PERFORM RANDOM INSTALLATION ENTRY/EXIT VEHICLE CHECKS - 45 SFS OI 31-1 V3 Chap 8 Para 8.2-8.2.2.2",
@@ -297,6 +334,7 @@
       "asked": 0
     },
     {
+      "id": 38,
       "question": "Who grants written permission to restricted areas within the SLD 45?",
       "answer": "SLD CC or designee",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -305,6 +343,7 @@
       "asked": 0
     },
     {
+      "id": 39,
       "question": "In order to enter a RA unescorted, the individual requesting entry must have one of the following:",
       "answer": "An authenticated EAL matching an /RAB from another installation. Air Crew Orders with associated CAC. A RAB and pin code with the appropriate area open for site access.",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -313,6 +352,7 @@
       "asked": 0
     },
     {
+      "id": 40,
       "question": "In addition to personal recognition, name three other supporting techniques for unescorted entry.",
       "answer": "Signature and Credential Check. EAL. Telephone or Radio Verification.",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -321,6 +361,7 @@
       "asked": 0
     },
     {
+      "id": 41,
       "question": "True or False: All personnel issued an RAB are trained as an escort.",
       "answer": "True",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -329,6 +370,7 @@
       "asked": 0
     },
     {
+      "id": 42,
       "question": "True or False: An escort official may designate a properly badged person in the area to act as subordinate escort acting on their behalf.",
       "answer": "True",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -337,6 +379,7 @@
       "asked": 0
     },
     {
+      "id": 43,
       "question": "Vehicles driven by visitors are inspected by the escort official unless _______ is implemented, at which time the 45 SFS will conduct the searches.",
       "answer": "FPCON Charlie",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -345,6 +388,7 @@
       "asked": 0
     },
     {
+      "id": 44,
       "question": "What form is utilized to maintain a record of unescorted access to a Restricted Area?",
       "answer": "AF Form 1109",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -353,6 +397,7 @@
       "asked": 0
     },
     {
+      "id": 45,
       "question": "Describe the Restricted Area Visitor Badge.",
       "answer": "RAVBs are identified by a large BLACK “V” with a RED background, in the photo block and the words “ESCORT REQUIRED” in the name of holder block of the badge",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -361,6 +406,7 @@
       "asked": 0
     },
     {
+      "id": 46,
       "question": "'T' Badges are utilzed where and for what purpose?",
       "answer": "'T' badges are only authorized at the Morrell Operations Center for visitors who require unescorted entry and are working at the facility for less than 90 days",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -369,6 +415,7 @@
       "asked": 0
     },
     {
+      "id": 47,
       "question": "How is the duress activated utilizing a RA card reader?",
       "answer": "When using card readers, adding one number to the Personal Identification Number (PIN) will automatically signal a duress situation to the BDOC.",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -377,6 +424,7 @@
       "asked": 0
     },
     {
+      "id": 48,
       "question": "Under what circumstances do SF members search vehicles/hand-carried items at RA's?",
       "answer": "FPCON Charlie or higher",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -385,6 +433,7 @@
       "asked": 0
     },
     {
+      "id": 49,
       "question": "RA duress codes are valid for how long?",
       "answer": "Six months, unless compromised",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -393,6 +442,7 @@
       "asked": 0
     },
     {
+      "id": 50,
       "question": "During normal security operations (FPCON NORMAL/ALPHA/BRAVO) who is responsible for vehicle inspections prior to RA entry?",
       "answer": "The properly badged vehicle operator",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -401,6 +451,7 @@
       "asked": 0
     },
     {
+      "id": 51,
       "question": "Vehicles driven by visitors into a RA are inspected by whom?",
       "answer": "The escort official.",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -409,6 +460,7 @@
       "asked": 0
     },
     {
+      "id": 52,
       "question": "What technique is used to facilitate emergency entry into an SF posted RA?",
       "answer": "Sign/countersign",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -417,6 +469,7 @@
       "asked": 0
     },
     {
+      "id": 53,
       "question": "What is the area designator on the RAB for the 750 Ramp?",
       "answer": "3",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -425,6 +478,7 @@
       "asked": 0
     },
     {
+      "id": 54,
       "question": "What is the area designator on the RAB for the SLC 37",
       "answer": "7",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -433,6 +487,7 @@
       "asked": 0
     },
     {
+      "id": 55,
       "question": "What is the area designator on the RAB for the VIF",
       "answer": "8",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -441,6 +496,7 @@
       "asked": 0
     },
     {
+      "id": 56,
       "question": "What is the area designator on the RAB for the MOC Perimeter",
       "answer": "9",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -449,6 +505,7 @@
       "asked": 0
     },
     {
+      "id": 57,
       "question": "What is the area designator on the RAB for the XY Perimeter",
       "answer": "12",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -457,6 +514,7 @@
       "asked": 0
     },
     {
+      "id": 58,
       "question": "What is the area designator on the RAB for the RCF Perimeter",
       "answer": "14",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -465,6 +523,7 @@
       "asked": 0
     },
     {
+      "id": 59,
       "question": "What is the area designator on the RAB for SLC 39A",
       "answer": "16",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -473,6 +532,7 @@
       "asked": 0
     },
     {
+      "id": 60,
       "question": "What is the area designator on the RAB for SLC 40",
       "answer": "17",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -481,6 +541,7 @@
       "asked": 0
     },
     {
+      "id": 61,
       "question": "What is the area designator on the RAB for CCF",
       "answer": "18",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -489,6 +550,7 @@
       "asked": 0
     },
     {
+      "id": 62,
       "question": "What is the area designator on the RAB for GPS",
       "answer": "19",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -497,6 +559,7 @@
       "asked": 0
     },
     {
+      "id": 63,
       "question": "What is the area designator on the RAB for Skid Strip (when posted)",
       "answer": "25",
       "ref": "EXPLAIN/PERFORM WORKING IN RESTRICTED/CONTROLLED AREAS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -505,6 +568,7 @@
       "asked": 0
     },
     {
+      "id": 64,
       "question": "Free zones are established within RA's under whose authority?",
       "answer": "SLD 45/CC",
       "ref": "EXPLAIN FREE ZONE REQUIREMENTS - 45 SW IDP 31-1 Annex C Appendix 6",
@@ -513,6 +577,7 @@
       "asked": 0
     },
     {
+      "id": 65,
       "question": "RA Group Tours are pre-announced by _______",
       "answer": "BDOC",
       "ref": "EXPLAIN/PERFORM GROUP TOUR PROCEDURES - 45 SFS OI 31-1 V3 Chap 10 Para 10.5",
@@ -521,6 +586,7 @@
       "asked": 0
     },
     {
+      "id": 66,
       "question": "RA Group Tours larger than ______ are authorized ESS by-pass.",
       "answer": "two",
       "ref": "EXPLAIN/PERFORM GROUP TOUR PROCEDURES - 45 SFS OI 31-1 V3 Chap 10 Para 10.5",
@@ -529,6 +595,7 @@
       "asked": 0
     },
     {
+      "id": 67,
       "question": "What Act/Law prevents Air Force personnel from executing the laws of the states or the laws of the U.S. except when acting under the authority of the U.S. Constitution, an Act of Congress or under the direction of the President of the United States.",
       "answer": "The Posse Comitatus Act",
       "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 51 Posse Comitatus Act",
@@ -537,6 +604,7 @@
       "asked": 0
     },
     {
+      "id": 68,
       "question": "Define the term 'Hearsay.'",
       "answer": "'Hearsay' is a statement, other than the one made by the declarant while testifying at the trial or hearing, offered in evidence to prove the truth of the matter asserted.",
       "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 54 RULES OF EVIDENCE.",
@@ -545,6 +613,7 @@
       "asked": 0
     },
     {
+      "id": 69,
       "question": "Define the term 'declarant.'",
       "answer": "A 'declarant' is a person who makes a statement.",
       "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 54 RULES OF EVIDENCE.",
@@ -553,6 +622,7 @@
       "asked": 0
     },
     {
+      "id": 70,
       "question": "Define the term 'search.'",
       "answer": "A search is an examination of a person, property or premises to uncover evidence of a crime or criminal intent, such as stolen goods, burglary tools and weapons.",
       "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 54",
@@ -561,6 +631,7 @@
       "asked": 0
     },
     {
+      "id": 71,
       "question": "Define the term 'statement.'",
       "answer": "A 'statement' is (1) an oral or written assertion or (2) nonverbal conduct of a person, if it is intended by the person as an assertion.",
       "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 54 RULES OF EVIDENCE.",
@@ -569,6 +640,7 @@
       "asked": 0
     },
     {
+      "id": 72,
       "question": "Define the term 'Protective Frisk.'",
       "answer": "A Defender may perform a protective frisk during a lawful stop when the member reasonably believes a person is armed and presently dangerous to the member or others.",
       "ref": "SFTRG 2 Operations VOL 1 General Knowledge, CH 54 RULES OF EVIDENCE.",
@@ -577,6 +649,7 @@
       "asked": 0
     },
     {
+      "id": 73,
       "question": "Who can validate/authenticate EAL's?",
       "answer": "A SF supervisor, (E-5/GS-7 or above or other designated civilian equivalent) will be responsible for validating and authenticating the EAL.",
       "ref": "SFTRG 2 Operations VOL 2 Access Control, CH10. ENTRY AUTHORITY LISTS.",
