@@ -12,10 +12,9 @@ import { QuestionsService } from '../questions.service';
 })
 export class CurrentTrainingComponent implements OnInit {
   exam: Exercise;
-  currentQuestions: any; 
+  currentQuestions: any;
   questionsHaveBeenFetched: boolean = false;
   score: number = 100;
-
 
   constructor(private dialog: MatDialog, private exerciseService: ExerciseService, private questionService: QuestionsService) { }
 
@@ -24,29 +23,21 @@ export class CurrentTrainingComponent implements OnInit {
     this.questionService.getQuestions()
   }
 
-  pointsAdded(points: number){
-    //TODO: refactor to subtract if it changes after being set 
-    // ---might have to use checkboxes and set point values 
-    this.score += +points;
-  }
-
-  correctAnswer(){
+  correctAnswer() {
     //this.score += 4;
   }
 
-  newQuestion(id: number, question:any){
-    console.log(id)
-    console.log(question)
-    //this.questionService.getNewSingleQuestion()
-    //replace current question with this.newQuestion
-    //this.
-      
+  newQuestion(index: number) {
+    this.questionService.getNewSingleQuestion();
+    setTimeout(() => {
+      this.currentQuestions.splice(index, 1, this.questionService.newQuestion);
+    }, 200)
   }
 
-  onEdit(id: number){
+  onEdit(id: number) {
     console.log(id)
   }
-  wrongAnswer(){
+  wrongAnswer() {
     this.score -= 4;
   }
 
@@ -55,7 +46,7 @@ export class CurrentTrainingComponent implements OnInit {
     this.currentQuestions = this.questionService.fetchedQuestions;
   }
 
-  onDone(){
+  onDone() {
     this.exerciseService.completeExercise();
   }
 
