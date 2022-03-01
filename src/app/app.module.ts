@@ -22,6 +22,7 @@ import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { HttpClientModule } from '@angular/common/http';
+import { EditTrainingComponent } from './training/current-training/edit-modal/edit-training.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     SidenavListComponent,
     StopTrainingComponent,
+    EditTrainingComponent
   ],
   imports: [
     BrowserModule,

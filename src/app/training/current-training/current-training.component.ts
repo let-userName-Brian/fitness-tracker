@@ -4,7 +4,7 @@ import { Exercise } from '../exercise.model';
 import { ExerciseService } from '../exercise.service';
 import { StopTrainingComponent } from './stop-training.component';
 import { QuestionsService } from '../questions.service';
-import { EditTrainingComponent } from './edit-training.component';
+import { EditTrainingComponent } from './edit-modal/edit-training.component';
 
 @Component({
   selector: 'app-current-training',
@@ -15,8 +15,9 @@ export class CurrentTrainingComponent implements OnInit {
   exam: Exercise;
   currentQuestions: any;
   questionsHaveBeenFetched: boolean = false;
-  score: number = 100;
+  score: number = 0;
   editingQuestion: any;
+  answerWrongBoolean: boolean = false;
 
   constructor(private dialog: MatDialog, private exerciseService: ExerciseService, private questionService: QuestionsService) { }
 
@@ -26,7 +27,11 @@ export class CurrentTrainingComponent implements OnInit {
   }
 
   correctAnswer() {
-    //this.score += 4;
+    this.score += 4;
+  }
+
+  wrongAnswer() {
+    this.score -= 4;
   }
 
   newQuestion(index: number) {
@@ -37,13 +42,8 @@ export class CurrentTrainingComponent implements OnInit {
   }
 
   onEdit(index: number, questions: any) {
-    console.log("id", index)
-    console.log("qs", questions)
     this.editingQuestion = questions;
     this.openEditDialog(index, questions);
-  }
-  wrongAnswer() {
-    this.score -= 4;
   }
 
   onStart() {

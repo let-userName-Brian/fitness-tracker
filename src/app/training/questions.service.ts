@@ -26,10 +26,7 @@ export class QuestionsService {
         return this.databank = "AM"
     }
   }
-  /**
-   * @description Filters the questions to a limit of 25 and randomizes the questions
-   *  *possible refactor*
-   */
+  
   filterQuestions() {
     let randomQuestions = [];
     let randomIndex = 0;

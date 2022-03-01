@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>Edit Question</h2>
+<form #f="ngForm" (submit)="submitEditedQuestion(f)">
+  <div>{{ this.exam.exam.question }}</div>
+  <mat-form-field class="question">
+    <mat-label>Question</mat-label>
+    <input matInput type="text" name="question" ngModel>
+  </mat-form-field>
+  <div>{{ this.exam.exam.ref }}</div>
+  <mat-form-field>
+    <mat-label>Ref</mat-label>
+    <textarea matInput type="text" ngModel name="ref" value="{{this.exam.exam.ref}}">
+    </textarea>
+  </mat-form-field>
+  <div>{{ this.exam.exam.answer }}</div>
+  <mat-form-field>
+    <mat-label>Answer</mat-label>
+    <input matInput type="text" ngModel name="answer">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Favorite food</mat-label>
+    <input matInput placeholder="Ex. Pizza" value="Sushi">
+  </mat-form-field>
+
+
+  <div mat-dialog-actions fxLayoutAlign="center">
+    <button mat-button type="submit" color="primary">Make the change</button>
+  </div>
+</form>
