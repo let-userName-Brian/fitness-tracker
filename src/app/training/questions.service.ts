@@ -1,10 +1,12 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Subject } from "rxjs";
 
 @Injectable({ providedIn: "root" })
 export class QuestionsService {
   private databank: string;
   fetchedQuestions: any;
+  newQuestion: any;
   constructor(private http: HttpClient) { }
 
   getNameofQuestionBank(qc: string) {
@@ -48,6 +50,17 @@ export class QuestionsService {
       `https://qc-database-aee15-default-rtdb.firebaseio.com/${params}/${params}.json`).subscribe((response: any) => {
         this.fetchedQuestions = response;
         this.filterQuestions();
+      });
+  }
+
+
+
+  getNewSingleQuestion() {
+    let params = this.databank;
+    let rand = Math.floor(Math.random() * this.fetchedQuestions.length);
+    return this.http.get(
+      `https://qc-database-aee15-default-rtdb.firebaseio.com/${params}/${params}/${rand}.json`).subscribe((response: any) => {
+        this.newQuestion = response;
       });
   }
 }

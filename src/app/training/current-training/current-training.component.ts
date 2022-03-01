@@ -16,6 +16,7 @@ export class CurrentTrainingComponent implements OnInit {
   questionsHaveBeenFetched: boolean = false;
   score: number = 100;
 
+
   constructor(private dialog: MatDialog, private exerciseService: ExerciseService, private questionService: QuestionsService) { }
 
   ngOnInit(): void {
@@ -33,8 +34,13 @@ export class CurrentTrainingComponent implements OnInit {
     //this.score += 4;
   }
 
-  newQuestion(id: number){
+  newQuestion(id: number, question:any){
     console.log(id)
+    console.log(question)
+    //this.questionService.getNewSingleQuestion()
+    //replace current question with this.newQuestion
+    //this.
+      
   }
 
   onEdit(id: number){
