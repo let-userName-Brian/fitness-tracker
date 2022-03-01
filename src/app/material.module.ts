@@ -18,7 +18,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from "@angular/material/sort";
 import { MatPaginatorModule } from '@angular/material/paginator';
-
+import { MatRadioModule } from '@angular/material/radio';
+import { MatMenuModule } from '@angular/material/menu';
 @NgModule({
   imports: [
     // import all the modules that are required
@@ -39,7 +40,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatDialogModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatRadioModule,
+    MatMenuModule
   ],
   exports: [
     // export all the modules that are required
@@ -60,7 +63,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatDialogModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatRadioModule,
+    MatMenuModule
   ]
 
 })

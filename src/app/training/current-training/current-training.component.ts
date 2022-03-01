@@ -14,7 +14,7 @@ export class CurrentTrainingComponent implements OnInit {
   exam: Exercise;
   currentQuestions: any; 
   questionsHaveBeenFetched: boolean = false;
-  score: number = 0;
+  score: number = 100;
 
   constructor(private dialog: MatDialog, private exerciseService: ExerciseService, private questionService: QuestionsService) { }
 
@@ -27,6 +27,21 @@ export class CurrentTrainingComponent implements OnInit {
     //TODO: refactor to subtract if it changes after being set 
     // ---might have to use checkboxes and set point values 
     this.score += +points;
+  }
+
+  correctAnswer(){
+    //this.score += 4;
+  }
+
+  newQuestion(id: number){
+    console.log(id)
+  }
+
+  onEdit(id: number){
+    console.log(id)
+  }
+  wrongAnswer(){
+    this.score -= 4;
   }
 
   onStart() {

@@ -12,18 +12,34 @@
   <hr style="margin-bottom: 1rem">
   <div *ngFor="let questions of currentQuestions; let i = index">
     <mat-card>
-      <mat-card-subtitle>Question {{ i + 1 }}</mat-card-subtitle>
+      <mat-card-subtitle>Question {{ i + 1 }}
+        <div class="more-button">
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="onEdit(questions.id)">
+              <mat-icon>edit</mat-icon>
+              <span>Edit</span>
+            </button>
+            <button mat-menu-item (click)="newQuestion(questions.id)">
+              <mat-icon>plus</mat-icon>
+              <span>New Question</span>
+            </button>
+          </mat-menu>
+        </div>
+      </mat-card-subtitle>
       <mat-card-title>{{ questions.question }}</mat-card-title>
       <mat-card-content>
         <mat-card-subtitle style="font-style:italic">{{ questions.ref }}</mat-card-subtitle>
         <p style="font-size: medium;">{{ questions.answer }}</p>
+        <p>{{ this.score }}</p>
       </mat-card-content>
       <mat-card-actions>
-        <form>
-          <mat-form-field>
-            <input matInput type="number" placeholder="Points awarded" (change)="pointsAdded($event.target.value)">
-          </mat-form-field>
-        </form>
+        <mat-radio-group aria-label="Select an option">
+          <mat-radio-button value="1" (click)="correctAnswer()">Correct</mat-radio-button>
+          <mat-radio-button value="2" (click)="wrongAnswer()" style="margin-left: 1rem;">Wrong</mat-radio-button>
+        </mat-radio-group>
       </mat-card-actions>
     </mat-card>
   </div>
