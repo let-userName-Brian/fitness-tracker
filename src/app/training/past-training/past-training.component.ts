@@ -15,7 +15,7 @@ import { Subscription } from 'rxjs';
 export class PastTrainingComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  displayedColumns = ['date', 'ExamName', 'UserName', 'passOrFail'];
+  displayedColumns = ['date', 'ExamName', 'UserName', 'go/no-go'];
   dataSource = new MatTableDataSource<any>();
   private qcChangedSubscrption: Subscription;
   constructor(private excerciseService: ExerciseService, private authService: AuthService) { }

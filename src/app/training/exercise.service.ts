@@ -8,10 +8,14 @@ import { QuestionsService } from "./questions.service";
 
 @Injectable({ providedIn: "root" })
 export class ExerciseService {
-  exerciseChanged = new Subject<Exercise>();
+  exerciseChanged = new Subject<Exercise[]>();
   qcChanged = new Subject<Exercise[]>();
   finishedQCsChanged = new Subject<Exercise[]>();
+  
+  verbalsChanged = new Subject<any>();
   userName: string;
+  verbalDone: any;
+  
   private availableExercises: Exercise[] = [];
   private runningExercise: any;
   private firebaseSubscription: Subscription[] = [];
@@ -52,15 +56,19 @@ export class ExerciseService {
     return { ...this.runningExercise };
   }
 
-  completeExercise() {
-    this.addToDatabase({
-      ...this.runningExercise,
-      date: new Date(),
-      user: this.userName,
-      state: "completed",
-    });
-    this.runningExercise = null;
-    this.exerciseChanged.next(null);
+  completeExercise(score: number, exam: Exercise) {
+    let verbalQCCompleted = [{
+      exam: exam, 
+      score: score, 
+      user: this.userName
+    }];
+    this.verbalDone = verbalQCCompleted;
+    this.addToVerbalCompleted({verbalQCCompleted});
+    // this.dataBase.collection("verbalCompleteQC's").add({verbalQCCompleted}).then(() => {
+    //   console.log("added to database");
+    // }).catch(err => {
+    //   console.log(err)
+    // })
   }
 
   cancelExercise(questions: number) {
@@ -69,7 +77,18 @@ export class ExerciseService {
       questions: this.runningExercise.questions - questions,
       date: new Date(),
       user: this.userName,
-      state: "cancelled",
+      state: "Canceled",
+    });
+    this.runningExercise = null;
+    this.exerciseChanged.next(null);
+  }
+
+  failExercise() {
+    this.addToDatabase({
+      ...this.runningExercise,
+      date: new Date(),
+      user: this.userName,
+      state: "No-Go",
     });
     this.runningExercise = null;
     this.exerciseChanged.next(null);
@@ -80,6 +99,22 @@ export class ExerciseService {
       this.finishedQCsChanged.next(qcs);
     })
     );
+  }
+
+  fetchVerbalQCCompleted() {
+    this.firebaseSubscription.push(this.dataBase.collection("verbalCompleteQC's").valueChanges().subscribe((verbals: any) => {
+      this.verbalsChanged.next(verbals);
+      this.verbalDone = verbals;
+      console.log(verbals)
+    }))
+  }
+
+  private addToVerbalCompleted(verbalDone: any) {
+    this.dataBase.collection("verbalCompleteQC's").add(verbalDone).then(() => {
+      console.log("added to database:", verbalDone);
+    }).catch(err => {
+      console.log(err)
+    })
   }
 
   private addToDatabase(exercise: Exercise) {
@@ -93,5 +128,4 @@ export class ExerciseService {
   cancelSubscriptions() {
     this.firebaseSubscription.forEach(sub => sub.unsubscribe());
   }
-
 }

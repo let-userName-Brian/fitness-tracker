@@ -23,6 +23,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { HttpClientModule } from '@angular/common/http';
 import { EditTrainingComponent } from './training/current-training/edit-modal/edit-training.component';
+import { PracticalComponent } from './training/current-training/practical/practical.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { EditTrainingComponent } from './training/current-training/edit-modal/ed
     HeaderComponent,
     SidenavListComponent,
     StopTrainingComponent,
-    EditTrainingComponent
+    EditTrainingComponent,
+    PracticalComponent
   ],
   imports: [
     BrowserModule,

@@ -51,11 +51,15 @@ export class CurrentTrainingComponent implements OnInit {
     this.currentQuestions = this.questionService.fetchedQuestions;
   }
 
-  onDone() {
-    this.exerciseService.completeExercise();
+  onPass() {
+    this.exerciseService.completeExercise(this.score, this.exam);
   }
 
-  onStop() {
+  onFail() {
+    this.exerciseService.failExercise();
+  }
+
+  onCancel() {
     this.openDialog();
   }
 

@@ -1,15 +1,15 @@
-<section class="current-training" fxLayout="column" fxLayoutAlign="center center">
+<section class="current-training" fxLayout="column" fxLayoutAlign="center center" *ngIf="!questionsHaveBeenFetched">
   <h1>{{ exam.name }} QC</h1>
   <h3>You have 25 questions in total</h3>
-  <section fxLayoutGap="10px">
-    <button mat-raised-button color="primary" (click)="onStart()">Start</button>
-    <button mat-raised-button color="primary" (click)="onStop()">Terminate/Cancel</button>
-    <button mat-raised-button color="primary" (click)="onDone()">Done</button>
+  <section fxLayoutGap="5px">
+    <button mat-raised-button color="primary" (click)="onStart()">Start QC</button>
+    <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+    <!-- <button mat-raised-button color="warn" (click)="onFail()">Fail/No-Go</button> -->
   </section>
+  <hr style="margin-bottom: 1rem">
 </section>
 
-<section *ngIf="questionsHaveBeenFetched">
-  <hr style="margin-bottom: 1rem">
+<section *ngIf="questionsHaveBeenFetched" style="margin-top: 1rem;">
   <div *ngFor="let questions of currentQuestions; let i = index">
     <mat-card>
       <mat-card-subtitle>Question {{ i + 1 }}
@@ -44,7 +44,8 @@
   </div>
   <section fxLayoutGap="10px" fxLayout="row" fxLayoutAlign="center center" style="margin-bottom: 1rem;">
     <h3>Score: {{ this.score }}</h3>
-    <button mat-raised-button color="primary" (click)="onStop()">Terminate/Cancel</button>
-    <button mat-raised-button color="primary" (click)="onDone()">Done</button>
+    <button mat-raised-button color="primary" (click)="onPass()">Pass/Go</button>
+    <button mat-raised-button color="primary" (click)="onCancel()">Cancel</button>
+    <button mat-raised-button color="warn" (click)="onFail()">Fail/No-Go</button>
   </section>
 </section>
