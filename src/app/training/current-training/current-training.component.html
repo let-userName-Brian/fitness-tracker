@@ -1,6 +1,6 @@
 <section class="current-training" fxLayout="column" fxLayoutAlign="center center">
-  <p>{{ exam.name }} QC</p>
-  <p>You have 25 questions in total</p>
+  <h1>{{ exam.name }} QC</h1>
+  <h3>You have 25 questions in total</h3>
   <section fxLayoutGap="10px">
     <button mat-raised-button color="primary" (click)="onStart()">Start</button>
     <button mat-raised-button color="primary" (click)="onStop()">Terminate/Cancel</button>
@@ -33,7 +33,6 @@
       <mat-card-content>
         <mat-card-subtitle style="font-style:italic">{{ questions.ref }}</mat-card-subtitle>
         <p style="font-size: medium;">{{ questions.answer }}</p>
-        <p>{{ this.score }}</p>
       </mat-card-content>
       <mat-card-actions>
         <mat-radio-group aria-label="Select an option">

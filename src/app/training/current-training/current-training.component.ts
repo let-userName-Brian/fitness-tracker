@@ -72,15 +72,10 @@ export class CurrentTrainingComponent implements OnInit {
     })
   }
 
-  openEditDialog(index: number, exam: any) {
+  openEditDialog(index: number, exam: any){
     const dialogRef = this.dialog.open(EditTrainingComponent, {
       data: {
         exam: this.editingQuestion
-      }
-    })
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        this.currentQuestions.splice(index, 1, result);
       }
     })
   }

@@ -1,7 +1,7 @@
-import { Component, Inject, OnInit, ViewChild } from "@angular/core";
+import { Component, Inject, OnInit } from "@angular/core";
 import { MAT_DIALOG_DATA } from "@angular/material/dialog";
-import { NgForm } from '@angular/forms';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
+import { QuestionsService } from "../../questions.service";
 
 @Component({
   selector: "app-edit-training",
@@ -9,7 +9,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./edit-training.component.css']
 })
 export class EditTrainingComponent implements OnInit {
-  constructor(@Inject(MAT_DIALOG_DATA) public exam: any, private fb: FormBuilder) { }
+  constructor(@Inject(MAT_DIALOG_DATA) public exam: any, private fb: FormBuilder, private questionService: QuestionsService) { }
 
   editForm = this.fb.group({
     answer: ['', Validators.required],
@@ -25,7 +25,7 @@ export class EditTrainingComponent implements OnInit {
 
 
   submitEditedQuestion() {
-    console.log(this.editForm.value)
+    this.questionService.editQuestion(this.editForm.value)
   }
 
   ngOnInit(): void {
