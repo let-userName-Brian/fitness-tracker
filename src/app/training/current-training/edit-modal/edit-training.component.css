@@ -4,3 +4,16 @@ form{
   min-width: 60vw;
   min-height: 20vh;
 }
+
+mat-label{
+  font-size: 1.4em;
+}
+
+textarea{
+  margin-bottom: -.5rem;
+}
+
+mat-form-field{
+  height: fit-content;
+  margin-bottom: 1rem;
+}

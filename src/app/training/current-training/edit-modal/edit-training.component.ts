@@ -12,9 +12,13 @@ export class EditTrainingComponent implements OnInit {
   constructor(@Inject(MAT_DIALOG_DATA) public exam: any, private fb: FormBuilder) { }
 
   editForm = this.fb.group({
-    question: ['', Validators.required],
     answer: ['', Validators.required],
-    ref: ['', Validators.required]
+    asked: ['', Validators.required],
+    correct: ['', Validators.required],
+    id: ['', Validators.required],
+    wrong: ['', Validators.required],
+    question: ['', Validators.required],
+    ref: ['', Validators.required],
   })
 
 
@@ -25,11 +29,14 @@ export class EditTrainingComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('onInit fired')
     this.editForm.setValue({
       question: this.exam.exam.question,
       answer: this.exam.exam.answer,
-      ref: this.exam.exam.ref
+      ref: this.exam.exam.ref,
+      asked: this.exam.exam.asked,
+      correct: this.exam.exam.correct,
+      wrong: this.exam.exam.wrong,
+      id: this.exam.exam.id,
     })
   }
 }
