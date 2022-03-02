@@ -1,6 +1,8 @@
 <p>practical works!</p>
-<div *ngFor="let verbals of verbals">
-  <p>{{verbals.verbalQCCompleted[0].user}}</p>
-  <p>{{verbals.score}}</p>
-  <p>{{verbals.exam?.name}}</p>
+<div *ngFor="let verbals of verbalCompletedQCs; let i = index">
+  <mat-card>
+    <p>{{verbals.verbalQCCompleted[0].user}}</p>
+    <p>{{verbals.verbalQCCompleted[0].score}}</p>
+    <p>{{verbals.verbalQCCompleted[0].exam.name}}</p>
+  </mat-card>
 </div>

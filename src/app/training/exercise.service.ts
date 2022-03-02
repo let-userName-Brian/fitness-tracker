@@ -97,15 +97,12 @@ export class ExerciseService {
   fetchCompletedOrCancelledExercises() {
     this.firebaseSubscription.push(this.dataBase.collection("pastQC's").valueChanges().subscribe((qcs : Exercise[]) => {
       this.finishedQCsChanged.next(qcs);
-    })
-    );
+    }));
   }
 
   fetchVerbalQCCompleted() {
     this.firebaseSubscription.push(this.dataBase.collection("verbalCompleteQC's").valueChanges().subscribe((verbals: any) => {
       this.verbalsChanged.next(verbals);
-      this.verbalDone = verbals;
-      console.log(verbals)
     }))
   }
 
