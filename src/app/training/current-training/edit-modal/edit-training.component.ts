@@ -10,13 +10,26 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class EditTrainingComponent implements OnInit {
   constructor(@Inject(MAT_DIALOG_DATA) public exam: any, private fb: FormBuilder) { }
-  @ViewChild('f') editForm: NgForm;
-  
-  submitEditedQuestion(form: NgForm) {
-    console.log(form)
+
+  editForm = this.fb.group({
+    question: ['', Validators.required],
+    answer: ['', Validators.required],
+    ref: ['', Validators.required]
+  })
+
+
+
+
+  submitEditedQuestion() {
+    console.log(this.editForm.value)
   }
 
   ngOnInit(): void {
     console.log('onInit fired')
+    this.editForm.setValue({
+      question: this.exam.exam.question,
+      answer: this.exam.exam.answer,
+      ref: this.exam.exam.ref
+    })
   }
 }

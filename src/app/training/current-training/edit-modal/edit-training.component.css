@@ -1,0 +1,6 @@
+form{
+  display: flex;
+  flex-direction: column;
+  min-width: 60vw;
+  min-height: 20vh;
+}
