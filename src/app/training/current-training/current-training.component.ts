@@ -5,6 +5,7 @@ import { ExerciseService } from '../exercise.service';
 import { StopTrainingComponent } from './stop-training.component';
 import { QuestionsService } from '../questions.service';
 import { EditTrainingComponent } from './edit-modal/edit-training.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-current-training',
@@ -19,7 +20,11 @@ export class CurrentTrainingComponent implements OnInit {
   editingQuestion: any;
   answerWrongBoolean: boolean = false;
 
-  constructor(private dialog: MatDialog, private exerciseService: ExerciseService, private questionService: QuestionsService) { }
+  constructor(private dialog: MatDialog,
+    private exerciseService: ExerciseService,
+    private questionService: QuestionsService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.exam = this.exerciseService.getRunningExercise();
@@ -53,10 +58,12 @@ export class CurrentTrainingComponent implements OnInit {
 
   onPass() {
     this.exerciseService.completeExercise(this.score, this.exam);
+    this.router.navigate(['/training']);
   }
 
   onFail() {
-    this.exerciseService.failExercise();
+    this.exerciseService.failExercise(this.exam);
+    this.router.navigate(['/training']);
   }
 
   onCancel() {
@@ -76,7 +83,7 @@ export class CurrentTrainingComponent implements OnInit {
     })
   }
 
-  openEditDialog(index: number, exam: any){
+  openEditDialog(index: number, exam: any) {
     const dialogRef = this.dialog.open(EditTrainingComponent, {
       data: {
         exam: this.editingQuestion

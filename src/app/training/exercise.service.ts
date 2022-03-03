@@ -64,11 +64,30 @@ export class ExerciseService {
     }];
     this.verbalDone = verbalQCCompleted;
     this.addToVerbalCompleted({verbalQCCompleted});
-    // this.dataBase.collection("verbalCompleteQC's").add({verbalQCCompleted}).then(() => {
-    //   console.log("added to database");
-    // }).catch(err => {
-    //   console.log(err)
-    // })
+  }
+
+  passQC(exercise: any) {
+    this.addToDatabase({
+      ...exercise.exam,
+      date: new Date(),
+      user: exercise.user,
+      state: "completed",
+    });
+    this.runningExercise = null;
+    this.exerciseChanged.next(null);
+    this.deletefromVerbalCompleted(exercise);
+  }
+
+  failExercise(exercise: any) {
+    this.addToDatabase({
+      ...exercise.exam,
+      date: new Date(),
+      user: exercise.user,
+      state: "cancelled",
+    });
+    this.runningExercise = null;
+    this.exerciseChanged.next(null);
+    this.deletefromVerbalCompleted(exercise);
   }
 
   cancelExercise(questions: number) {
@@ -77,22 +96,12 @@ export class ExerciseService {
       questions: this.runningExercise.questions - questions,
       date: new Date(),
       user: this.userName,
-      state: "Canceled",
+      state: "canceled",
     });
     this.runningExercise = null;
     this.exerciseChanged.next(null);
   }
 
-  failExercise() {
-    this.addToDatabase({
-      ...this.runningExercise,
-      date: new Date(),
-      user: this.userName,
-      state: "No-Go",
-    });
-    this.runningExercise = null;
-    this.exerciseChanged.next(null);
-  }
 
   fetchCompletedOrCancelledExercises() {
     this.firebaseSubscription.push(this.dataBase.collection("pastQC's").valueChanges().subscribe((qcs : Exercise[]) => {
@@ -117,6 +126,16 @@ export class ExerciseService {
   private addToDatabase(exercise: Exercise) {
     this.dataBase.collection("pastQC's").add(exercise).then(() => {
       console.log("added to database:", exercise.user);
+    }).catch(err => {
+      console.log(err)
+    })
+  }
+
+  private deletefromVerbalCompleted(verbalDone: any) {
+    this.dataBase.collection("verbalCompleteQC's").doc(verbalDone.exam.id).delete().then(() => {
+      console.log("deleted from database:", verbalDone);
+      console.log("deleted from database:", verbalDone.exam.id);
+      console.log("deleted from database:", verbalDone.user);
     }).catch(err => {
       console.log(err)
     })

@@ -25,4 +25,14 @@ export class PracticalComponent implements OnInit, OnDestroy {
   ngOnDestroy(){
     this.verbalQCsComplete.unsubscribe();
   }
+
+  onPass(exam:any, index: number){
+    this.exerciseService.passQC(exam);
+    this.verbalCompletedQCs.splice(index, 1);
+  }
+
+  onFail(exercise:any, index: number){
+    this.exerciseService.failExercise(exercise);
+    this.verbalCompletedQCs.splice(index, 1);
+  }
 }
