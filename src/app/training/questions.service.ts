@@ -92,15 +92,14 @@ export class QuestionsService {
    * @returns finishes the QC and moves it to the awaiting practical page
    */
   completedVerbal(score: number, exam: any) {
-    console.log('in post route id', exam.id)
-    return this.http.post(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedVerbals.json`, {
+    return this.http.put(
+      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedVerbals/${exam.id}.json`, {
       exam: exam,
       date: new Date(),
       score: score,
       user: this.userName
     }).subscribe((res) => {
-      console.log('in post route', res)
+      this.getVerbalCompleted();
     })
   }
 
@@ -110,9 +109,11 @@ export class QuestionsService {
    * @returns removes the QC from the completed verbals so it doesnt show up as awaiting practical
    */
   deleteVerbalCompleted(exam: any) {
-    let id = exam.id;
+    console.log('deleting verbal', exam)
     return this.http.delete(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedVerbals/${id}.json`)
+      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedVerbals/${exam}.json`).subscribe(() => {
+        this.getCompletedQCs();
+    });
   }
 
   /**
@@ -126,7 +127,9 @@ export class QuestionsService {
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`, {
       exam: exam,
       state: 'go'
-    }).subscribe()
+    }).subscribe(()=>{
+      this.getCompletedQCs();
+    })
   }
 
   /**
@@ -178,6 +181,7 @@ export class QuestionsService {
    * used for the cards on the verbal completed page
    */
   getVerbalCompleted() {
+    console.log("getting completed verbals")
     return this.http.get(
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedVerbals.json`).subscribe((response: any) => {
         let arr = [];
@@ -196,15 +200,14 @@ export class QuestionsService {
    * used for the data table
    */
   getCompletedQCs() {
+    console.log("getting completed qcs")
     return this.http.get(
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`).subscribe((res: any) => {
-        console.log('in getCompletedQCs', res)
         let arr = [];
         for (let key in res) {
           arr.push(res[key]);
         }
         this.allCompletedQCs = arr;
-        console.log(arr)
       });
     
   }

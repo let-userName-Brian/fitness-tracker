@@ -22,8 +22,11 @@ export class PracticalComponent implements OnInit {
   }
 
   onPass(exam:any, index: number){
+    let examId = exam.exam.id
     this.questionService.completedPractical(exam);
+    this.questionService.deleteVerbalCompleted(examId);
     this.verbalCompletedQCs.splice(index, 1);
+    this.questionService.getCompletedQCs();
   }
 
   onFail(exercise:any, index: number){
