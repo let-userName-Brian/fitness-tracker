@@ -23,7 +23,7 @@ export class CurrentTrainingComponent implements OnInit {
   constructor(private dialog: MatDialog,
     private exerciseService: ExerciseService,
     private questionService: QuestionsService,
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -57,12 +57,15 @@ export class CurrentTrainingComponent implements OnInit {
   }
 
   onPass() {
-    this.exerciseService.completeExercise(this.score, this.exam);
+    this.questionService.completedVerbal(this.score, this.exam);
+    console.log(this.score, this.exam.id);
+    //this.exerciseService.completeExercise(this.score, this.exam);
     this.router.navigate(['/training']);
   }
 
   onFail() {
-    this.exerciseService.failExercise(this.exam);
+    this.questionService.onFailQC(this.score, this.exam);
+    //this.exerciseService.failExercise(this.exam);
     this.router.navigate(['/training']);
   }
 
@@ -78,7 +81,7 @@ export class CurrentTrainingComponent implements OnInit {
     })
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.exerciseService.cancelExercise(this.score);
+        this.questionService.onCancelQC(this.score, this.exam)
       }
     })
   }

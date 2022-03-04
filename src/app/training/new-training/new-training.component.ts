@@ -3,6 +3,7 @@ import { ExerciseService } from '../exercise.service';
 import { Exercise } from '../exercise.model';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { QuestionsService } from '../questions.service';
 
 @Component({
   selector: 'app-new-training',
@@ -13,7 +14,7 @@ export class NewTrainingComponent implements OnInit, OnDestroy {
   @Output() trainingStart = new EventEmitter<void>();
   availableExercises: Exercise[];
   qcSubscription: Subscription;
-  constructor(private exerciseService: ExerciseService) { }
+  constructor(private exerciseService: ExerciseService, private questionService: QuestionsService) { }
 
   ngOnInit(): void {
     this.qcSubscription = this.exerciseService.qcChanged.subscribe(
@@ -28,5 +29,6 @@ export class NewTrainingComponent implements OnInit, OnDestroy {
 
   onStartTraining(form: NgForm): void {
     this.exerciseService.startExercise(form.value.exam, form.value.name)
+    this.questionService.userName = form.value.name;
   }
 }

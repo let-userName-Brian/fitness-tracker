@@ -1,8 +1,8 @@
 <div *ngFor="let verbals of verbalCompletedQCs; let i = index">
   <mat-card>
-    <mat-card-title>{{verbals.verbalQCCompleted[0].user}}</mat-card-title>
-    <mat-card-subtitle>{{verbals.verbalQCCompleted[0].score}}</mat-card-subtitle>
-    <mat-card-content>{{verbals.verbalQCCompleted[0].exam.name}}</mat-card-content>
+    <mat-card-title>{{verbals.user}}</mat-card-title>
+    <mat-card-subtitle>{{verbals.score}}</mat-card-subtitle>
+    <mat-card-content>{{verbals.exam.name}}</mat-card-content>
     <mat-divider inset></mat-divider>
     <mat-card-actions>
       <button mat-raised-button color="primary" (click)="onPass(verbals.verbalQCCompleted[0], i)">Pass/Go</button>

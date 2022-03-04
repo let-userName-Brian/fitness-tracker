@@ -1,7 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
-import { ExerciseService } from "./exercise.service";
 
 @Injectable({ providedIn: "root" })
 export class QuestionsService {
@@ -10,10 +9,12 @@ export class QuestionsService {
   newQuestion: any;
   editedQuestion: any;
 
+  userName: string;
+
   verbalsCompleted: any; //holds all verbals and is used for the cards awaiting practical
   allCompletedQCs: any; //holds all fully completed and is used for the data table
 
-  constructor(private http: HttpClient, private router: Router, private exerciseService: ExerciseService) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   getNameofQuestionBank(qc: string) {
     this.databank = qc;
@@ -91,12 +92,15 @@ export class QuestionsService {
    * @returns finishes the QC and moves it to the awaiting practical page
    */
   completedVerbal(score: number, exam: any) {
+    console.log('in post route id', exam.id)
     let id = exam.id;
     return this.http.post(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedVerbals/${id}.json`, {
+      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedVerbals.json`, {
       exam: exam,
       score: score,
-      user: this.exerciseService.userName
+      user: this.userName
+    }).subscribe((res) => {
+      console.log('in post route', res)
     })
   }
 
@@ -115,7 +119,7 @@ export class QuestionsService {
    * 
    * @param score the score of the QC
    * @param exam the actual exam
-   * @returns moves the qc to the completed screen and data table
+   * @returns moves the qc to the completed screen and data table & state as "go"
    */
   completedPractical(score: number, exam: any) {
     let id = exam.id;
@@ -123,17 +127,48 @@ export class QuestionsService {
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs/${id}.json`, {
       exam: exam,
       score: score,
-      user: this.exerciseService.userName
+      state: 'go'
     })
   }
 
+  /**
+   * 
+   * @param score 
+   * @param exam 
+   * @returns returns the state as "cancel"
+   */
+  onCancelQC(score: number, exam: any) {
+    let id = exam.id;
+    return this.http.patch(
+      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs/${id}.json`, {
+      exam: exam,
+      score: score,
+      state: 'cancel'
+    })
+  }
+  /**
+   * 
+   * @param score 
+   * @param exam 
+   * @returns returns the state as "no-go"
+   */
+  onFailQC(score: number, exam: any) {
+    let id = exam.id;
+    return this.http.patch(
+      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs/${id}.json`, {
+      exam: exam,
+      score: score,
+      user: exam.userName,
+      state: 'no-go'
+    })
+  }
   /**
    * 
    * @param exam the exam to be deleted
    * @returns 
    * needs a subscription to be used but deletes a full QC from the DB
    */
-  deleteQC(exam:any){
+  deleteQC(exam: any) {
     let id = exam.id;
     return this.http.delete(
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs/${id}.json`)
@@ -148,9 +183,15 @@ export class QuestionsService {
   getVerbalCompleted() {
     return this.http.get(
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedVerbals.json`).subscribe((response: any) => {
-        this.verbalsCompleted = response;
-      });
-  }
+        let arr = [];
+        for (let key in response) {
+          arr.push(response[key]);
+        }
+        this.verbalsCompleted = arr;
+        });
+      }
+      
+
 
   /**
    * 
@@ -163,4 +204,5 @@ export class QuestionsService {
         this.allCompletedQCs = response;
       });
   }
+
 }
