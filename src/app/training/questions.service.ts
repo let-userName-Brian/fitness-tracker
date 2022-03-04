@@ -132,6 +132,16 @@ export class QuestionsService {
     })
   }
 
+  failPractical(exam: any) {
+    return this.http.post(
+      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`, {
+      exam: exam,
+      state: 'no-go'
+    }).subscribe(()=>{
+      this.getCompletedQCs();
+    })
+  }
+
   /**
    * 
    * @param score 
@@ -153,13 +163,15 @@ export class QuestionsService {
    * @returns returns the state as "no-go"
    */
   onFailQC(score: number, exam: any) {
-    let id = exam.id;
-    return this.http.patch(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs/${id}.json`, {
+    return this.http.put(
+      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedVerbals/${exam.id}.json`, {
       exam: exam,
+      date: new Date(),
       score: score,
-      user: exam.userName,
+      user: this.userName,
       state: 'no-go'
+    }).subscribe((res) => {
+      this.getVerbalCompleted();
     })
   }
   /**

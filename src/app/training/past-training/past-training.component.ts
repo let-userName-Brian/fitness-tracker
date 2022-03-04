@@ -1,11 +1,8 @@
-import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
-import { ExerciseService } from '../exercise.service';
 import { AuthService } from 'src/app/auth/auth.service';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
-import { Exercise } from '../exercise.model';
-import { Subscription } from 'rxjs';
 import { QuestionsService } from '../questions.service';
 
 @Component({
@@ -24,13 +21,10 @@ export class PastTrainingComponent implements OnInit, AfterViewInit {
   constructor(private questionService: QuestionsService, private authService: AuthService) { }
 
   ngOnInit(): void {
-    // this.qcChangedSubscrption = this.excerciseService.finishedQCsChanged.subscribe((qcs: Exercise[]) => {
-    //   this.dataSource.data = qcs;
-    // });
-    // this.excerciseService.fetchCompletedOrCancelledExercises();
     this.questionService.getCompletedQCs();
     setTimeout(() => {
       this.dataSource.data = this.questionService?.allCompletedQCs;
+      console.log(this.dataSource.data);
     }, 600);
   }
 

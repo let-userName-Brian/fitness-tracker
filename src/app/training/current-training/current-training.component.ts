@@ -58,16 +58,12 @@ export class CurrentTrainingComponent implements OnInit {
 
   onPass() {
     this.questionService.completedVerbal(this.score, this.exam);
-    console.log(this.score, this.exam.id);
-    //this.exerciseService.completeExercise(this.score, this.exam);
-    //refresh page
     this.router.navigate(['']);
   }
 
   onFail() {
     this.questionService.onFailQC(this.score, this.exam);
-    //this.exerciseService.failExercise(this.exam);
-    this.router.navigate(['/training']);
+    this.router.navigate(['']);
   }
 
   onCancel() {

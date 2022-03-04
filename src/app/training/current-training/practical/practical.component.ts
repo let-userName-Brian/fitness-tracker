@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ExerciseService } from '../../exercise.service';
 import { QuestionsService } from '../../questions.service';
@@ -10,7 +11,7 @@ import { QuestionsService } from '../../questions.service';
 })
 export class PracticalComponent implements OnInit {
   verbalCompletedQCs: any;
-  constructor(private questionService: QuestionsService) { }
+  constructor(private questionService: QuestionsService, private router: Router) { }
 
 
   ngOnInit(){
@@ -26,11 +27,14 @@ export class PracticalComponent implements OnInit {
     this.questionService.completedPractical(exam);
     this.questionService.deleteVerbalCompleted(examId);
     this.verbalCompletedQCs.splice(index, 1);
-    this.questionService.getCompletedQCs();
+    this.router.navigate([''])
   }
 
   onFail(exercise:any, index: number){
-    // this.exerciseService.failExercise(exercise);
-    // this.verbalCompletedQCs.splice(index, 1);
+    let examId = exercise.exam.id
+    this.questionService.failPractical(exercise);
+    this.questionService.deleteVerbalCompleted(examId);
+    this.verbalCompletedQCs.splice(index, 1);
+    this.router.navigate([''])
   }
 }
