@@ -6,29 +6,32 @@ import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { Exercise } from '../exercise.model';
 import { Subscription } from 'rxjs';
+import { QuestionsService } from '../questions.service';
 
 @Component({
   selector: 'app-past-training',
   templateUrl: './past-training.component.html',
   styleUrls: ['./past-training.component.css']
 })
-export class PastTrainingComponent implements OnInit, AfterViewInit, OnDestroy {
+export class PastTrainingComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  displayedColumns = ['date', 'ExamName', 'UserName', 'go/no-go'];
+  displayedColumns = ['date', 'ExamName', 'UserName', 'go/no-go', 'score'];
   dataSource = new MatTableDataSource<any>();
-  private qcChangedSubscrption: Subscription;
-  constructor(private excerciseService: ExerciseService, private authService: AuthService) { }
+
+  completedQC: any;
+
+  constructor(private questionService: QuestionsService, private authService: AuthService) { }
 
   ngOnInit(): void {
-    this.qcChangedSubscrption = this.excerciseService.finishedQCsChanged.subscribe((qcs: Exercise[]) => {
-      this.dataSource.data = qcs;
-    });
-    this.excerciseService.fetchCompletedOrCancelledExercises();
-  }
-
-  ngOnDestroy() {
-    this.qcChangedSubscrption.unsubscribe();
+    // this.qcChangedSubscrption = this.excerciseService.finishedQCsChanged.subscribe((qcs: Exercise[]) => {
+    //   this.dataSource.data = qcs;
+    // });
+    // this.excerciseService.fetchCompletedOrCancelledExercises();
+    this.questionService.getCompletedQCs();
+    setTimeout(() => {
+      this.dataSource.data = this.questionService?.allCompletedQCs;
+    }, 600);
   }
 
   ngAfterViewInit() {

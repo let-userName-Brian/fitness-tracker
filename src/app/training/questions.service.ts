@@ -93,10 +93,10 @@ export class QuestionsService {
    */
   completedVerbal(score: number, exam: any) {
     console.log('in post route id', exam.id)
-    let id = exam.id;
     return this.http.post(
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedVerbals.json`, {
       exam: exam,
+      date: new Date(),
       score: score,
       user: this.userName
     }).subscribe((res) => {
@@ -121,14 +121,12 @@ export class QuestionsService {
    * @param exam the actual exam
    * @returns moves the qc to the completed screen and data table & state as "go"
    */
-  completedPractical(score: number, exam: any) {
-    let id = exam.id;
+  completedPractical(exam: any) {
     return this.http.post(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs/${id}.json`, {
+      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`, {
       exam: exam,
-      score: score,
       state: 'go'
-    })
+    }).subscribe()
   }
 
   /**
@@ -138,9 +136,8 @@ export class QuestionsService {
    * @returns returns the state as "cancel"
    */
   onCancelQC(score: number, exam: any) {
-    let id = exam.id;
     return this.http.patch(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs/${id}.json`, {
+      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`, {
       exam: exam,
       score: score,
       state: 'cancel'
@@ -200,9 +197,16 @@ export class QuestionsService {
    */
   getCompletedQCs() {
     return this.http.get(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`).subscribe((response: any) => {
-        this.allCompletedQCs = response;
+      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`).subscribe((res: any) => {
+        console.log('in getCompletedQCs', res)
+        let arr = [];
+        for (let key in res) {
+          arr.push(res[key]);
+        }
+        this.allCompletedQCs = arr;
+        console.log(arr)
       });
+    
   }
 
 }

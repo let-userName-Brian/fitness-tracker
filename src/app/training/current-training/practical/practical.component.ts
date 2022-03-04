@@ -22,8 +22,8 @@ export class PracticalComponent implements OnInit {
   }
 
   onPass(exam:any, index: number){
-    // this.exerciseService.passQC(exam);
-    // this.verbalCompletedQCs.splice(index, 1);
+    this.questionService.completedPractical(exam);
+    this.verbalCompletedQCs.splice(index, 1);
   }
 
   onFail(exercise:any, index: number){
