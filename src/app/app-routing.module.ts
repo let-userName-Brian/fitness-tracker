@@ -4,7 +4,8 @@ import { AuthGaurd } from './auth/auth-guard';
 
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { CurrentTrainingComponent } from './training/current-training/current-training.component';
+import { PracticalComponent } from './training/current-training/practical/practical.component';
+import { PastTrainingComponent } from './training/past-training/past-training.component';
 import { TrainingComponent } from './training/training.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 
@@ -12,7 +13,9 @@ const routes: Routes = [
   { path: '', component: WelcomeComponent},
   { path: 'signup', component: SignupComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'training', component: TrainingComponent, canActivate: [AuthGaurd] }
+  { path: 'new-training', component: TrainingComponent},
+  { path: 'practical', component: PracticalComponent, canActivate: [AuthGaurd] },
+  { path: 'past', component: PastTrainingComponent, canActivate: [AuthGaurd] },
 ];
 
 @NgModule({

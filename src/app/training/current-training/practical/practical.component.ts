@@ -27,7 +27,7 @@ export class PracticalComponent implements OnInit {
     this.questionService.completedPractical(exam);
     this.questionService.deleteVerbalCompleted(examId);
     this.verbalCompletedQCs.splice(index, 1);
-    this.router.navigate([''])
+    this.router.navigate(['/past'])
   }
 
   onFail(exercise:any, index: number){
@@ -35,6 +35,6 @@ export class PracticalComponent implements OnInit {
     this.questionService.failPractical(exercise);
     this.questionService.deleteVerbalCompleted(examId);
     this.verbalCompletedQCs.splice(index, 1);
-    this.router.navigate([''])
+    this.router.navigate(['/past'])
   }
 }

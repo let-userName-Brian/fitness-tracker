@@ -39,7 +39,7 @@ export class AuthService {
     this.afAuth.authState.subscribe(user => {
       if (user) {
         this.authChange.next(true);
-        this.router.navigate(["/training"]);
+        this.router.navigate(["/new-training"]);
         this.isUser = true;
       } else {
         this.exerciseService.cancelSubscriptions();
