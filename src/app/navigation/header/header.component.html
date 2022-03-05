@@ -5,15 +5,18 @@
     </button>
   </div>
   <div><a routerLink="/">QC</a></div>
-  <a routerLink="/new-training">New QC</a>
-  <a routerLink="/practical">Need Practical</a>
-  <a routerLink="/past">Past</a>
+
+  <div fxFlex fxLayout fxLayoutAlign="center center" fxHide.xs>
+    <ul fxLayout fxLayoutGap="15px" class="link-box">
+      <li><a routerLink="/new-training" routerLinkActive="activeLink">New QC</a></li>
+      <li><a routerLink="/practical" routerLinkActive="activeLink">Need Practical</a></li>
+      <li><a routerLink="/past" routerLinkActive="activeLink">Past</a></li>
+    </ul>
+  </div>
 
   <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
     <ul fxLayout fxLayoutGap="10px" class="nav-items">
-      <!-- <li *ngIf="!isAuth"><a routerLink="/signup">Signup</a></li> -->
       <li *ngIf="!isAuth"><a routerLink="/login">Login</a></li>
-      <li *ngIf="isAuth"><a routerLink="/new-training">QC's</a></li>
       <li *ngIf="isAuth"><a (click)="onLogout()">Logout</a></li>
 
     </ul>

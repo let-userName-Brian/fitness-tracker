@@ -1,5 +1,6 @@
 import { Component, Inject } from "@angular/core";
 import { MAT_DIALOG_DATA } from "@angular/material/dialog";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-stop-training",
@@ -10,5 +11,5 @@ import { MAT_DIALOG_DATA } from "@angular/material/dialog";
             </div>`
 })
 export class StopTrainingComponent { 
-  constructor( @Inject(MAT_DIALOG_DATA) public data: any ){ }
+  constructor( @Inject(MAT_DIALOG_DATA) public data: any, private router: Router ){ }
 }  

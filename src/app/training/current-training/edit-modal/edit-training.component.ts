@@ -21,9 +21,6 @@ export class EditTrainingComponent implements OnInit {
     ref: ['', Validators.required],
   })
 
-
-
-
   submitEditedQuestion() {
     this.questionService.editQuestion(this.editForm.value)
   }

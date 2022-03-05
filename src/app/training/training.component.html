@@ -1,13 +1,2 @@
-<!-- <mat-tab-group *ngIf="!ongoingTraining">
-  <mat-tab label="New Training">
-    <app-new-training></app-new-training>
-  </mat-tab>
-  <mat-tab label="Need Practical">
-    <app-practical></app-practical>
-  </mat-tab>
-  <mat-tab label="Past Training">
-    <app-past-training></app-past-training>
-  </mat-tab>
-</mat-tab-group> -->
-<app-new-training *ngIf="!ongoingTraining" routerLinkActive="/new-training"></app-new-training>
+<app-new-training class="new-training-box" *ngIf="!ongoingTraining" routerLinkActive="/new-training"></app-new-training>
 <app-current-training *ngIf="ongoingTraining"></app-current-training>

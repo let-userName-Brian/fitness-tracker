@@ -15,13 +15,11 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    console.log("form", form.value);
     this.authService.login({
       name: form.value.userName,
       email: form.value.email,
       password: form.value.password
     })
-    this.router.navigate(['/new-training']);
   }
 
 }

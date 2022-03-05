@@ -82,6 +82,7 @@ export class QuestionsService {
       id: form.id,
     }).subscribe((response: any) => {
       this.editedQuestion = response;
+      alert("Question edited");
     });
   }
 
@@ -109,7 +110,6 @@ export class QuestionsService {
    * @returns removes the QC from the completed verbals so it doesnt show up as awaiting practical
    */
   deleteVerbalCompleted(exam: any) {
-    console.log('deleting verbal', exam)
     return this.http.delete(
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedVerbals/${exam}.json`).subscribe(() => {
         this.getCompletedQCs();

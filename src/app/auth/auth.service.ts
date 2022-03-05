@@ -24,15 +24,17 @@ export class AuthService {
   login(authData: AuthData) {
     this.afAuth.signInWithEmailAndPassword(authData.email, authData.password)
     .then(() => {
-     console.log('logged in');
+     this.router.navigate(['/new-training']);
     })
-    .catch(error => {
-      console.log(error);
+    .catch(() => {
+      alert('Invalid credentials');
+      this.router.navigate(['/login']);
     });
   }
 
   logout() {
     this.afAuth.signOut();
+    alert(`Have a great Air Force day!`);
   }
 
   initAuthListener() {
