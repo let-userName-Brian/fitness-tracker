@@ -17,7 +17,7 @@
   <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
     <ul fxLayout fxLayoutGap="10px" class="nav-items">
       <li *ngIf="!isAuth"><a routerLink="/login">Login</a></li>
-      <li *ngIf="isAuth"><a (click)="onLogout()">Logout</a></li>
+      <li *ngIf="isAuth"><a class="logout" (click)="onLogout()">Logout</a></li>
 
     </ul>
   </div>

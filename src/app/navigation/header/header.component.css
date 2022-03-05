@@ -4,6 +4,10 @@ a{
   /* padding: 10px */
 }
 
+.logout{
+  cursor: pointer;
+}
+
 a:hover, a:active{
   color: lightgrey;
 }

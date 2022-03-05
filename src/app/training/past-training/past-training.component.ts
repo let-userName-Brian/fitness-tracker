@@ -4,6 +4,7 @@ import { AuthService } from 'src/app/auth/auth.service';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { QuestionsService } from '../questions.service';
+import { ExcelService } from 'src/app/excel.service';
 
 @Component({
   selector: 'app-past-training',
@@ -15,26 +16,45 @@ export class PastTrainingComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   displayedColumns = ['date', 'ExamName', 'UserName', 'go/no-go', 'score'];
   dataSource = new MatTableDataSource<any>();
+  excelSheet: any = {
+    date: '',
+    qc: '',
+    member: '',
+    status: '',
+    score: 0
+  }
 
-  completedQC: any;
-
-  constructor(private questionService: QuestionsService, private authService: AuthService) { }
+  constructor(private questionService: QuestionsService, private authService: AuthService, private excelService: ExcelService) { }
 
   ngOnInit(): void {
     this.questionService.getCompletedQCs();
     setTimeout(() => {
       this.dataSource.data = this.questionService?.allCompletedQCs;
-      console.log(this.dataSource.data);
+      this.excelSheet = this.dataSource.data;
+      this.flatlistExcelVar()
     }, 600);
   }
 
-  ngAfterViewInit() {
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;
+  flatlistExcelVar() {
+    this.excelSheet?.forEach((element, index) => {
+      element.date = this.excelSheet[index].exam.date;
+      element.qc = this.excelSheet[index].exam.exam.name;
+      element.member = this.excelSheet[index].exam.user;
+      element.score = this.excelSheet[index].exam.score;
+    });
   }
 
-  doFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+ngAfterViewInit() {
+  this.dataSource.sort = this.sort;
+  this.dataSource.paginator = this.paginator;
+}
+
+doFilter(filterValue: string) {
+  this.dataSource.filter = filterValue.toLowerCase();
+}
+
+exportAsXLSX(): void {
+  this.excelService.exportAsExcelFile(this.excelSheet, 'QC_Report');
+}
 }
 
