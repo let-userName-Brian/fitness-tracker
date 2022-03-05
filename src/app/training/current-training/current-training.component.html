@@ -1,9 +1,9 @@
 <section class="current-training" fxLayout="column" fxLayoutAlign="center center" *ngIf="!questionsHaveBeenFetched">
   <h1>{{ exam.name }} QC</h1>
   <h3>You have 25 questions in total</h3>
-  <section fxLayoutGap="5px">
-    <button mat-raised-button color="primary" (click)="onStart()">Start QC</button>
-    <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+  <section fxLayoutGap="10px">
+    <button mat-raised-button class="start" (click)="onStart()">Start QC</button>
+    <button mat-raised-button class="cancel" (click)="onCancel()">Cancel</button>
   </section>
   <hr style="margin-bottom: 1rem">
 </section>
@@ -43,8 +43,8 @@
   </div>
   <section fxLayoutGap="10px" fxLayout="row" fxLayoutAlign="center center" style="margin-bottom: 1rem;">
     <h3>Score: {{ this.score }}</h3>
-    <button mat-raised-button color="primary" (click)="onPass()">Pass/Go</button>
-    <button mat-raised-button color="primary" (click)="onCancel()">Cancel</button>
-    <button mat-raised-button color="warn" (click)="onFail()">Fail/No-Go</button>
+    <button mat-raised-button class="pass" (click)="onPass()">Pass/Go</button>
+    <button mat-raised-button class="cancel" (click)="onCancel()">Cancel</button>
+    <button mat-raised-button class="fail" (click)="onFail()">Fail/No-Go</button>
   </section>
 </section>

@@ -21,3 +21,79 @@ mat-card-actions{
   justify-content: right;
   margin-top: -2rem;
 }
+
+.start{
+  color: white;
+  background-color: rgb(21, 86, 101);
+}
+
+.start:hover{
+  box-shadow: rgb(124, 124, 124) 0px 0px 10px;
+  background-color: rgb(21, 86, 101);
+  border: solid;
+  border-width: 1px;
+  border-color: #78d0e3;
+  color: #78d0e3;
+  transform: scale(1.1);
+}
+
+.cancel{
+  color:black;
+  background-color: rgb(207, 152, 0);
+}
+
+.cancel:hover{
+  box-shadow: rgb(124, 124, 124) 0px 0px 10px;
+  background-color: rgb(207, 152, 0);
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+  color: black;
+  transform: scale(1.1);
+}
+
+.pass{
+  color:black;
+  background-color: rgb(5, 255, 46);
+}
+
+.pass:hover{
+  box-shadow: rgb(124, 124, 124) 0px 0px 10px;
+  background-color: rgb(5, 255, 46);
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+  color: black;
+  transform: scale(1.1);
+}
+
+.fail{
+  color:white;
+  background-color: rgb(209, 0, 0);
+}
+
+.fail:hover{
+  box-shadow: rgb(124, 124, 124) 0px 0px 10px;
+  background-color: rgb(209, 0, 0);
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* 
+button {
+  color: white;
+  background-color: rgb(21, 86, 101);
+}
+
+button:hover{
+  box-shadow: rgb(124, 124, 124) 0px 0px 10px;
+  background-color: rgb(21, 86, 101);
+  border: solid;
+  border-width: 1px;
+  border-color: #78d0e3;
+  color: #78d0e3;
+  transform: scale(1.1);
+} */

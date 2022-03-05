@@ -6,8 +6,8 @@
     <mat-card-content>{{verbals.exam.name}}</mat-card-content>
     <mat-divider inset></mat-divider>
     <mat-card-actions>
-      <button mat-raised-button color="primary" (click)="onPass(verbals, i)">Pass/Go</button>
-      <button mat-raised-button color="warn" (click)="onFail(verbals, i)">Fail/No-Go</button>
+      <button mat-raised-button class="pass" (click)="onPass(verbals, i)">Pass/Go</button>
+      <button mat-raised-button class="fail" (click)="onFail(verbals, i)">Fail/No-Go</button>
     </mat-card-actions>
   </mat-card>
 </div>

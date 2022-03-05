@@ -1,3 +1,8 @@
+mat-toolbar{
+  background-color: #155665;
+  color: white;
+}
+
 a{
   text-decoration: none;
   color: #fff;
@@ -9,7 +14,7 @@ a{
 }
 
 a:hover, a:active{
-  color: lightgrey;
+  color: #78d0e3;
 }
 
 .nav-items{
@@ -35,10 +40,9 @@ button{
 }
 
 .activeLink{
-  color: rgb(255, 0, 179);
+  color: #78d0e3;
   padding: 5px 15px;
-  background-color: rgb(14, 13, 13);
+  /* background-color: rgb(14, 13, 13); */
   border-radius: 10px;
   border: solid;
-  
 }

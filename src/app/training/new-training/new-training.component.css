@@ -11,5 +11,20 @@ mat-card{
 
 form{
   border-radius: 20px;
-  box-shadow: rgb(190, 202, 252) 2px 2px 90px 2px;
+  box-shadow: rgba(21, 86, 101, 0.582) 0px 10px 30px 0px;
+}
+
+button {
+  color: white;
+  background-color: rgb(21, 86, 101);
+}
+
+button:hover{
+  box-shadow: rgb(124, 124, 124) 0px 0px 10px;
+  background-color: rgb(21, 86, 101);
+  border: solid;
+  border-width: 1px;
+  border-color: #78d0e3;
+  color: #78d0e3;
+  transform: scale(1.1);
 }
