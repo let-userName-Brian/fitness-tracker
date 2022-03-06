@@ -21,6 +21,7 @@ export class NewTrainingComponent implements OnInit, OnDestroy {
       qcs => this.availableExercises = qcs
     );
     this.exerciseService.fetchAvailableExercises();
+    this.questionService.getVerbalCompleted();
   }
 
   ngOnDestroy(): void {

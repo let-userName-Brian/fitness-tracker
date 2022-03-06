@@ -34,24 +34,3 @@
   <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </mat-table>
 <mat-paginator [length]="10" [pageSizeOptions]="[10, 20, 30, 50]" aria-label="Select page"></mat-paginator>
-
-
-<!-- hidden table for excel -->
-<table class="table table-striped" fxHide>
-  <tr>
-    <td><b>Date</b></td>
-    <td><b>QC Name</b></td>
-    <td><b>Member</b></td>
-    <td><b>Go | No-Go</b></td>
-    <td><b>Score</b></td>
-  </tr>
-  <tbody>
-    <tr *ngFor="let qc of excelSheet">
-      <td>{{ qc.date | date }}</td>
-      <td>{{ qc.qc }}</td>
-      <td>{{ qc.member }}</td>
-      <td>{{ qc.state }}</td>
-      <td>{{ qc.score }}</td>  
-    </tr>
-  </tbody>
-</table>

@@ -6,10 +6,10 @@
   </div>
   <div><a routerLink="/">QC</a></div>
 
-  <div fxFlex fxLayout fxLayoutAlign="center center" fxHide.xs>
-    <ul fxLayout fxLayoutGap="15px" class="link-box">
+  <div fxFlex fxLayout fxLayoutAlign="center center" fxHide.xs >
+    <ul fxLayout fxLayoutGap="25px" class="link-box">
       <li><a routerLink="/new-training" routerLinkActive="activeLink">New QC</a></li>
-      <li><a routerLink="/practical" routerLinkActive="activeLink">Need Practical</a></li>
+      <li><a routerLink="/practical" routerLinkActive="activeLink" [matBadge]="alertInfo" matBadgeOverlap="false">Need Practical</a></li>
       <li><a routerLink="/past" routerLinkActive="activeLink">Past</a></li>
     </ul>
   </div>

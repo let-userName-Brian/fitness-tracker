@@ -20,6 +20,7 @@ import { MatSortModule } from "@angular/material/sort";
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatBadgeModule } from '@angular/material/badge';
 @NgModule({
   imports: [
     // import all the modules that are required
@@ -42,7 +43,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatSortModule,
     MatPaginatorModule,
     MatRadioModule,
-    MatMenuModule
+    MatMenuModule,
+    MatBadgeModule
   ],
   exports: [
     // export all the modules that are required
@@ -65,7 +67,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatSortModule,
     MatPaginatorModule,
     MatRadioModule,
-    MatMenuModule
+    MatMenuModule,
+    MatBadgeModule
   ]
 
 })

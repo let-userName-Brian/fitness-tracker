@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, OnDestroy } from '@angular/core';
 import { AuthService } from 'src/app/auth/auth.service';
 import { Subscription } from 'rxjs';
+import { QuestionsService } from 'src/app/training/questions.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
   @Output() sidenavToggle = new EventEmitter();
   isAuth: boolean = false;
   authSubscription: Subscription;
-  constructor(private authService: AuthService) { }
+  alertInfo: number;
+  constructor(private authService: AuthService, private questionService: QuestionsService) {
+    setInterval(() => {
+      console.log('firing')
+      this.alertInfo = this.questionService.alertIcon;
+    }, 2000);
+  }
 
   ngOnInit(): void {
     this.authSubscription = this.authService.authChange.subscribe(authStatus => {

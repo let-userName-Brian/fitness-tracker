@@ -21,6 +21,7 @@ export class TrainingComponent implements OnInit, OnDestroy {
           this.ongoingTraining = false;
         }
       })
+      
   }
 
   ngOnDestroy(): void {

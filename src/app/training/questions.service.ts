@@ -8,7 +8,7 @@ export class QuestionsService {
   fetchedQuestions: any;
   newQuestion: any;
   editedQuestion: any;
-
+  alertIcon: number = 0;
   userName: string;
 
   verbalsCompleted: any; //holds all verbals and is used for the cards awaiting practical
@@ -99,9 +99,7 @@ export class QuestionsService {
       date: new Date(),
       score: score,
       user: this.userName
-    }).subscribe((res) => {
-      this.getVerbalCompleted();
-    })
+    }).subscribe();
   }
 
   /**
@@ -127,9 +125,7 @@ export class QuestionsService {
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`, {
       exam: exam,
       state: 'go'
-    }).subscribe(()=>{
-      this.getCompletedQCs();
-    })
+    }).subscribe();
   }
 
   failPractical(exam: any) {
@@ -137,9 +133,7 @@ export class QuestionsService {
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`, {
       exam: exam,
       state: 'no-go'
-    }).subscribe(()=>{
-      this.getCompletedQCs();
-    })
+    }).subscribe();
   }
 
   /**
@@ -170,9 +164,7 @@ export class QuestionsService {
       score: score,
       user: this.userName,
       state: 'no-go'
-    }).subscribe((res) => {
-      this.getVerbalCompleted();
-    })
+    }).subscribe();
   }
   /**
    * 
@@ -201,6 +193,7 @@ export class QuestionsService {
           arr.push(response[key]);
         }
         this.verbalsCompleted = arr;
+        this.alertIcon = this.verbalsCompleted.length 
         });
       }
       
