@@ -24,6 +24,9 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { HttpClientModule } from '@angular/common/http';
 import { EditTrainingComponent } from './training/current-training/edit-modal/edit-training.component';
 import { PracticalComponent } from './training/current-training/practical/practical.component';
+import { MarkdownRendererComponent } from './markdown/markdown-renderer/markdown-renderer.component';
+import { MarkdownOptionsComponent } from './markdown/markdown-options/markdown-options.component';
+import { DpeDisplayComponent } from './markdown/dpe-display/dpe-display.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { PracticalComponent } from './training/current-training/practical/practi
     SidenavListComponent,
     StopTrainingComponent,
     EditTrainingComponent,
-    PracticalComponent
+    PracticalComponent,
+    MarkdownRendererComponent,
+    MarkdownOptionsComponent,
+    DpeDisplayComponent
   ],
   imports: [
     BrowserModule,
