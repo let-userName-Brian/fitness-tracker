@@ -14,7 +14,7 @@ import { ExcelService } from 'src/app/excel.service';
 export class PastTrainingComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  displayedColumns = ['date', 'ExamName', 'UserName', 'go/no-go', 'score'];
+  displayedColumns = ['date', 'ExamName', 'UserName', 'go/no-go', 'score', 'delete'];
   dataSource = new MatTableDataSource<any>();
   excelSheet: any = {
     date: '',
@@ -42,6 +42,11 @@ export class PastTrainingComponent implements OnInit, AfterViewInit {
       element.member = this.excelSheet[index].exam.user;
       element.score = this.excelSheet[index].exam.score;
     });
+  }
+
+  onDelete(id: any) {
+    console.log(id);
+    this.questionService.deleteQC(id);
   }
 
 ngAfterViewInit() {

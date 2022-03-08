@@ -8,7 +8,7 @@ export class QuestionsService {
   fetchedQuestions: any;
   newQuestion: any;
   editedQuestion: any;
-  alertIcon: number = 0;
+  alertIcon: number;
   userName: string;
 
   verbalsCompleted: any; //holds all verbals and is used for the cards awaiting practical
@@ -175,7 +175,9 @@ export class QuestionsService {
   deleteQC(exam: any) {
     let id = exam.id;
     return this.http.delete(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs/${id}.json`)
+      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs/${id}.json`).subscribe((res) => {
+        console.log(res)
+    });
   }
 
 
