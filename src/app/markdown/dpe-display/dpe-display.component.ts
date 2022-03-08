@@ -10,6 +10,7 @@ export class DpeDisplayComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log('DpeDisplayComponent');
   }
 
 }

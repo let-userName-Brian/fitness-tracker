@@ -1,1 +1,55 @@
-<p>markdown-options works!</p>
+<mat-drawer-container class="options-container">
+  <mat-drawer mode="side" opened fxHide>Drawer content</mat-drawer>
+  <mat-drawer-content>
+    <div class="header">
+      <h2>Edit</h2>
+    </div>
+    <hr>
+    <form class="form" [formGroup]="edit">
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Members name</mat-label>
+        <input type="text" matInput formControlName="name">
+      </mat-form-field>
+      <hr>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label> Members flight</mat-label>
+        <input type="text" matInput formControlName="flight">
+      </mat-form-field>
+      <hr>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Type of Eval</mat-label>
+        <input type="text" matInput formControlName="eval">
+      </mat-form-field>
+      <hr>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Rating</mat-label>
+        <input type="text" matInput formControlName="rating">
+      </mat-form-field>
+      <hr>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label> Section to add in the questions missed</mat-label>
+        <textarea type="text" matInput formControlName="missed"></textarea>
+      </mat-form-field>
+      <hr>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Shoot dont Shoot</mat-label>
+        <textarea type="text" matInput formControlName="shoot"></textarea>
+      </mat-form-field>
+      <hr>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Practicals completed</mat-label>
+        <textarea type="text" matInput formControlName="practical"></textarea>
+      </mat-form-field>
+      <hr>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Synopsis</mat-label>
+        <textarea type="text" matInput formControlName="synopsis"></textarea>
+      </mat-form-field>
+      <hr>
+      <mat-form-field class="full-width" appearance="fill">
+        <mat-label>Signature</mat-label>
+        <input type="text" matInput formControlName="signature">
+      </mat-form-field>
+    </form>
+  </mat-drawer-content>
+</mat-drawer-container>

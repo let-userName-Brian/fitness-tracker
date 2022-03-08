@@ -1,4 +1,4 @@
-.excelButton{
+.excelButton {
     background-color: #00aa2b;
     color: white;
     border-radius: 10px;
@@ -8,7 +8,7 @@
     cursor: pointer;
 }
 
-.excelButton:hover{
+.excelButton:hover {
     background-color: #00aa2b;
     color: white;
     box-shadow: grey 0px 0px 10px;
@@ -18,5 +18,5 @@
     margin-left: 5rem;
     cursor: pointer;
     transform: scale(1.1);
-
 }
+

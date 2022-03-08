@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-markdown-options',
@@ -6,8 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./markdown-options.component.css']
 })
 export class MarkdownOptionsComponent implements OnInit {
+  
+  constructor(private fb: FormBuilder) { }
 
-  constructor() { }
+  edit = this.fb.group({
+    name: [''],
+    flight: [''],
+    eval: [''],
+    rating: [''],
+    missed: [''],
+    shoot: [''],
+    practical: [''],
+    synopsis: [''],
+    signature: ['']
+  })
 
   ngOnInit(): void {
   }
