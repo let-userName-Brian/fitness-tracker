@@ -26,11 +26,11 @@ export class PastTrainingComponent implements OnInit, AfterViewInit {
   }
 
   constructor(
-    private questionService: QuestionsService, 
-    private authService: AuthService, 
+    private questionService: QuestionsService,
+    private authService: AuthService,
     private excelService: ExcelService,
     private router: Router
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.questionService.getCompletedQCs();
@@ -50,22 +50,22 @@ export class PastTrainingComponent implements OnInit, AfterViewInit {
     });
   }
 
-  onLoadDPE(exam:any) {
+  onLoadDPE(exam: any) {
     this.questionService.loadDPE(exam);
     this.router.navigate(['/dpe']);
   }
 
-ngAfterViewInit() {
-  this.dataSource.sort = this.sort;
-  this.dataSource.paginator = this.paginator;
-}
+  ngAfterViewInit() {
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
+  }
 
-doFilter(filterValue: string) {
-  this.dataSource.filter = filterValue.toLowerCase();
-}
+  doFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.toLowerCase();
+  }
 
-exportAsXLSX(): void {
-  this.excelService.exportAsExcelFile(this.excelSheet, 'QC_Report');
-}
+  exportAsXLSX(): void {
+    this.excelService.exportAsExcelFile(this.excelSheet, 'QC_Report');
+  }
 }
 
