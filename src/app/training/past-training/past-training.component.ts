@@ -14,7 +14,7 @@ import { ExcelService } from 'src/app/excel.service';
 export class PastTrainingComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  displayedColumns = ['date', 'ExamName', 'UserName', 'go/no-go', 'score', 'delete'];
+  displayedColumns = ['date', 'ExamName', 'UserName', 'go/no-go', 'score'];
   dataSource = new MatTableDataSource<any>();
   excelSheet: any = {
     date: '',

@@ -1,4 +1,4 @@
-﻿<div align="right">**45th SECURITY FORCES SQUADRON**</div>
+﻿**45th SECURITY FORCES SQUADRON**
 
 **STAN EVAL REPORT**
 
@@ -40,5 +40,4 @@
 `				   `///ORGINAL SIGNED///  					DWIGHT T. VEON, MSgt, USAF
 
 Section Chief, Standardization & Evaluations                     	
-1
 

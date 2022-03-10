@@ -27,6 +27,12 @@ import { PracticalComponent } from './training/current-training/practical/practi
 import { MarkdownRendererComponent } from './markdown/markdown-renderer/markdown-renderer.component';
 import { MarkdownOptionsComponent } from './markdown/markdown-options/markdown-options.component';
 import { DpeDisplayComponent } from './markdown/dpe-display/dpe-display.component';
+import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
+
+import 'prismjs';
+import 'prismjs/components/prism-typescript.min.js';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.js';
+import 'prismjs/plugins/line-highlight/prism-line-highlight.js';
 
 @NgModule({
   declarations: [
@@ -45,7 +51,7 @@ import { DpeDisplayComponent } from './markdown/dpe-display/dpe-display.componen
     PracticalComponent,
     MarkdownRendererComponent,
     MarkdownOptionsComponent,
-    DpeDisplayComponent
+    DpeDisplayComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +64,20 @@ import { DpeDisplayComponent } from './markdown/dpe-display/dpe-display.componen
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    HttpClientModule
+    HttpClientModule,
+    MarkdownModule.forRoot({
+      markedOptions: {
+        provide: MarkedOptions,
+        useValue: {
+          gfm: true,
+          breaks: false,
+          pedantic: false,
+          smartLists: true,
+          smartypants: false,
+        },
+      },
+    })
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
