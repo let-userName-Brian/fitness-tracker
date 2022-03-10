@@ -12,19 +12,8 @@ export class MarkdownRendererComponent implements OnInit {
   loadedMD: any;
   constructor(private questionService: QuestionsService) { }
 
-  onLoad(event) {
-    console.log(event);
-  }
-
-  onError(event) {
-    console.log(event);
-  }
-
   ngOnInit(): void {
-    this.loadedMD = this.questionService.allCompletedQCs[0]
-    setTimeout(() => {
-      console.log(this.loadedMD);
-    }, 1000);
+    this.loadedMD = this.questionService.loadDPEReport
   }
 
 }

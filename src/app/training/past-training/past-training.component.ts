@@ -5,6 +5,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { QuestionsService } from '../questions.service';
 import { ExcelService } from 'src/app/excel.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-past-training',
@@ -14,7 +15,7 @@ import { ExcelService } from 'src/app/excel.service';
 export class PastTrainingComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  displayedColumns = ['date', 'ExamName', 'UserName', 'go/no-go', 'score'];
+  displayedColumns = ['date', 'ExamName', 'UserName', 'go/no-go', 'score', 'generate DPE'];
   dataSource = new MatTableDataSource<any>();
   excelSheet: any = {
     date: '',
@@ -24,7 +25,12 @@ export class PastTrainingComponent implements OnInit, AfterViewInit {
     score: 0
   }
 
-  constructor(private questionService: QuestionsService, private authService: AuthService, private excelService: ExcelService) { }
+  constructor(
+    private questionService: QuestionsService, 
+    private authService: AuthService, 
+    private excelService: ExcelService,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
     this.questionService.getCompletedQCs();
@@ -44,9 +50,9 @@ export class PastTrainingComponent implements OnInit, AfterViewInit {
     });
   }
 
-  onDelete(id: any) {
-    console.log(id);
-    this.questionService.deleteQC(id);
+  onLoadDPE(exam:any) {
+    this.questionService.loadDPE(exam);
+    this.router.navigate(['/dpe']);
   }
 
 ngAfterViewInit() {

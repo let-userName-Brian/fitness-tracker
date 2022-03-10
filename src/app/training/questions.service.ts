@@ -13,7 +13,7 @@ export class QuestionsService {
 
   verbalsCompleted: any; //holds all verbals and is used for the cards awaiting practical
   allCompletedQCs: any; //holds all fully completed and is used for the data table
-
+  loadDPEReport: any; //a loaded DPE report from the past training component 
   constructor(private http: HttpClient, private router: Router) { }
 
   getNameofQuestionBank(qc: string) {
@@ -56,8 +56,6 @@ export class QuestionsService {
         this.filterQuestions();
       });
   }
-
-
 
   getNewSingleQuestion() {
     let params = this.databank;
@@ -219,4 +217,7 @@ export class QuestionsService {
     
   }
 
+  loadDPE(exam: any){
+    this.loadDPEReport = exam;
+  }
 }
