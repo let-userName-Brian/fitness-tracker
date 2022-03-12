@@ -13,7 +13,7 @@
 
 .markdown {
   min-width: 80%;
-  margin-top: 1rem
+  margin-top: 3rem
 }
 
 .options-container {
@@ -25,8 +25,6 @@
 }
 
 .form {
-  min-width: 150px;
-  max-width: 500px;
   width: 90%;
   padding: 10px;
 }
@@ -36,7 +34,7 @@
 }
 
 hr {
-  width: 100vw;
+  width: 30%;
 }
 
 .header {
@@ -106,5 +104,33 @@ p {
 }
 
 .perf{
+  margin-top: 1rem;
+}
+
+.loadPDF{
+  background-color: #aa0000;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  border: solid;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.loadPDF:hover{
+  background-color: #aa0000;
+  color: white;
+  box-shadow: grey 0px 0px 10px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  border: solid;
+  margin-left: 1rem;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
   margin-top: 1rem;
 }

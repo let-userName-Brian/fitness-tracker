@@ -1,7 +1,8 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { QuestionsService } from 'src/app/training/questions.service';
 import { jsPDF } from "jspdf";
+import html2canvas from 'html2canvas';
 import "jspdf/dist/polyfills.es.js";
 @Component({
   selector: 'app-markdown-renderer',
@@ -9,10 +10,9 @@ import "jspdf/dist/polyfills.es.js";
   styleUrls: ['./markdown-renderer.component.css']
 })
 export class MarkdownRendererComponent implements OnInit {
-  @ViewChild('content') content: ElementRef;
   loadedMD: any;
   loadedDPE: any;
-  
+
   constructor(private questionService: QuestionsService, private fb: FormBuilder) { }
 
   editForm = this.fb.group({
@@ -49,12 +49,15 @@ export class MarkdownRendererComponent implements OnInit {
     })
   }
 
-  public SavePDF(): void {  
-    //console.log(this.content.nativeElement.innerText)
-    let doc = new jsPDF();   
-    doc.setFontSize(12);
-    doc.setFont("helvetica");
-    doc.text(this.content.nativeElement.innerText, 10, 10);
-    doc.save('test.pdf');  
-  } 
+  public SavePDF(): void {
+    html2canvas(document.getElementById('content')!).then(canvas => {
+      const contentDataURL = canvas.toDataURL('image/png')
+      let pdf = new jsPDF('p', 'pt', 'a4');
+      let width = pdf.internal.pageSize.getWidth();
+      let height = canvas.height * (width / canvas.width);
+      pdf.addImage(contentDataURL, 'PNG', 0, 10, width, height);
+      pdf.save('DPE-Report.pdf');
+    })
+  }
 }
+ 
