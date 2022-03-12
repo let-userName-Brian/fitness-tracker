@@ -10,21 +10,8 @@ import { QuestionsService } from 'src/app/training/questions.service';
   styleUrls: ['./markdown-renderer.component.css']
 })
 export class MarkdownRendererComponent implements OnInit {
-  //full form loaded
   loadedMD: any;
   loadedDPE: any;
-
-  name: string;
-  flight = new Subject<string>();
-  eval: string;
-  rating: string;
-  missed: string;
-  shoot: string;
-  practical: string;
-  synopsis: string;
-  signature: string;
-
-  showBlock: boolean = false;
   
   constructor(private questionService: QuestionsService, private fb: FormBuilder) { }
 
@@ -39,23 +26,11 @@ export class MarkdownRendererComponent implements OnInit {
     synopsis: [''],
     signature: ['']
   })
-
-  showBlockTrigger() {
-    this.showBlock = true
-  }
+  
   setValues(event: any, edit) {
-    // console.log("value", event)
-    // console.log("form name", edit)
-    // this.editForm.patchValue({
-    //   edit: event
-    // })
-    // this.flight = event
-    // console.log("flight", this.flight)
-    console.log(this.loadedMD)
-  }
-  reloadMD() {
-    console.log("reloadMD")
-    //this.loadedMD = this.questionService.loadDPEReport$
+    this.editForm.patchValue({
+      edit: event
+    })
   }
 
   ngOnInit(): void {
@@ -63,22 +38,14 @@ export class MarkdownRendererComponent implements OnInit {
     this.loadedDPE = this.questionService.loadDPEReport$
     this.editForm.setValue({
       name: this.loadedDPE.member,
-      flight: '',
+      flight: this.editForm.value.flight,
       eval: this.loadedDPE.exam.exam.name,
-      rating: '',
-      missed: '',
-      shoot: '',
-      practical: '',
-      synopsis: '',
-      signature: ''
-    })
-    this.flight.subscribe(event => {
-      this.eval = event
+      rating: this.editForm.value.rating,
+      missed: this.editForm.value.missed,
+      shoot: this.editForm.value.shoot,
+      practical: this.editForm.value.practical,
+      synopsis: this.editForm.value.synopsis,
+      signature: this.editForm.value.signature
     })
   }
-
-  onPreviewDomChanged($event) {
-    console.log("preview dom changed", $event)
-  }
-
 }
