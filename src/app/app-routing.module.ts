@@ -4,7 +4,6 @@ import { AuthGaurd } from './auth/auth-guard';
 
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { DpeDisplayComponent } from './markdown/dpe-display/dpe-display.component';
 import { MarkdownRendererComponent } from './markdown/markdown-renderer/markdown-renderer.component';
 import { PracticalComponent } from './training/current-training/practical/practical.component';
 import { PastTrainingComponent } from './training/past-training/past-training.component';
@@ -18,7 +17,7 @@ const routes: Routes = [
   { path: 'new-training', component: TrainingComponent},
   { path: 'practical', component: PracticalComponent, canActivate: [AuthGaurd] },
   { path: 'past', component: PastTrainingComponent, canActivate: [AuthGaurd] },
-  { path: 'dpe', component: DpeDisplayComponent, canActivate: [AuthGaurd] }
+  { path: 'dpe', component: MarkdownRendererComponent, canActivate: [AuthGaurd] }
 ];
 
 @NgModule({
