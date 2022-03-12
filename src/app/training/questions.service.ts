@@ -23,7 +23,7 @@ export class QuestionsService {
   getNameofQuestionBank(qc: string) {
     this.databank = qc;
     switch (qc) {
-      case "Flight Sargent":
+      case "Flight Sergeant":
         return this.databank = "FS";
       case "RFL - Patrol":
         return this.databank = "RFL";
