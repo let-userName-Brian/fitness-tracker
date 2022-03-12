@@ -25,9 +25,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { EditTrainingComponent } from './training/current-training/edit-modal/edit-training.component';
 import { PracticalComponent } from './training/current-training/practical/practical.component';
 import { MarkdownRendererComponent } from './markdown/markdown-renderer/markdown-renderer.component';
-import { MarkdownOptionsComponent } from './markdown/markdown-options/markdown-options.component';
-import { DpeDisplayComponent } from './markdown/dpe-display/dpe-display.component';
 import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
+import { LMarkdownEditorModule } from 'ngx-markdown-editor';
+
 
 import 'prismjs';
 import 'prismjs/components/prism-typescript.min.js';
@@ -50,8 +50,6 @@ import 'prismjs/plugins/line-highlight/prism-line-highlight.js';
     EditTrainingComponent,
     PracticalComponent,
     MarkdownRendererComponent,
-    MarkdownOptionsComponent,
-    DpeDisplayComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +63,7 @@ import 'prismjs/plugins/line-highlight/prism-line-highlight.js';
     AngularFirestoreModule,
     AngularFireAuthModule,
     HttpClientModule,
+    LMarkdownEditorModule,
     MarkdownModule.forRoot({
       markedOptions: {
         provide: MarkedOptions,

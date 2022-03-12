@@ -1,51 +1,125 @@
-<div class="markdown-form" >
-  <div markdown ngPreserveWhitespaces>
-    **45th SECURITY FORCES SQUADRON**
-
-    **STAN EVAL REPORT**
-
-    **SSgt {{ loadedMD.member || loadedDPE.name}}**
-
-    **Alpha 1**
-
-    **EVALUATION DATA:**
-
-    |*Position Evaluated* |*Type of Eval* |*Evaluation Date* |*Anniversary Date* |
-    | :-: | :-: | :-: | :-: |
-    |**{{loadedMD.exam.exam.name}}**|**Initial**|**{{loadedMD.date | date}}** |**N/A**|
-    |||||
-    |*Written*|*Verbal*|*Performance*|*Score*|
-    |**N/A** |` `**{{loadedMD.score}}%** |**{{loadedMD.state}}** |` `**{{loadedMD.score}}%** |
-
-    **RATING: Qualified**
-
-    **Verbal: {{loadedMD.score}}%**
-
-    \- Explain Restricted/Controlled Area Designators
-
-    **Shoot/Don't Shoot: N/A**
-
-    **Performance: {{loadedMD.state}}**
-
-    **-Gate Runner AF Form 689 #37**
-
-    **-Challenge/Identify/Apprehend Intruders AF Form 689 #7**
-    **
-
-
-    **Synopsis**: MSgt Veon/V1 conducted practical evaluation which included Gate Runner (Entry Controller Actions) and
-    Challenge/Identify/Apprehend Intruders (Vehicle Challenge). All objectives of this scenario were met and A1C
-    Winkelhake located the hidden “weapon” during the search. Minor discrepancies noted and discussed upon termination
-    of
-    exercise.
-
-
-
-    <div class="signature-block">
-      ///ORGINAL SIGNED/// <br>
-      DWIGHT T. VEON, MSgt, USAF <br>
-      Section Chief, Standardization & Evaluations
-    </div>
+<div class="flex-container">
+  <div class="sidebar">
+    <mat-drawer-container class="options-container">
+      <mat-drawer mode="side" opened fxHide>Drawer content</mat-drawer>
+      <mat-drawer-content>
+        <div class="header">
+          <h2>Edit</h2>
+        </div>
+        <hr>
+        <form class="form" [formGroup]="editForm" >
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Members name</mat-label>
+            <input type="text" matInput formControlName="name" (keydown)="setValues($event.target.value, editForm.value.name)">
+          </mat-form-field>
+          <hr>
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label> Members flight</mat-label>
+            <input type="text" matInput formControlName="flight" (keydown)="setValues($event.target.value, editForm.value.flight)">
+          </mat-form-field>
+          <hr>
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Type of Eval</mat-label>
+            <input type="text" matInput formControlName="eval" (keydown)="setValues($event.target.value, editForm.value.eval)">
+          </mat-form-field>
+          <hr>
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Rating</mat-label>
+            <input type="text" matInput formControlName="rating" (keydown)="setValues($event.target.value, editForm.value.rating)">
+          </mat-form-field>
+          <hr>
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label> Section to add in the questions missed</mat-label>
+            <textarea type="text" matInput formControlName="missed" (keydown)="setValues($event.target.value, editForm.value.missed)"></textarea>
+          </mat-form-field>
+          <hr>
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Shoot dont Shoot</mat-label>
+            <textarea type="text" matInput formControlName="shoot" (keydown)="setValues($event.target.value, editForm.value.shoot)"></textarea>
+          </mat-form-field>
+          <hr>
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Practicals completed</mat-label>
+            <textarea type="text" matInput formControlName="practical" (keydown)="setValues($event.target.value, editForm.value.practical)"></textarea>
+          </mat-form-field>
+          <hr>
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Synopsis</mat-label>
+            <textarea type="text" matInput formControlName="synopsis" (keydown)="setValues($event.target.value, editForm.value.synopsis)"></textarea>
+          </mat-form-field>
+          <hr>
+          <mat-form-field class="full-width" appearance="fill">
+            <mat-label>Signature</mat-label>
+            <input type="text" matInput formControlName="signature" (keydown)="setValues($event.target.value, editForm.value.signature)">
+          </mat-form-field>
+        </form>
+      </mat-drawer-content>
+    </mat-drawer-container>
+    
   </div>
 
+  <div class="markdown"> 
+    <div class="markdown-form" >
+      <div markdown ngPreserveWhitespaces (change)="reloadMD()">
+        **45th SECURITY FORCES SQUADRON**
+    
+        **STAN EVAL REPORT**
+    
+        **SSgt {{loadedMD.member}}**
+    
+        <div *ngIf="showBlock">**FLIGHT**</div>
+        <button (click)="showBlockTrigger()" mat-button>Show Block</button>
+        **EVALUATION DATA:**
+    
+        |*Position Evaluated* |*Type of Eval* |*Evaluation Date* |*Anniversary Date* |
+        | :-: | :-: | :-: | :-: |
+        |**{{loadedMD.exam.exam.name}}**|**Initial**|**{{loadedMD.date | date}}** |**N/A**|
+        |||||
+        |*Written*|*Verbal*|*Performance*|*Score*|
+        |**N/A** |` `**{{loadedMD.score}}%** |**{{loadedMD.state}}** |` `**{{loadedMD.score}}%** |
+    
+        **RATING: Qualified**
+    
+        **Verbal: {{loadedMD.score}}%**
+    
+        \- Explain Restricted/Controlled Area Designators
+    
+        **Shoot/Don't Shoot: N/A**
+    
+        **Performance: {{loadedMD.state}}**
+    
+        **-Gate Runner AF Form 689 #37**
+    
+        **-Challenge/Identify/Apprehend Intruders AF Form 689 #7**
+        **
+    
+    
+        **Synopsis**: MSgt Veon/V1 conducted practical evaluation which included Gate Runner (Entry Controller Actions) and
+        Challenge/Identify/Apprehend Intruders (Vehicle Challenge). All objectives of this scenario were met and A1C
+        Winkelhake located the hidden “weapon” during the search. Minor discrepancies noted and discussed upon termination
+        of
+        exercise.
+    
+    
+    
+        <div class="signature-block">
+          ///ORGINAL SIGNED/// <br>
+          DWIGHT T. VEON, MSgt, USAF <br>
+          Section Chief, Standardization & Evaluations
+        </div>
+      </div>
+    
+    </div>
+  </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
