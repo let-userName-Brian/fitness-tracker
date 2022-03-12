@@ -56,7 +56,7 @@
   </div>
 
   <div class="markdown">
-    <div class="markdown-form">
+    <div class="markdown-form" id="content" #content>
       <div markdown ngPreserveWhitespaces class="title">
         **45th SECURITY FORCES SQUADRON**
       </div>
@@ -109,6 +109,7 @@
         {{ editForm.value.signature }} <br>
         Standardization & Evaluations
       </div>
+      <button (click)="SavePDF()"> hello</button>
     </div>
   </div>
 </div>
