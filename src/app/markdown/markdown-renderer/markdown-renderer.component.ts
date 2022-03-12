@@ -10,10 +10,11 @@ import { QuestionsService } from 'src/app/training/questions.service';
 export class MarkdownRendererComponent implements OnInit {
   //full form loaded
   loadedMD: any;
+  loadedDPE: any;
   constructor(private questionService: QuestionsService) { }
 
   ngOnInit(): void {
-    this.loadedMD = this.questionService.loadDPEReport
+    this.loadedMD = this.questionService.loadDPEReport$
+    this.loadedDPE = this.questionService.loadDPEReport$
   }
-
 }

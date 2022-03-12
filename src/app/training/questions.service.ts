@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
+import { BehaviorSubject, Observable, Subscription } from "rxjs";
 
 @Injectable({ providedIn: "root" })
 export class QuestionsService {
@@ -13,7 +14,8 @@ export class QuestionsService {
 
   verbalsCompleted: any; //holds all verbals and is used for the cards awaiting practical
   allCompletedQCs: any; //holds all fully completed and is used for the data table
-  loadDPEReport: any; //a loaded DPE report from the past training component 
+  loadDPEReport$: Observable<any>; //a loaded DPE report from the past training component 
+  updatedDPE$ = new BehaviorSubject<boolean>(false);
   constructor(private http: HttpClient, private router: Router) { }
 
   getNameofQuestionBank(qc: string) {
@@ -218,6 +220,14 @@ export class QuestionsService {
   }
 
   loadDPE(exam: any){
-    this.loadDPEReport = exam;
+    this.loadDPEReport$ = exam;
   }
+
+  updateDPEReport(exam: any){
+    this.loadDPEReport$ = exam;
+    setTimeout(() => {
+   console.log(this.loadDPEReport$) 
+    }, 400);
+  }
+
 }
