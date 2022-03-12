@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, NgModel } from '@angular/forms';
-import { Subject } from 'rxjs';
+import { FormBuilder } from '@angular/forms';
 import { QuestionsService } from 'src/app/training/questions.service';
 
 
@@ -26,8 +25,8 @@ export class MarkdownRendererComponent implements OnInit {
     synopsis: [''],
     signature: ['']
   })
-  
-  setValues(event: any, edit) {
+
+  setValues(event: any, edit: any) {
     this.editForm.patchValue({
       edit: event
     })
