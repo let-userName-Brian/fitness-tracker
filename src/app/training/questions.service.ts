@@ -170,7 +170,8 @@ export class QuestionsService {
       date: new Date(),
       score: score,
       user: this.userName,
-      state: 'no-go'
+      state: 'no-go',
+      wrongAnswers: this.wrongAnswerArray
     }).subscribe();
   }
   /**
