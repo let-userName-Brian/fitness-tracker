@@ -36,7 +36,7 @@
       <mat-card-actions>
         <mat-radio-group aria-label="Select an option">
           <mat-radio-button value="correct" (click)="correctAnswer(value)">Correct</mat-radio-button>
-          <mat-radio-button value="wrong" (click)="wrongAnswer($event)" style="margin-left: 1rem;">Wrong</mat-radio-button>
+          <mat-radio-button value="wrong" (click)="wrongAnswer(i, $event)" style="margin-left: 1rem;">Wrong</mat-radio-button>
         </mat-radio-group>
       </mat-card-actions>
     </mat-card>

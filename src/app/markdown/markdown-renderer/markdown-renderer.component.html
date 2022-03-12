@@ -20,12 +20,12 @@
               (keydown)="setValues($event.target.value, editForm.value.rating)">
           </mat-form-field>
           <hr>
-          <mat-form-field class="full-width" appearance="fill">
+          <!-- <mat-form-field class="full-width" appearance="fill">
             <mat-label> Section to add in the questions missed</mat-label>
             <textarea type="text" matInput formControlName="missed"
               (keydown)="setValues($event.target.value, editForm.value.missed)"></textarea>
           </mat-form-field>
-          <hr>
+          <hr> -->
           <mat-form-field class="full-width" appearance="fill">
             <mat-label>Shoot dont Shoot</mat-label>
             <textarea type="text" matInput formControlName="shoot"
@@ -57,18 +57,21 @@
 
   <div class="markdown">
     <div class="markdown-form">
-      <div markdown ngPreserveWhitespaces>
+      <div markdown ngPreserveWhitespaces class="title">
         **45th SECURITY FORCES SQUADRON**
-
+      </div>
+      <div markdown ngPreserveWhitespaces class="title">
         **STAN EVAL REPORT**
-
+      </div>
+      <div markdown ngPreserveWhitespaces class="name">
         **{{loadedDPE.member}}**
       </div>
-      <output>Flight: {{editForm.value.flight}}</output>
+      <output class="name">{{editForm.value.flight}}</output>
       <br>
-      <div markdown ngPreserveWhitespaces>
+      <div markdown ngPreserveWhitespaces class="eval-title">
         **EVALUATION DATA:**
-
+      </div>
+      <div markdown ngPreserveWhitespaces class="eval-table">
         |*Position Evaluated*|- *Type of Eval*|- *Evaluation Date*|- *Anniversary Date*|
         | :-: | :-: | :-: | :-: |
         |**{{loadedMD.exam.exam.name}}**|**Initial**|**{{loadedMD.date | date}}** |**N/A**|
@@ -77,32 +80,33 @@
         |**N/A** |` `**{{loadedMD.score}}%** |**{{loadedMD.state}}** |` `**{{loadedMD.score}}%** |
       </div>
       <br>
-
-      <output>RATING: {{editForm.value.rating}}</output>
-      <br>
-      <div markdown ngPreserveWhitespaces>
-        **Verbal: {{loadedMD.score}}%**
+      <div class="bulk-form">
+        <output class="rating">Rating: {{editForm.value.rating}}</output>
+        <br>
+        <div markdown ngPreserveWhitespaces class="score">
+          **Verbal: {{loadedMD.score}}%**
+        </div>
+        <br>
+        <output>Missed Question References:</output>
+        <p *ngFor="let wrong of loadedMD.exam?.wrongAnswers">-{{ wrong.ref}}</p>
+        <p *ngIf="loadedMD.exam?.wrongAnswers === undefined">- Nothing Missed, Excellent Work!</p>
+        <br>
+        <output>Shoot/Don't Shoot: {{editForm.value.shoot}}</output>
+        <br>
+        <div markdown ngPreserveWhitespaces class="perf">
+          **Performance: {{loadedMD.state}}**
+        </div>
+        <br>
+        <output>Practicals:</output>
+        <p>{{editForm.value.practical }}</p>
+        <br>
+        <output>Synopsis:</output>
+        <p>{{editForm.value.synopsis}}</p>
+        <br>
       </div>
-      <br>
-      <output>Missed Questions:</output>
-      <p>{{ editForm.value.missed}}</p>
-      <br>
-      <output>Shoot/Don't Shoot: {{editForm.value.shoot}}</output>
-      <br>
-      <div markdown ngPreserveWhitespaces>
-        **Performance: {{loadedMD.state}}**
-      </div>
-      <br>
-      <output>Practicals:</output> 
-      <p>{{editForm.value.practical }}</p>
-      <br>
-      <output>Synopsis:</output>
-      <p>{{editForm.value.synopsis}}</p>
-      <br>
-
       <div class="signature-block">
         ///ORGINAL SIGNED/// <br>
-       {{ editForm.value.signature }} <br>
+        {{ editForm.value.signature }} <br>
         Standardization & Evaluations
       </div>
     </div>

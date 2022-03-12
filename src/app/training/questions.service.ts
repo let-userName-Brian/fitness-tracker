@@ -12,6 +12,8 @@ export class QuestionsService {
   alertIcon: number;
   userName: string;
 
+  wrongAnswerArray: any = [];
+
   verbalsCompleted: any; //holds all verbals and is used for the cards awaiting practical
   allCompletedQCs: any; //holds all fully completed and is used for the data table
   loadDPEReport$: Observable<any>; //a loaded DPE report from the past training component 
@@ -40,7 +42,11 @@ export class QuestionsService {
     let randomQuestions = [];
     let randomIndex = 0;
     let randomQuestion = null;
-    while (randomQuestions.length < 25) {
+    let numQuestions = 25
+    if(this.databank === "FS" || this.databank === "AM" || this.databank === "SC"){
+      numQuestions = 50
+    }
+    while (randomQuestions.length < numQuestions) {
       randomIndex = Math.floor(Math.random() * this.fetchedQuestions.length);
       randomQuestion = this.fetchedQuestions[randomIndex];
       if (randomQuestions.indexOf(randomQuestion) === -1) {
@@ -98,7 +104,8 @@ export class QuestionsService {
       exam: exam,
       date: new Date(),
       score: score,
-      user: this.userName
+      user: this.userName,
+      wrongAnswers: this.wrongAnswerArray
     }).subscribe();
   }
 

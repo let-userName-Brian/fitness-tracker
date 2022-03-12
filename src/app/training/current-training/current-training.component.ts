@@ -32,11 +32,21 @@ export class CurrentTrainingComponent implements OnInit {
   }
 
   correctAnswer() {
+    if(this.currentQuestions.length === 50) {
+    this.score += 2;
+    } else {
     this.score += 4;
+    }
   }
 
-  wrongAnswer() {
-    this.score -= 4;
+  wrongAnswer(index: number) {
+    if(this.currentQuestions.length === 50) {
+      this.score -= 2;
+      } else {
+      this.score -= 4;
+      }
+      this.questionService.wrongAnswerArray.push(this.currentQuestions[index]);
+      console.log(this.questionService.wrongAnswerArray);
   }
 
   newQuestion(index: number) {
@@ -58,12 +68,12 @@ export class CurrentTrainingComponent implements OnInit {
 
   onPass() {
     this.questionService.completedVerbal(this.score, this.exam);
-    this.router.navigate(['/practical']);
+    this.router.navigate(['']);
   }
 
   onFail() {
     this.questionService.onFailQC(this.score, this.exam);
-    this.router.navigate(['/practical']);
+    this.router.navigate(['']);
   }
 
   onCancel() {
