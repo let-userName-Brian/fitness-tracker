@@ -18,7 +18,7 @@ mat-card-actions{
 
 .more-button{
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   margin-top: -2rem;
 }
 
@@ -81,19 +81,3 @@ mat-card-actions{
   color: white;
   transform: scale(1.1);
 }
-
-/* 
-button {
-  color: white;
-  background-color: rgb(21, 86, 101);
-}
-
-button:hover{
-  box-shadow: rgb(124, 124, 124) 0px 0px 10px;
-  background-color: rgb(21, 86, 101);
-  border: solid;
-  border-width: 1px;
-  border-color: #78d0e3;
-  color: #78d0e3;
-  transform: scale(1.1);
-} */
