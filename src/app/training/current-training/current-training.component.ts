@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, throwMatDialogContentAlreadyAttachedError } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { Exercise } from '../exercise.model';
 import { ExerciseService } from '../exercise.service';
 import { StopTrainingComponent } from './stop-training.component';

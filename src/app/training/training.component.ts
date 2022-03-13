@@ -4,8 +4,7 @@ import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-training',
-  templateUrl: './training.component.html',
-  styleUrls: ['./training.component.css']
+  templateUrl: './training.component.html'
 })
 export class TrainingComponent implements OnInit, OnDestroy {
   ongoingTraining: boolean = false;

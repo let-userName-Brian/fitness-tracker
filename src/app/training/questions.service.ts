@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
-import { BehaviorSubject, Observable, Subscription } from "rxjs";
+import { BehaviorSubject, Observable } from "rxjs";
 
 @Injectable({ providedIn: "root" })
 export class QuestionsService {
@@ -195,7 +195,6 @@ export class QuestionsService {
    * used for the cards on the verbal completed page
    */
   getVerbalCompleted() {
-    console.log("getting completed verbals")
     return this.http.get(
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedVerbals.json`).subscribe((response: any) => {
         let arr = [];
@@ -215,7 +214,6 @@ export class QuestionsService {
    * used for the data table
    */
   getCompletedQCs() {
-    console.log("getting completed qcs")
     return this.http.get(
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`).subscribe((res: any) => {
         let arr = [];

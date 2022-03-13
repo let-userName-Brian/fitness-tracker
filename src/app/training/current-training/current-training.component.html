@@ -1,6 +1,6 @@
 <section class="current-training" fxLayout="column" fxLayoutAlign="center center" *ngIf="!questionsHaveBeenFetched">
   <h1>{{ exam.name }} QC</h1>
-  <h3>You have 25 questions in total</h3>
+  <h3>You have 25 or 50 questions and no time limit, good luck!</h3>
   <section fxLayoutGap="10px">
     <button mat-raised-button class="start" (click)="onStart()">Start QC</button>
     <button mat-raised-button class="cancel" (click)="onCancel()">Cancel</button>

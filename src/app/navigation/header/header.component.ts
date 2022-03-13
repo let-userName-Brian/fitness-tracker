@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
   alertInfo: number;
   constructor(private authService: AuthService, private questionService: QuestionsService) {
     setInterval(() => {
-      console.log('firing')
       this.alertInfo = this.questionService.alertIcon;
     }, 2000);
   }
