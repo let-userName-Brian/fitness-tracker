@@ -131,7 +131,7 @@ export class QuestionsService {
     return this.http.post(
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`, {
       exam: exam,
-      state: 'go'
+      state: 'GO'
     }).subscribe();
   }
 
@@ -139,7 +139,7 @@ export class QuestionsService {
     return this.http.post(
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`, {
       exam: exam,
-      state: 'no-go'
+      state: 'NO-GO'
     }).subscribe();
   }
 
@@ -154,7 +154,7 @@ export class QuestionsService {
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`, {
       exam: exam,
       score: score,
-      state: 'cancel'
+      state: 'Cancel'
     })
   }
   /**
@@ -170,7 +170,7 @@ export class QuestionsService {
       date: new Date(),
       score: score,
       user: this.userName,
-      state: 'no-go',
+      state: 'NO-GO',
       wrongAnswers: this.wrongAnswerArray
     }).subscribe();
   }

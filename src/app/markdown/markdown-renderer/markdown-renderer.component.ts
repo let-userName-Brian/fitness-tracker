@@ -55,7 +55,7 @@ export class MarkdownRendererComponent implements OnInit {
       let pdf = new jsPDF('p', 'pt', 'a4');
       let width = pdf.internal.pageSize.getWidth();
       let height = canvas.height * (width / canvas.width);
-      pdf.addImage(contentDataURL, 'PNG', 0, 10, width, height);
+      pdf.addImage(contentDataURL, 'PNG', 0, 20, width, height);
       pdf.save('DPE-Report.pdf');
     })
   }
