@@ -1,0 +1,49 @@
+<div class="header-container">
+  <nav class="header">
+    <form #f="ngForm" class="drop-down">
+      <mat-select ngModel name="exam" placeholder="Choose your exam" required>
+        <mat-option *ngFor="let exams of availableExercises" [value]="exams.name">
+          {{ exams.name }}
+        </mat-option>
+      </mat-select>
+      <button mat-raised-button color="primary" class="start-button" (click)="onSelectedEdit(f)">Grab these QC's</button>
+      <button mat-raised-button color="primary" class="start-button">Add a QC</button>
+    </form>
+  </nav>
+</div>
+<hr>
+<div class="container">
+  <section class="card-container" *ngFor="let question of selectedQuesitons; let i = index">
+    <p *ngIf="i == 0">Total Questions: {{selectedQuesitons.length}}</p>
+    <mat-card>
+      <mat-card-subtitle>
+        Question {{ i + 1 }}
+        <div class="more-button">
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="onEdit(question, i)">
+              <mat-icon>edit</mat-icon>
+              <span>Edit</span>
+            </button>
+            <button mat-menu-item (click)="onDelete(i)">
+              <mat-icon>cached icon</mat-icon>
+              <span>Delete</span>
+            </button>
+          </mat-menu>
+        </div>
+      </mat-card-subtitle>
+      <mat-card-title>{{ question?.question }}</mat-card-title>
+      <mat-card-content>
+        <mat-card-subtitle style="font-style:italic">{{ question?.ref }}</mat-card-subtitle>
+        <p style="font-size: medium;">{{ question?.answer }}</p>
+      </mat-card-content>
+      <mat-card-footer>
+        <p>Times asked: {{ question?.asked }}</p>
+        <p>Times Correct: {{ question?.correct }}</p>
+        <p>Number of wrong: {{ question?.wrong }}</p>
+      </mat-card-footer>
+    </mat-card>
+  </section>
+</div>

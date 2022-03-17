@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGaurd } from './auth/auth-guard';
 
 import { LoginComponent } from './auth/login/login.component';
+import { EditExamsComponent } from './edit-exams/edit-exams.component';
 import { MarkdownRendererComponent } from './markdown/markdown-renderer/markdown-renderer.component';
 import { PracticalComponent } from './training/current-training/practical/practical.component';
 import { PastTrainingComponent } from './training/past-training/past-training.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'new-training', component: TrainingComponent},
   { path: 'practical', component: PracticalComponent, canActivate: [AuthGaurd] },
   { path: 'past', component: PastTrainingComponent, canActivate: [AuthGaurd] },
-  { path: 'dpe', component: MarkdownRendererComponent, canActivate: [AuthGaurd] }
+  { path: 'dpe', component: MarkdownRendererComponent, canActivate: [AuthGaurd] },
+  { path: 'edit-exams', component: EditExamsComponent, canActivate: [AuthGaurd] },
 ];
 
 @NgModule({

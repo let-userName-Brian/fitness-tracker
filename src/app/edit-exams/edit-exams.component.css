@@ -1,0 +1,53 @@
+.header-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.drop-down{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 40%;
+}
+
+.start-button{
+  width: 50%;
+  margin-left: 2rem;
+}
+
+.more-button{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -2rem;
+}
+
+p{
+  margin-top: -1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+}
+
+.card-container {
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+mat-card-footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
