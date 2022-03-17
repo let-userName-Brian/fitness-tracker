@@ -13,7 +13,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 const routes: Routes = [
   { path: '', component: WelcomeComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'new-training', component: TrainingComponent},
+  { path: 'new-training', component: TrainingComponent, canActivate: [AuthGaurd]},
   { path: 'practical', component: PracticalComponent, canActivate: [AuthGaurd] },
   { path: 'past', component: PastTrainingComponent, canActivate: [AuthGaurd] },
   { path: 'dpe', component: MarkdownRendererComponent, canActivate: [AuthGaurd] },
