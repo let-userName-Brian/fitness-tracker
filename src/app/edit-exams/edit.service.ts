@@ -35,42 +35,41 @@ export class EditService {
   }
 
   editQuestion(question: any, i: number) {
-    console.log('selectedQ index', this.selectedQuesitonsBank[i]);
-    //   return this.http.patch(`https://qc-database-aee15-default-rtdb.firebaseio.com/${this.databank}/${this.databank}/${i}.json`, {
-    //     answer: question.answer,
-    //     asked: question.asked,
-    //     correct: question.correct,
-    //     id: question.id,
-    //     question: question.question,
-    //     ref: question.ref,
-    //     wrong: question.wrong
-    //   }).subscribe(
-    //     (response: any) => {
-    //       console.log(response);
-    //     })
-    // };
-  }
+    return this.http.patch(`https://qc-database-aee15-default-rtdb.firebaseio.com/${this.databank}/${this.databank}/${i}.json`, {
+      answer: question.answer,
+      asked: question.asked,
+      correct: question.correct,
+      id: question.id,
+      question: question.question,
+      ref: question.ref,
+      wrong: question.wrong
+    }).subscribe(
+      () => {
+        this.selectedQuesitonsBank.splice(i, 1, question);
+      })
+  };
 
   deleteQuestion(index: number) {
-    this.selectedQuesitonsBank.splice(index, 1);
-    //return this.http.delete(`https://qc-database-aee15-default-rtdb.firebaseio.com/${this.databank}/${this.databank}/${index}.json`);
+    return this.http.delete(`https://qc-database-aee15-default-rtdb.firebaseio.com/${this.databank}/${this.databank}/${index}.json`).subscribe(
+      () => {
+        this.selectedQuesitonsBank.splice(index, 1);
+      });
   }
 
   addQuestion(question: any) {
-    let id = this.selectedQuesitonsBank.length + 1;
-    this.selectedQuesitonsBank.push(question);
-    // return this.http.put(`https://qc-database-aee15-default-rtdb.firebaseio.com/${this.databank}/${this.databank}/${id}.json`, {
-    //   answer: question.answer,
-    //   asked: question.asked,
-    //   correct: question.correct,
-    //   id: id,
-    //   question: question.question,
-    //   ref: question.ref,
-    //   wrong: question.wrong
-    // }).subscribe(
-    //   (response: any) => {
-    //     console.log(response);
-    //   })
-  };
+    let id = this.selectedQuesitonsBank.length;
+      return this.http.put(`https://qc-database-aee15-default-rtdb.firebaseio.com/${this.databank}/${this.databank}/${id}.json`, {
+        answer: question.answer,
+        asked: question.asked,
+        correct: question.correct,
+        id: this.selectedQuesitonsBank.length + 1,
+        question: question.question,
+        ref: question.ref,
+        wrong: question.wrong
+      }).subscribe(
+        (response: any) => {
+          this.selectedQuesitonsBank.push(response);
+          this.selectedQuesitonsBank.splice()
+        })
+    };
 }
-

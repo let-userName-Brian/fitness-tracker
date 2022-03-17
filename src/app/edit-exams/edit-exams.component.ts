@@ -3,6 +3,9 @@ import { ExerciseService } from '../training/exercise.service';
 import { Subscription } from 'rxjs';
 import { NgForm } from '@angular/forms';
 import { EditService } from './edit.service';
+import { MatDialog } from '@angular/material/dialog';
+import { AddModalComponent } from './add-modal/add-modal.component';
+import { EditModalComponent } from './edit-modal/edit-modal.component';
 
 @Component({
   selector: 'app-edit-exams',
@@ -13,7 +16,7 @@ export class EditExamsComponent implements OnInit, OnDestroy {
   qcSubscription: Subscription;
   availableExercises: any;
   selectedQuesitons: any;
-  constructor(private exerciseService: ExerciseService, private editService: EditService) { }
+  constructor(private exerciseService: ExerciseService, private editService: EditService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.qcSubscription = this.exerciseService.qcChanged.subscribe(
@@ -33,15 +36,31 @@ export class EditExamsComponent implements OnInit, OnDestroy {
     }, 200);
   }
 
-  onEdit(question:any, i){
-    console.log(question);
-    console.log(i);
-    let id = question.id;
-    //console.log("index at comp", id)
-    this.editService.editQuestion(question, i);
+  onEdit(question: any, i) {
+    this.openEditDialog(question, i);
   }
 
-  onDelete(index:number){
+  onDelete(index: number) {
     this.editService.deleteQuestion(index);
+  }
+
+  onAdd() {
+    this.openAddDialog()
+  }
+
+
+  openAddDialog() {
+    const dialogRef = this.dialog.open(AddModalComponent)
+    dialogRef.afterClosed().subscribe();
+  }
+
+  openEditDialog(question: any, i: number) {
+    const dialogRef = this.dialog.open(EditModalComponent, {
+      data: {
+        question: question,
+        index: i
+      }
+    })
+    dialogRef.afterClosed().subscribe()
   }
 }

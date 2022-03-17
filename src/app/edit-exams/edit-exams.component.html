@@ -6,15 +6,18 @@
           {{ exams.name }}
         </mat-option>
       </mat-select>
-      <button mat-raised-button color="primary" class="start-button" (click)="onSelectedEdit(f)">Grab these QC's</button>
-      <button mat-raised-button color="primary" class="start-button">Add a QC</button>
+      <button mat-raised-button color="primary" class="start-button" (click)="onSelectedEdit(f)">Grab these
+        QC's</button>
     </form>
   </nav>
 </div>
 <hr>
 <div class="container">
   <section class="card-container" *ngFor="let question of selectedQuesitons; let i = index">
-    <p *ngIf="i == 0">Total Questions: {{selectedQuesitons.length}}</p>
+    <div *ngIf="i == 0" class="top-sec">
+      <p>Total Questions: {{selectedQuesitons.length}}</p>
+      <button mat-raised-button color="primary" class="add-button" (click)="onAdd(selectedQuesitons)">Add a Question</button>
+    </div>
     <mat-card>
       <mat-card-subtitle>
         Question {{ i + 1 }}

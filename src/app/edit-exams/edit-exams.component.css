@@ -23,14 +23,25 @@
   margin-left: 2rem;
 }
 
+.top-sec{
+  margin-top: -2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.add-button{
+  margin-top: -1rem;
+  margin-left: 2rem;
+}
+
 .more-button{
   display: flex;
   justify-content: flex-end;
   margin-top: -2rem;
-}
-
-p{
-  margin-top: -1rem;
 }
 
 .container {
