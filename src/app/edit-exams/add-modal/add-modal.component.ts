@@ -13,9 +13,9 @@ export class AddModalComponent implements OnInit {
 
   addForm = this.fb.group({
     answer: ['', Validators.required],
-    asked: ['', Validators.required],
-    correct: ['', Validators.required],
-    wrong: ['', Validators.required],
+    asked: [0, Validators.required],
+    correct: [0, Validators.required],
+    wrong: [0, Validators.required],
     question: ['', Validators.required],
     ref: ['', Validators.required],
   })
