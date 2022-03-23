@@ -1,25 +1,29 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Router } from "@angular/router";
 import { BehaviorSubject, Observable } from "rxjs";
 
 @Injectable({ providedIn: "root" })
 export class QuestionsService {
-  private databank: string;
-  fetchedQuestions: any;
-  newQuestion: any;
-  editedQuestion: any;
-  alertIcon: number;
-  userName: string;
+  private databank: string; //used in the switch case below to save the name of the exam in JSON vs the UI
+  fetchedQuestions: any; //all fetched questions initially
+  newQuestion: any; //the new question var from grabbing a new question in the currentTrainingComp
+  editedQuestion: any; //the edited question from the currentTrainingComp
+  alertIcon: number; //set here to display purple number over need Practical in header
+  userName: string; //set from the initial new exam form
 
-  wrongAnswerArray: any = [];
+  wrongAnswerArray: any = []; //the array to grab the ref of each wrong answer
 
   verbalsCompleted: any; //holds all verbals and is used for the cards awaiting practical
   allCompletedQCs: any; //holds all fully completed and is used for the data table
   loadDPEReport$: Observable<any>; //a loaded DPE report from the past training component 
-  updatedDPE$ = new BehaviorSubject<boolean>(false);
-  constructor(private http: HttpClient, private router: Router) { }
+  updatedDPE$ = new BehaviorSubject<boolean>(false); 
+  constructor(private http: HttpClient) { }
 
+
+  /**
+   * @param qc 
+   * @returns the JSON name of the QC to be used in the getQuestions() call
+   */
   getNameofQuestionBank(qc: string) {
     this.databank = qc;
     switch (qc) {
@@ -34,16 +38,24 @@ export class QuestionsService {
       case "Armorer":
         return this.databank = "Armory";
       case "Alarm Monitor":
-        return this.databank = "AM"
+        return this.databank = "AM";
+      case "Boat Operator":
+        return this.databank = "BO";
+      case "DAF - Patrol":
+        return this.databank = "DAFPT";
     }
   }
 
+  /**
+   * called in the getQuestions() function
+   * & sorts questions based on the exam chosen to pull 25 or 50 random questions
+ */
   filterQuestions() {
     let randomQuestions = [];
     let randomIndex = 0;
     let randomQuestion = null;
     let numQuestions = 25
-    if(this.databank === "FS" || this.databank === "AM" || this.databank === "SC"){
+    if (this.databank === "FS" || this.databank === "AM" || this.databank === "SC") {
       numQuestions = 50
     }
     while (randomQuestions.length < numQuestions) {
@@ -56,6 +68,9 @@ export class QuestionsService {
     this.fetchedQuestions = randomQuestions;
   }
 
+  /**
+   * @returns gets the quesitons based in waht table is selected and in the databank var
+   */
   getQuestions() {
     let params = this.databank;
     return this.http.get(
@@ -65,6 +80,11 @@ export class QuestionsService {
       });
   }
 
+  /**
+   * 
+   * @returns a new single question from the DB
+   * used in the currentTrainingComp on the mapped questions
+   */
   getNewSingleQuestion() {
     let params = this.databank;
     let rand = Math.floor(Math.random() * this.fetchedQuestions.length);
@@ -74,6 +94,11 @@ export class QuestionsService {
       });
   }
 
+  /**
+   * 
+   * @param form created from the modal in the currentTrainingComp
+   * @returns edits the selected form in the single JSON table on firebase based on the ID
+   */
   editQuestion(form: any) {
     let params = this.databank;
     let id = form.id;
@@ -118,7 +143,7 @@ export class QuestionsService {
     return this.http.delete(
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedVerbals/${exam}.json`).subscribe(() => {
         this.getCompletedQCs();
-    });
+      });
   }
 
   /**
@@ -185,7 +210,7 @@ export class QuestionsService {
     return this.http.delete(
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs/${id}.json`).subscribe((res) => {
         console.log(res)
-    });
+      });
   }
 
 
@@ -202,10 +227,10 @@ export class QuestionsService {
           arr.push(response[key]);
         }
         this.verbalsCompleted = arr;
-        this.alertIcon = this.verbalsCompleted.length 
-        });
-      }
-      
+        this.alertIcon = this.verbalsCompleted.length
+      });
+  }
+
 
 
   /**
@@ -222,18 +247,22 @@ export class QuestionsService {
         }
         this.allCompletedQCs = arr;
       });
-    
+
   }
 
-  loadDPE(exam: any){
+  /**
+   * @param exam the exam youve elected to edit in the pastTrainingComp
+   * @returns the exam youve selected to edit
+   */
+  loadDPE(exam: any) {
     this.loadDPEReport$ = exam;
   }
 
-  updateDPEReport(exam: any){
+  /**
+   * this is called on the MarkDownRenderer to display the selected DPE as an Observable
+  */
+  updateDPEReport(exam: any) {
     this.loadDPEReport$ = exam;
-    setTimeout(() => {
-   console.log(this.loadDPEReport$) 
-    }, 400);
   }
 
 }

@@ -1,0 +1,238 @@
+{
+  "BO": [
+    {
+      "id": 1,
+      "question": "Where would you annotate your daily fuel consumption, violations, etc.?",
+      "answer": "Boat Log",
+      "ref": "10.01 EXPLAIN/PERFORM OPERATING SF VESSELS (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 2,
+      "question": "When should a vessel operator wear a PFD?",
+      "answer": "At any time they are on a boat",
+      "ref": "10.03 EXPLAIN SAFETY EQUIPMENT REQUIREMENTS (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 3,
+      "question": "T or F:  Do not travel off shore during a Small Craft Advisory",
+      "answer": "TRUE",
+      "ref": "10.04 EXPLAIN SEA STATE REQUIREMENTS (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 4,
+      "question": "Name six pieces of safety equipment each SF vessel should have on hand.",
+      "answer": "The vessel will be equipped with an anchor attached to anchor line, fenders, throwable flotation device, spare personal flotation devices, a spare container of oil, operational mobile radio, fire extinguisher, “kill switch” lanyard (if equipped), dock lines, first-aid kit, siren, binoculars, tow line, signal flares and boating safety guides.",
+      "ref": "10.03 EXPLAIN SAFETY EQUIPMENT REQUIREMENTS (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 5,
+      "question": "If a commercial or private vessel enters the restricted area/basin, immediately give the __________________.",
+      "answer": "“Restricted Area Warning Statement.”",
+      "ref": "10.05 EXPLAIN/PERFORM NAVY PATROL (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 6,
+      "question": "If you hear “breakaway, breakaway, breakaway” over the radio during a Security Breach Red, what must you do?",
+      "answer": "Back off, out of the line of fire.",
+      "ref": "10.05 EXPLAIN/PERFORM NAVY PATROL (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 7,
+      "question": "With a warship in port, the SF patrol will be armed with a _______ and ______ rounds of ammunition.",
+      "answer": "M240 B",
+      "ref": "10.05 EXPLAIN/PERFORM NAVY PATROL (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 8,
+      "question": "When a vessel is within the “Restricted Zone” (when activated), 45 SFS members conduct a vessel stop, treating it similar to _________ .",
+      "answer": "Traffic Stop",
+      "ref": "10.01 EXPLAIN/PERFORM OPERATING SF VESSELS (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 9,
+      "question": "Warships will be assigned  a radio call sign based upon berthing location.  If the vessel is o n Trident South wharf, its call sign would be _______",
+      "answer": "Tango Sierra",
+      "ref": "10.05 EXPLAIN/PERFORM NAVY PATROL (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 10,
+      "question": "When a war vessel is not in port, what would be your routine operation?",
+      "answer": "Conduct random patrols of the Poseidon Basin, Trident Basin and Navy associated assets. It is not required to carry a M240B when there is no HVA in port.",
+      "ref": "10.05 EXPLAIN/PERFORM NAVY PATROL (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 11,
+      "question": "In addition to the LMR and VHF, what other means of communications may be used (i.e. emergency)?",
+      "answer": "flares, horns and hailers",
+      "ref": "10.02 EXPLAIN/PERFORM COMMUNICATIONS (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 12,
+      "question": "If a vessel is equipped with this type of safety device, it will be attached to the operator at all times.",
+      "answer": "Kill Switch lanyard",
+      "ref": "10.01 EXPLAIN/PERFORM OPERATING SF VESSELS (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 13,
+      "question": "Post change is conducted where?",
+      "answer": "Trident Area",
+      "ref": "10.05 EXPLAIN/PERFORM NAVY PATROL (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 14,
+      "question": "Re-fueling is conducted where?",
+      "answer": "Cape Marina",
+      "ref": "10.05 EXPLAIN/PERFORM NAVY PATROL (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 15,
+      "question": "Which data buoys would you rely upon for current sea informations?",
+      "answer": "41116",
+      "ref": "10.04 EXPLAIN SEA STATE REQUIREMENTS (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 16,
+      "question": "Which data buoys would you rely upon for current sea informations?",
+      "answer": "41113",
+      "ref": "10.04 EXPLAIN SEA STATE REQUIREMENTS (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 17,
+      "question": "If either a “Security Breach Yellow” or “Security Breach Red” are implemented, what must be completed?",
+      "answer": "AF Form 3545/SFMIS",
+      "ref": "10.05 EXPLAIN/PERFORM NAVY PATROL (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 18,
+      "question": "If the vessel fails to heed your warnings after issuing the warning, notify BDOC and the HVAs in port that you have a _____________.",
+      "answer": " “Security Breach Yellow.”",
+      "ref": "10.05 EXPLAIN/PERFORM NAVY PATROL (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 19,
+      "question": "45 SFS water vessels will normally be operated at a speed which allows the operator to do what?",
+      "answer": "achieve and maintain a plane",
+      "ref": "10.01 EXPLAIN/PERFORM OPERATING SF VESSELS (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 20,
+      "question": "Conduct a check for destructive devices, unauthorized divers or unusual circumstances under and around the Trident/Poseidon Wharfs, at least ________ checks throughout each shift and one hour prior to the arrival of any naval ship.",
+      "answer": "two",
+      "ref": "10.05 EXPLAIN/PERFORM NAVY PATROL (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 21,
+      "question": "How often should radio checks be conducted with in port war vessels.",
+      "answer": "Hourly",
+      "ref": "10.05 EXPLAIN/PERFORM NAVY PATROL (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 22,
+      "question": "At no time will a boat patrol tow another vessel, other than 45 SFS vessels, without the direct approval of whom?",
+      "answer": "45 SFS/S3",
+      "ref": "10.01 EXPLAIN/PERFORM OPERATING SF VESSELS (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 23,
+      "question": "During a dual boat escort, what must the clearing boat do upon arrival at the mouth of the port?",
+      "answer": "Stop outbound traffic.",
+      "ref": "10.05 EXPLAIN/PERFORM NAVY PATROL (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 24,
+      "question": "Who is responsible for your wake and damages caused by your actions/negligence?",
+      "answer": "Operator",
+      "ref": "10.01 EXPLAIN/PERFORM OPERATING SF VESSELS (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 25,
+      "question": "If seas are in excess of _____, do not place the vessel in service.",
+      "answer": "7 feet",
+      "ref": "10.04 EXPLAIN SEA STATE REQUIREMENTS (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    },
+    {
+      "id": 26,
+      "question": "The USCG provides current weather conditions and warnings on marine channel ______ at 0800L and every four hours thereafter.",
+      "answer": "16A",
+      "ref": "10.02 EXPLAIN/PERFORM COMMUNICATIONS (REF: 45 SFS OI 31-1 V3)",
+      "correct": 0,
+      "wrong": 0,
+      "asked": 0
+    }
+  ]
+}

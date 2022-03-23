@@ -32,21 +32,15 @@ export class CurrentTrainingComponent implements OnInit {
   }
 
   correctAnswer() {
-    if(this.currentQuestions.length === 50) {
-    this.score += 2;
+    if (this.currentQuestions.length === 50) {
+      this.score += 2;
     } else {
-    this.score += 4;
+      this.score += 4;
     }
   }
 
   wrongAnswer(index: number) {
-    if(this.currentQuestions.length === 50) {
-      this.score -= 2;
-      } else {
-      this.score -= 4;
-      }
-      this.questionService.wrongAnswerArray.push(this.currentQuestions[index]);
-      console.log(this.questionService.wrongAnswerArray);
+    this.questionService.wrongAnswerArray.push(this.currentQuestions[index]);
   }
 
   newQuestion(index: number) {
