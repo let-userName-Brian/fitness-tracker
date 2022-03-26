@@ -35,8 +35,8 @@
       </mat-card-content>
       <mat-card-actions>
         <mat-radio-group aria-label="Select an option" required>
-          <mat-radio-button value="correct" (click)="correctAnswer(value)">Correct</mat-radio-button>
-          <mat-radio-button value="wrong" (click)="wrongAnswer(i, $event)" style="margin-left: 1rem;">Wrong</mat-radio-button>
+          <mat-radio-button #correct value="correct" (click)="correctAnswer(value)" [disabled]="this.correct?._checked || this.wrong?._checked" >Correct</mat-radio-button>
+          <mat-radio-button #wrong value="wrong" (click)="wrongAnswer(i, $event)" [disabled]="this.wrong?._checked || this.correct?._checked" style="margin-left: 1rem;">Wrong</mat-radio-button>
         </mat-radio-group>
       </mat-card-actions>
     </mat-card>

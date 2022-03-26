@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Exercise } from '../exercise.model';
 import { ExerciseService } from '../exercise.service';
@@ -13,6 +13,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./current-training.component.css']
 })
 export class CurrentTrainingComponent implements OnInit {
+  @ViewChild('correct') correct: any;
+  @ViewChild('wrong') wrong: any;
   exam: Exercise;
   currentQuestions: any;
   questionsHaveBeenFetched: boolean = false;
@@ -39,7 +41,7 @@ export class CurrentTrainingComponent implements OnInit {
     }
   }
 
-  wrongAnswer(index: number) {
+  wrongAnswer(index: number, event: any) {
     this.questionService.wrongAnswerArray.push(this.currentQuestions[index]);
   }
 
