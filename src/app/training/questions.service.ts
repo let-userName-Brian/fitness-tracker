@@ -16,7 +16,7 @@ export class QuestionsService {
   verbalsCompleted: any; //holds all verbals and is used for the cards awaiting practical
   allCompletedQCs: any; //holds all fully completed and is used for the data table
   loadDPEReport$: Observable<any>; //a loaded DPE report from the past training component 
-  updatedDPE$ = new BehaviorSubject<boolean>(false); 
+  updatedDPE$ = new BehaviorSubject<boolean>(false);
   constructor(private http: HttpClient) { }
 
 
@@ -116,6 +116,46 @@ export class QuestionsService {
       this.editedQuestion = response;
       alert("Question edited");
     });
+  }
+
+  /**
+   * @param exam 
+   * @returns void
+   * increments the questions asked as well as correct and wrong answers
+   */
+  correctQuestion(exam: any) {
+    let params = this.databank;
+    let id = exam.id - 1;
+    return this.http.patch(
+      `https://qc-database-aee15-default-rtdb.firebaseio.com/${params}/${params}/${id}.json`, {
+      question: exam.question,
+      answer: exam.answer,
+      ref: exam.ref,
+      asked: exam.asked + 1,
+      correct: exam.correct + 1,
+      wrong: exam.wrong,
+      id: exam.id,
+    }).subscribe();
+  }
+
+  /**
+ * @param exam 
+ * @returns void
+ * increments the questions asked as well as wrong answer
+ */
+  wrongQuestion(exam: any) {
+    let params = this.databank;
+    let id = exam.id - 1;
+    return this.http.patch(
+      `https://qc-database-aee15-default-rtdb.firebaseio.com/${params}/${params}/${id}.json`, {
+      question: exam.question,
+      answer: exam.answer,
+      ref: exam.ref,
+      asked: exam.asked + 1,
+      correct: exam.correct,
+      wrong: exam.wrong + 1,
+      id: exam.id,
+    }).subscribe();
   }
 
   /**

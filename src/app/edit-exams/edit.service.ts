@@ -21,7 +21,11 @@ export class EditService {
       case "Armorer":
         return this.databank = "Armory";
       case "Alarm Monitor":
-        return this.databank = "AM"
+        return this.databank = "AM";
+      case "Boat Operator":
+        return this.databank = "BO";
+      case "DAF - Patrol":
+        return this.databank = "DAFPT";
     }
   }
 

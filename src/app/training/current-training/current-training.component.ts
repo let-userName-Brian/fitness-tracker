@@ -22,7 +22,8 @@ export class CurrentTrainingComponent implements OnInit {
   editingQuestion: any;
   answerWrongBoolean: boolean = false;
 
-  constructor(private dialog: MatDialog,
+  constructor(
+    private dialog: MatDialog,
     private exerciseService: ExerciseService,
     private questionService: QuestionsService,
     private router: Router,
@@ -33,16 +34,15 @@ export class CurrentTrainingComponent implements OnInit {
     this.questionService.getQuestions()
   }
 
-  correctAnswer() {
-    if (this.currentQuestions.length === 50) {
-      this.score += 2;
-    } else {
-      this.score += 4;
-    }
+  correctAnswer(exam: any) {
+    if (this.currentQuestions.length === 50) this.score += 2;
+    if (this.currentQuestions.length === 25) this.score += 4;
+    this.questionService.correctQuestion(exam);
   }
 
-  wrongAnswer(index: number, event: any) {
+  wrongAnswer(index: number, exam: any) {
     this.questionService.wrongAnswerArray.push(this.currentQuestions[index]);
+    this.questionService.wrongQuestion(exam);
   }
 
   newQuestion(index: number) {

@@ -9,42 +9,47 @@
 </section>
 
 <section *ngIf="questionsHaveBeenFetched" style="margin-top: 1rem;">
-  <div *ngFor="let questions of currentQuestions; let i = index">
-    <mat-card>
-      <mat-card-subtitle>Question {{ i + 1 }}
-        <div class="more-button">
-          <button mat-icon-button [matMenuTriggerFor]="menu">
-            <mat-icon>more_vert</mat-icon>
-          </button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item (click)="onEdit(i, questions)">
-              <mat-icon>edit</mat-icon>
-              <span>Edit</span>
+  <form #f>
+    <div *ngFor="let questions of currentQuestions; let i = index">
+      <mat-card>
+        <mat-card-subtitle>Question {{ i + 1 }}
+          <div class="more-button">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
             </button>
-            <button mat-menu-item (click)="newQuestion(i)">
-              <mat-icon> cached icon</mat-icon>
-              <span>New Question</span>
-            </button>
-          </mat-menu>
-        </div>
-      </mat-card-subtitle>
-      <mat-card-title>{{ questions?.question }}</mat-card-title>
-      <mat-card-content>
-        <mat-card-subtitle style="font-style:italic">{{ questions?.ref }}</mat-card-subtitle>
-        <p style="font-size: medium;">{{ questions?.answer }}</p>
-      </mat-card-content>
-      <mat-card-actions>
-        <mat-radio-group aria-label="Select an option" required>
-          <mat-radio-button #correct value="correct" (click)="correctAnswer(value)" [disabled]="this.correct?._checked || this.wrong?._checked" >Correct</mat-radio-button>
-          <mat-radio-button #wrong value="wrong" (click)="wrongAnswer(i, $event)" [disabled]="this.wrong?._checked || this.correct?._checked" style="margin-left: 1rem;">Wrong</mat-radio-button>
-        </mat-radio-group>
-      </mat-card-actions>
-    </mat-card>
-  </div>
-  <section fxLayoutGap="10px" fxLayout="row" fxLayoutAlign="center center" style="margin-bottom: 1rem;">
-    <h3>Score: {{ this.score }}</h3>
-    <button mat-raised-button class="pass" (click)="onPass()">Pass/Go</button>
-    <button mat-raised-button class="cancel" (click)="onCancel()">Cancel</button>
-    <button mat-raised-button class="fail" (click)="onFail()">Fail/No-Go</button>
-  </section>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="onEdit(i, questions)">
+                <mat-icon>edit</mat-icon>
+                <span>Edit</span>
+              </button>
+              <button mat-menu-item (click)="newQuestion(i)">
+                <mat-icon> cached icon</mat-icon>
+                <span>New Question</span>
+              </button>
+            </mat-menu>
+          </div>
+        </mat-card-subtitle>
+        <mat-card-title>{{ questions?.question }}</mat-card-title>
+        <mat-card-content>
+          <mat-card-subtitle style="font-style:italic">{{ questions?.ref }}</mat-card-subtitle>
+          <p style="font-size: medium;">{{ questions?.answer }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <mat-radio-group aria-label="Select an option" required #group>
+            <mat-radio-button #correct value="correct" (click)="correctAnswer(questions)"
+              [disabled]="this.correct?._checked || this.wrong?._checked">Correct</mat-radio-button>
+            <mat-radio-button #wrong value="wrong" (click)="wrongAnswer(i, questions)"
+              [disabled]="this.wrong?._checked || this.correct?._checked" style="margin-left: 1rem;">Wrong
+            </mat-radio-button>
+          </mat-radio-group>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <section fxLayoutGap="10px" fxLayout="row" fxLayoutAlign="center center" style="margin-bottom: 1rem;">
+      <h3>Score: {{ this.score }}</h3>
+      <button mat-raised-button class="pass" (click)="onPass()">Pass/Go</button>
+      <button mat-raised-button class="cancel" (click)="onCancel()">Cancel</button>
+      <button mat-raised-button class="fail" (click)="onFail()">Fail/No-Go</button>
+    </section>
+  </form>
 </section>
