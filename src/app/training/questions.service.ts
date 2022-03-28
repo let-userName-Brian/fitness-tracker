@@ -72,6 +72,7 @@ export class QuestionsService {
    * @returns gets the quesitons based in waht table is selected and in the databank var
    */
   getQuestions() {
+    this.wrongAnswerArray = [];
     let params = this.databank;
     return this.http.get(
       `https://qc-database-aee15-default-rtdb.firebaseio.com/${params}/${params}.json`).subscribe((response: any) => {
