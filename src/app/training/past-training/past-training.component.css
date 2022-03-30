@@ -20,6 +20,28 @@
     transform: scale(1.1);
 }
 
+.deleteButton {
+    background-color: #7e0000;
+    color: white;
+    border-radius: 10px;
+    padding: 8px;
+    border: solid;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.deleteButton:hover {
+    background-color: #7e0000;
+    color: white;
+    box-shadow: grey 0px 0px 10px;
+    border-radius: 10px;
+    padding: 8px;
+    border: solid;
+    margin-left: 2rem;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
 .loadDPE{
     background-color: #004aaa;
     color: white;

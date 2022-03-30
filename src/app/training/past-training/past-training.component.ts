@@ -53,6 +53,11 @@ export class PastTrainingComponent implements OnInit, AfterViewInit {
     this.router.navigate(['/dpe']);
   }
 
+  onDeleteAllDPEs() {
+    console.log('delete all DPEs');
+    this.questionService.deleteAllQCs();
+  }
+
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;

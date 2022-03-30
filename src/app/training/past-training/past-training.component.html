@@ -3,6 +3,7 @@
     <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="Filter">
   </mat-form-field>
   <button class="excelButton" (click)="exportAsXLSX()">Export to Excel</button>
+  <button class="deleteButton" (click)="onDeleteAllDPEs()">Delete All DPEs</button>
 </div>
 <div class="table-container">
 <div class="table">

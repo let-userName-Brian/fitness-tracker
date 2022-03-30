@@ -288,7 +288,13 @@ export class QuestionsService {
         }
         this.allCompletedQCs = arr;
       });
+  }
 
+  deleteAllQCs() {
+    return this.http.delete(
+      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`).subscribe(() => {
+        this.getCompletedQCs();
+      });
   }
 
   /**
