@@ -4,7 +4,7 @@
       <mat-icon>menu</mat-icon>
     </button>
   </div>
-  <div><a routerLink="/">QC</a></div>
+  <div><a routerLink="/">Stan Eval</a></div>
   <div fxFlex fxLayout fxLayoutAlign="center center" fxHide.xs >
     <ul fxLayout fxLayoutGap="25px" class="link-box">
       <li><a routerLink="/new-training" routerLinkActive="activeLink">New QC</a></li>
@@ -16,6 +16,7 @@
   <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
     <ul fxLayout fxLayoutGap="10px" class="nav-items">
       <li *ngIf="!isAuth"><a routerLink="/login">Login</a></li>
+      <li *ngIf="isAuth"><a routerLink="/register">Register</a></li>
       <li *ngIf="isAuth"><a class="logout" (click)="onLogout()">Logout</a></li>
     </ul>
   </div>

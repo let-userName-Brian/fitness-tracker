@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGaurd } from './auth/auth-guard';
 
 import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
 import { EditExamsComponent } from './edit-exams/edit-exams.component';
 import { MarkdownRendererComponent } from './markdown/markdown-renderer/markdown-renderer.component';
 import { PracticalComponent } from './training/current-training/practical/practical.component';
@@ -13,6 +14,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 const routes: Routes = [
   { path: '', component: WelcomeComponent},
   { path: 'login', component: LoginComponent},
+  { path: 'register', component: SignupComponent, canActivate: [AuthGaurd]},
   { path: 'new-training', component: TrainingComponent, canActivate: [AuthGaurd]},
   { path: 'practical', component: PracticalComponent, canActivate: [AuthGaurd] },
   { path: 'past', component: PastTrainingComponent, canActivate: [AuthGaurd] },

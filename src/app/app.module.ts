@@ -35,6 +35,7 @@ import 'prismjs/plugins/line-highlight/prism-line-highlight.js';
 import { EditExamsComponent } from './edit-exams/edit-exams.component';
 import { EditModalComponent } from './edit-exams/edit-modal/edit-modal.component';
 import { AddModalComponent } from './edit-exams/add-modal/add-modal.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { AddModalComponent } from './edit-exams/add-modal/add-modal.component';
     EditExamsComponent,
     EditModalComponent,
     AddModalComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
