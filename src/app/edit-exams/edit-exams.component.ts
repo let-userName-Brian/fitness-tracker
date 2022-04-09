@@ -41,6 +41,7 @@ export class EditExamsComponent implements OnInit, OnDestroy {
   }
 
   onDelete(index: number) {
+    this.selectedQuesitons.splice(index, 1);
     this.editService.deleteQuestion(index);
   }
 

@@ -54,26 +54,28 @@ export class EditService {
   };
 
   deleteQuestion(index: number) {
+    console.log(index)
     return this.http.delete(`https://qc-database-aee15-default-rtdb.firebaseio.com/${this.databank}/${this.databank}/${index}.json`).subscribe(
       () => {
         this.selectedQuesitonsBank.splice(index, 1);
+        this.selectedQuesitonsBank.splice();
       });
   }
 
   addQuestion(question: any) {
     let id = this.selectedQuesitonsBank.length;
-      return this.http.put(`https://qc-database-aee15-default-rtdb.firebaseio.com/${this.databank}/${this.databank}/${id}.json`, {
-        answer: question.answer,
-        asked: question.asked,
-        correct: question.correct,
-        id: this.selectedQuesitonsBank.length + 2,
-        question: question.question,
-        ref: question.ref,
-        wrong: question.wrong
-      }).subscribe(
-        (response: any) => {
-          this.selectedQuesitonsBank.push(response);
-          this.selectedQuesitonsBank.splice()
-        })
-    };
+    return this.http.put(`https://qc-database-aee15-default-rtdb.firebaseio.com/${this.databank}/${this.databank}/${id}.json`, {
+      answer: question.answer,
+      asked: question.asked,
+      correct: question.correct,
+      id: this.selectedQuesitonsBank.length + 1,
+      question: question.question,
+      ref: question.ref,
+      wrong: question.wrong
+    }).subscribe(
+      (response: any) => {
+        this.selectedQuesitonsBank.push(response);
+        this.selectedQuesitonsBank.splice()
+      })
+  };
 }
