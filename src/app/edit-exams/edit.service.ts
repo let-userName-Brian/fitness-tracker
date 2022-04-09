@@ -66,7 +66,7 @@ export class EditService {
         answer: question.answer,
         asked: question.asked,
         correct: question.correct,
-        id: this.selectedQuesitonsBank.length + 1,
+        id: this.selectedQuesitonsBank.length + 2,
         question: question.question,
         ref: question.ref,
         wrong: question.wrong

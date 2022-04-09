@@ -67,6 +67,11 @@ mat-card-actions{
   transform: scale(1.1);
 }
 
+.pass:disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
 .fail{
   color:white;
   background-color: rgb(209, 0, 0);

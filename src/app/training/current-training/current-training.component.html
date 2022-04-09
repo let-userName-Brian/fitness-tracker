@@ -45,11 +45,12 @@
         </mat-card-actions>
       </mat-card>
     </div>
-    <section fxLayoutGap="10px" fxLayout="row" fxLayoutAlign="center center" style="margin-bottom: 1rem;">
+    <section fxLayoutGap="15px" fxLayout="row" fxLayoutAlign="center center" style="margin-bottom: 1rem;">
       <h3>Score: {{ this.score }}</h3>
-      <button mat-raised-button class="pass" (click)="onPass()">Pass/Go</button>
+      <button mat-raised-button class="pass" [disabled]="this.questionsAnswered.length !== this.currentQuestions.length" (click)="onPass()">Pass/Go</button>
       <button mat-raised-button class="cancel" (click)="onCancel()">Cancel</button>
       <button mat-raised-button class="fail" (click)="onFail()">Fail/No-Go</button>
+      <h3 style="color: red" *ngIf="this.questionsAnswered.length !== this.currentQuestions.length">You forgot to answer a question!</h3>
     </section>
   </form>
 </section>
