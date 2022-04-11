@@ -54,7 +54,6 @@ export class EditService {
   };
 
   deleteQuestion(index: number) {
-    console.log(index)
     return this.http.delete(`https://qc-database-aee15-default-rtdb.firebaseio.com/${this.databank}/${this.databank}/${index}.json`).subscribe(
       () => {
         this.selectedQuesitonsBank.splice(index, 1);
