@@ -33,7 +33,7 @@ export class EditExamsComponent implements OnInit, OnDestroy {
     this.editService.getSelectedQuestionBank(form.value.exam);
     setTimeout(() => {
       this.selectedQuesitons = this.editService.selectedQuesitonsBank;
-    }, 200);
+    }, 400);
   }
 
   onEdit(question: any, i) {
@@ -41,8 +41,8 @@ export class EditExamsComponent implements OnInit, OnDestroy {
   }
 
   onDelete(index: number) {
-    this.selectedQuesitons.splice(index, 1);
     this.editService.deleteQuestion(index);
+    this.selectedQuesitons.splice(index, 1);
   }
 
   onAdd() {

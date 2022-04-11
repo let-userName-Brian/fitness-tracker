@@ -58,7 +58,9 @@ export class EditService {
     return this.http.delete(`https://qc-database-aee15-default-rtdb.firebaseio.com/${this.databank}/${this.databank}/${index}.json`).subscribe(
       () => {
         this.selectedQuesitonsBank.splice(index, 1);
-        this.selectedQuesitonsBank.splice();
+        setTimeout(() => {
+          this.selectedQuesitonsBank.splice();
+        }, 200);
       });
   }
 
