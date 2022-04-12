@@ -23,13 +23,13 @@ export class AuthService {
 
   login(authData: AuthData) {
     this.afAuth.signInWithEmailAndPassword(authData.email, authData.password)
-    .then(() => {
-     this.router.navigate(['/new-training']);
-    })
-    .catch(() => {
-      alert('Invalid credentials');
-      this.router.navigate(['/login']);
-    });
+      .then(() => {
+        this.router.navigate(['/new-training']);
+      })
+      .catch(() => {
+        alert('Invalid credentials');
+        this.router.navigate(['/login']);
+      });
   }
 
   logout() {
