@@ -55,7 +55,7 @@ export class QuestionsService {
     let randomIndex = 0;
     let randomQuestion = null;
     let numQuestions = 25
-    if (this.databank === "FS" || this.databank === "AM" || this.databank === "SC") {
+    if (this.databank === "FS" || this.databank === "AM" || this.databank === "SC" || this.databank === "DAFPT") {
       numQuestions = 50
     }
     while (randomQuestions.length < numQuestions) {
