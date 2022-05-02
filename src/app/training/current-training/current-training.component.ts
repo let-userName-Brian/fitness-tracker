@@ -39,18 +39,13 @@ export class CurrentTrainingComponent implements OnInit {
   correctAnswer(exam: any) {
     if (this.questionsAnswered.includes(exam.id)) return
     this.questionsAnswered.push(exam.id)
-    if (this.currentQuestions.length === 50) this.score += 2;
-    if (this.currentQuestions.length === 25) this.score += 4;
+    if (this.currentQuestions.length > 25) this.score += 2;
+    if (this.currentQuestions.length <= 25) this.score += 4;
     this.questionService.correctQuestion(exam);
-
-    setTimeout(() => {
-      console.log("QA",this.questionsAnswered.length)
-      console.log("q", this.currentQuestions.length)
-    }, 800)
   }
 
   wrongAnswer(index: number, exam: any) {
-    if (this.questionsAnswered.includes(exam.id)) return
+    if (this.questionsAnswered.includes(exam.id)) return;
     this.questionsAnswered.push(exam.id)
     this.questionService.wrongAnswerArray.push(this.currentQuestions[index]);
     this.questionService.wrongQuestion(exam);
@@ -58,9 +53,6 @@ export class CurrentTrainingComponent implements OnInit {
 
   newQuestion(index: number) {
     this.questionService.getNewSingleQuestion();
-    setTimeout(() => {
-      this.currentQuestions.splice(index, 1, this.questionService.newQuestion);
-    }, 200)
   }
 
   onEdit(index: number, questions: any) {
