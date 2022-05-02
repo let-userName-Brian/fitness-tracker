@@ -20,6 +20,7 @@ const routes: Routes = [
   { path: 'past', component: PastTrainingComponent, canActivate: [AuthGaurd] },
   { path: 'dpe', component: MarkdownRendererComponent, canActivate: [AuthGaurd] },
   { path: 'edit-exams', component: EditExamsComponent, canActivate: [AuthGaurd] },
+  { path: '**', redirectTo: ''}
 ];
 
 @NgModule({

@@ -53,6 +53,9 @@ export class CurrentTrainingComponent implements OnInit {
 
   newQuestion(index: number) {
     this.questionService.getNewSingleQuestion();
+    setTimeout(() => {
+      this.currentQuestions.splice(index, 1, this.questionService.newQuestion);
+    }, 200)
   }
 
   onEdit(index: number, questions: any) {
