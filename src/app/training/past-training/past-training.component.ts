@@ -36,7 +36,6 @@ export class PastTrainingComponent implements OnInit, AfterViewInit {
       this.dataSource.data = this.questionService?.allCompletedQCs;
       this.excelSheet = this.dataSource.data;
       this.flatlistExcelVar()
-      console.log(this.dataSource.data);
     }, 600);
   }
 
