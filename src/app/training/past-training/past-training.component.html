@@ -28,6 +28,16 @@
       <mat-cell *matCellDef="let element"> {{ element.state }} </mat-cell>
     </ng-container>
 
+    <ng-container matColumnDef="Verbal">
+      <mat-header-cell *matHeaderCellDef> Verbal </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element?.exam.verbal }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Practical">
+      <mat-header-cell *matHeaderCellDef> Practical </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{ element?.practical }} </mat-cell>
+    </ng-container>
+
     <ng-container matColumnDef="score">
       <mat-header-cell *matHeaderCellDef> Score </mat-header-cell>
       <mat-cell *matCellDef="let element"> {{ element.exam.score }} </mat-cell>

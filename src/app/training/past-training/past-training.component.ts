@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 export class PastTrainingComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  displayedColumns = ['date', 'ExamName', 'UserName', 'go/no-go', 'score', 'generate DPE'];
+  displayedColumns = ['date', 'ExamName', 'UserName', 'go/no-go', 'Verbal', 'Practical', 'score', 'generate DPE'];
   dataSource = new MatTableDataSource<any>();
   excelSheet: any = {
     date: '',
@@ -36,6 +36,7 @@ export class PastTrainingComponent implements OnInit, AfterViewInit {
       this.dataSource.data = this.questionService?.allCompletedQCs;
       this.excelSheet = this.dataSource.data;
       this.flatlistExcelVar()
+      console.log(this.dataSource.data);
     }, 600);
   }
 

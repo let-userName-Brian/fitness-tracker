@@ -171,7 +171,8 @@ export class QuestionsService {
       date: new Date(),
       score: score,
       user: this.userName,
-      wrongAnswers: this.wrongAnswerArray
+      wrongAnswers: this.wrongAnswerArray,
+      verbal: 'GO',
     }).subscribe();
   }
 
@@ -197,7 +198,8 @@ export class QuestionsService {
     return this.http.post(
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`, {
       exam: exam,
-      state: 'GO'
+      state: 'GO',
+      practical: 'GO',
     }).subscribe();
   }
 
@@ -205,7 +207,8 @@ export class QuestionsService {
     return this.http.post(
       `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`, {
       exam: exam,
-      state: 'NO-GO'
+      state: 'NO-GO',
+      practical: 'NO-GO',
     }).subscribe();
   }
 
@@ -237,6 +240,7 @@ export class QuestionsService {
       score: score,
       user: this.userName,
       state: 'NO-GO',
+      verbal: 'NO-GO',
       wrongAnswers: this.wrongAnswerArray
     }).subscribe();
   }
