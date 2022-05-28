@@ -37,25 +37,35 @@ export class CurrentTrainingComponent implements OnInit {
   }
 
   correctAnswer(exam: any) {
-    if (this.questionsAnswered.includes(exam.id)) return
+    if (this.questionsAnswered.includes(exam.id)) return alert('You have already answered this question, please choose another one.');
     this.questionsAnswered.push(exam.id)
     if (this.currentQuestions.length > 25) this.score += 2;
     if (this.currentQuestions.length <= 25) this.score += 4;
     this.questionService.correctQuestion(exam);
+    console.log(this.score)
   }
 
   wrongAnswer(index: number, exam: any) {
-    if (this.questionsAnswered.includes(exam.id)) return;
+    if (this.questionsAnswered.includes(exam.id)) return alert('You have already answered this question, please choose another one.');
     this.questionsAnswered.push(exam.id)
     this.questionService.wrongAnswerArray.push(this.currentQuestions[index]);
     this.questionService.wrongQuestion(exam);
   }
 
   newQuestion(index: number) {
-    this.questionService.getNewSingleQuestion();
-    setTimeout(() => {
-      this.currentQuestions.splice(index, 1, this.questionService.newQuestion);
-    }, 200)
+    this.questionService.getNewSingleQuestion().subscribe((newQ => {
+      setTimeout(() => {
+        //if the question is already in the array, get a new one
+        if (this.currentQuestions.includes(newQ)) {
+          this.newQuestion(index);
+        } else {
+          this.currentQuestions.splice(index, 1, newQ)
+        }
+      }, 200)
+    }))
+    // setTimeout(() => {
+    //   this.currentQuestions.splice(index, 1, this.questionService.newQuestion);
+    // }, 200)
   }
 
   onEdit(index: number, questions: any) {

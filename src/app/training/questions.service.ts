@@ -90,9 +90,7 @@ export class QuestionsService {
     let params = this.databank;
     let rand = Math.floor(Math.random() * this.fetchedQuestions.length);
     return this.http.get(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/${params}/${params}/${rand}.json`).subscribe((response: any) => {
-        this.newQuestion = response;
-      });
+      `https://qc-database-aee15-default-rtdb.firebaseio.com/${params}/${params}/${rand}.json`)
   }
 
   /**
