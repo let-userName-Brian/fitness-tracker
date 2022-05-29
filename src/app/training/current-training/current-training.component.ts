@@ -6,6 +6,7 @@ import { StopTrainingComponent } from './stop-training.component';
 import { QuestionsService } from '../questions.service';
 import { EditTrainingComponent } from './edit-modal/edit-training.component';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-current-training',
@@ -20,6 +21,7 @@ export class CurrentTrainingComponent implements OnInit {
   questionsHaveBeenFetched: boolean = false;
   score: number = 0;
   editingQuestion: any;
+  lodaingNewQ = false;
   answerWrongBoolean: boolean = false;
 
   questionsAnswered: any = [];
@@ -36,37 +38,75 @@ export class CurrentTrainingComponent implements OnInit {
     this.questionService.getQuestions()
   }
 
-  correctAnswer(exam: any) {
-    if (this.questionsAnswered.includes(exam.id)) return alert('You have already answered this question, please choose another one.');
+  correctAnswer(exam: any, correct: any, wrong: any) {
+    if(correct._checked || wrong._checked) return
+    if (this.questionsAnswered.includes(exam.id)) {
+      this.lodaingNewQ = true;
+      let timerInterval;
+      if (this.lodaingNewQ) {
+        Swal.fire({
+          heightAuto: false,
+          title: 'You have already answered this question, let us grab you a new one.',
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading()
+            timerInterval = setInterval(() => {
+              Swal.getTimerLeft()
+            }, 100)
+          },
+          willClose: () => {
+            clearInterval(timerInterval)
+          }
+        })
+      }
+      return this.newQuestion(this.currentQuestions.indexOf(exam));
+    }
     this.questionsAnswered.push(exam.id)
     if (this.currentQuestions.length > 25) this.score += 2;
     if (this.currentQuestions.length <= 25) this.score += 4;
     this.questionService.correctQuestion(exam);
-    console.log(this.score)
   }
 
-  wrongAnswer(index: number, exam: any) {
-    if (this.questionsAnswered.includes(exam.id)) return alert('You have already answered this question, please choose another one.');
+  wrongAnswer(index: number, exam: any, wrong: any, correct: any ) {
+    if(wrong._checked || correct._checked) return
+    if (this.questionsAnswered.includes(exam.id)) {
+      this.lodaingNewQ = true;
+      let timerInterval;
+      Swal.fire({
+        heightAuto: false,
+        title: 'You have already answered this question, let us grab you a new one.',
+        timer: 1200,
+        timerProgressBar: true,
+        didOpen: () => {
+          Swal.showLoading()
+          timerInterval = setInterval(() => {
+            Swal.getTimerLeft()
+          }, 100)
+        },
+        willClose: () => {
+          clearInterval(timerInterval)
+        }
+      })
+      return this.newQuestion(this.currentQuestions.indexOf(exam));
+    }
     this.questionsAnswered.push(exam.id)
     this.questionService.wrongAnswerArray.push(this.currentQuestions[index]);
     this.questionService.wrongQuestion(exam);
   }
 
   newQuestion(index: number) {
-    this.questionService.getNewSingleQuestion().subscribe((newQ => {
+    this.questionService.getNewSingleQuestion().subscribe((newQ: any) => {
+      //if the question is already in the array, ge a new one
       setTimeout(() => {
-        //if the question is already in the array, get a new one
-        if (this.currentQuestions.includes(newQ)) {
-          this.newQuestion(index);
-        } else {
-          this.currentQuestions.splice(index, 1, newQ)
+        if (this.questionsAnswered.includes(newQ.id)) return this.newQuestion(index);
+        if (!this.questionsAnswered.includes(newQ.id)) {
+          this.lodaingNewQ = false;
+          Swal.close();
+          return this.currentQuestions.splice(index, 1, newQ)
         }
-      }, 200)
-    }))
-    // setTimeout(() => {
-    //   this.currentQuestions.splice(index, 1, this.questionService.newQuestion);
-    // }, 200)
-  }
+      }, 200);
+    });
+  };
 
   onEdit(index: number, questions: any) {
     this.editingQuestion = questions;

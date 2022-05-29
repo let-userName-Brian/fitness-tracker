@@ -32,7 +32,6 @@ export class EditModalComponent implements OnInit {
   }
 
   editQuestion() {
-    console.log(this.editForm.value)
     this.editService.editQuestion(this.editForm.value, this.question.index);
   }
 

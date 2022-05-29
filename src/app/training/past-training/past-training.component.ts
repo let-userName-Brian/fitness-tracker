@@ -54,7 +54,6 @@ export class PastTrainingComponent implements OnInit, AfterViewInit {
   }
 
   onDeleteAllDPEs() {
-    console.log('delete all DPEs');
     this.questionService.deleteAllQCs();
   }
 

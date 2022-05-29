@@ -36,10 +36,10 @@
         </mat-card-content>
         <mat-card-actions>
           <mat-radio-group aria-label="Select an option" required #group>
-            <mat-radio-button #correct value="correct" (click)="correctAnswer(questions)"
-              [disabled]="this.correct?._checked || this.wrong?._checked">Correct</mat-radio-button>
-            <mat-radio-button #wrong value="wrong" (click)="wrongAnswer(i, questions)"
-              [disabled]="this.wrong?._checked || this.correct?._checked" style="margin-left: 1rem;">Wrong
+            <mat-radio-button #correct value="correct" [disabled]="this.correct?._checked || this.wrong?._checked"
+              (click)="correctAnswer(questions, correct, wrong)">Correct</mat-radio-button>
+            <mat-radio-button #wrong value="wrong" [disabled]="this.wrong?._checked || this.correct?._checked"
+              style="margin-left: 1rem;" (click)="wrongAnswer(i, questions, wrong, correct)">Wrong
             </mat-radio-button>
           </mat-radio-group>
         </mat-card-actions>
@@ -47,10 +47,12 @@
     </div>
     <section fxLayoutGap="15px" fxLayout="row" fxLayoutAlign="center center" style="margin-bottom: 1rem;">
       <h3>Score: {{ this.score }}</h3>
-      <button mat-raised-button class="pass" [disabled]="this.questionsAnswered.length !== this.currentQuestions.length" (click)="onPass()">Pass/Go</button>
+      <button mat-raised-button class="pass" [disabled]="this.score < 80"
+        (click)="onPass()">Pass/Go</button>
       <button mat-raised-button class="cancel" (click)="onCancel()">Cancel</button>
       <button mat-raised-button class="fail" (click)="onFail()">Fail/No-Go</button>
-      <h3 style="color: red" *ngIf="this.questionsAnswered.length !== this.currentQuestions.length">You forgot to answer a question!</h3>
+      <h3 style="color: red" *ngIf="this.questionsAnswered.length !== this.currentQuestions.length">You may have forgotten to answer
+        a question!</h3>
     </section>
   </form>
 </section>
