@@ -114,8 +114,9 @@ export class CurrentTrainingComponent implements OnInit {
   }
 
   onStart() {
-    this.questionsHaveBeenFetched = true;
     this.currentQuestions = this.questionService.fetchedQuestions;
+    this.currentQuestions = this.currentQuestions.filter((question: any) => question !== null);
+    this.questionsHaveBeenFetched = true;
   }
 
   onPass() {
