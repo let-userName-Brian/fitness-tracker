@@ -11,38 +11,30 @@ export class EditService {
     this.databank = qc;
     switch (qc) {
       case "Flight Sergeant":
-        this.databank = "FS";
-        return "FS"
+        return this.databank = "FS";
       case "RFL - Patrol":
-        this.databank = "RFL";
-        return "RFL"
+        return this.databank = "RFL";
       case "IEC/RFM":
-        this.databank = "RFM";
-        return "RFM"
+        return this.databank = "RFM";
       case "Security Controller":
-        this.databank = "SC";
-        return "SC"
+        return this.databank = "SC";
       case "Armorer":
-        this.databank = "Armory";
-        return "Armory"
+        return this.databank = "Armory";
       case "Alarm Monitor":
-        this.databank = "AM";
-        return "AM"
+        return this.databank = "AM";
       case "Boat Operator":
-        this.databank = "BO";
-        return "BO"
+        return this.databank = "BO";
       case "DAF - Patrol":
-        this.databank = "DAFPT";
-        return "DAFPT"
+        return this.databank = "DAFPT";
       case "Confinement":
-        this.databank = "CO";
-        return "CO"
+        return this.databank = "CO"; 
     }
   }
 
   getSelectedQuestionBank(qc: string) {
     this.getNameofQuestionBank(qc);
-    return this.http.get(`https://qc-database-e638d-default-rtdb.firebaseio.com/${this.databank}/${this.databank}.json`).subscribe(
+    console.log('testing',this.databank);
+    return this.http.get(`https://qc-database-e638d-default-rtdb.firebaseio.com/${this.databank}/${this.databank === "Confinement" ? 'CO' : this.databank}.json`).subscribe(
       (response: any) => {
         this.selectedQuesitonsBank = response;
       }
