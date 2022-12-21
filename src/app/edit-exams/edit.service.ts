@@ -40,10 +40,9 @@ export class EditService {
     }
   }
 
-  async getSelectedQuestionBank(qc: string) {
-    const name = this.getNameofQuestionBank(qc);
-    console.log(`Name: ${name}`)
-    return this.http.get(`https://qc-database-e638d-default-rtdb.firebaseio.com/${name}/${name}.json`).subscribe(
+  getSelectedQuestionBank(qc: string) {
+    this.getNameofQuestionBank(qc);
+    return this.http.get(`https://qc-database-e638d-default-rtdb.firebaseio.com/${this.databank}/${this.databank}.json`).subscribe(
       (response: any) => {
         this.selectedQuesitonsBank = response;
       }
