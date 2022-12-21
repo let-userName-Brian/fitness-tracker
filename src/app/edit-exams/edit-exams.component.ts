@@ -20,7 +20,9 @@ export class EditExamsComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.qcSubscription = this.exerciseService.qcChanged.subscribe(
-      qcs => this.availableExercises = qcs
+      qcs => {
+        this.availableExercises = qcs
+      }
     );
     this.exerciseService.fetchAvailableExercises();
   }

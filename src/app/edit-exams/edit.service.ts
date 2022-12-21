@@ -26,12 +26,14 @@ export class EditService {
         return this.databank = "BO";
       case "DAF - Patrol":
         return this.databank = "DAFPT";
+      case "Confinement":
+        return this.databank = "CO";
     }
   }
 
   getSelectedQuestionBank(qc: string) {
     this.getNameofQuestionBank(qc);
-    return this.http.get(`https://qc-database-aee15-default-rtdb.firebaseio.com/${this.databank}/${this.databank}.json`).subscribe(
+    return this.http.get(`https://qc-database-e638d-default-rtdb.firebaseio.com/${this.databank}/${this.databank}.json`).subscribe(
       (response: any) => {
         this.selectedQuesitonsBank = response;
       }
@@ -39,7 +41,7 @@ export class EditService {
   }
 
   editQuestion(question: any, i: number) {
-    return this.http.patch(`https://qc-database-aee15-default-rtdb.firebaseio.com/${this.databank}/${this.databank}/${i}.json`, {
+    return this.http.patch(`https://qc-database-e638d-default-rtdb.firebaseio.com/${this.databank}/${this.databank}/${i}.json`, {
       answer: question.answer,
       asked: question.asked,
       correct: question.correct,
@@ -54,7 +56,7 @@ export class EditService {
   };
 
   deleteQuestion(index: number) {
-    return this.http.delete(`https://qc-database-aee15-default-rtdb.firebaseio.com/${this.databank}/${this.databank}/${index}.json`).subscribe(
+    return this.http.delete(`https://qc-database-e638d-default-rtdb.firebaseio.com/${this.databank}/${this.databank}/${index}.json`).subscribe(
       () => {
         this.selectedQuesitonsBank.splice(index, 1);
         setTimeout(() => {
@@ -65,7 +67,7 @@ export class EditService {
 
   addQuestion(question: any) {
     let id = this.selectedQuesitonsBank.length;
-    return this.http.put(`https://qc-database-aee15-default-rtdb.firebaseio.com/${this.databank}/${this.databank}/${id}.json`, {
+    return this.http.put(`https://qc-database-e638d-default-rtdb.firebaseio.com/${this.databank}/${this.databank}/${id}.json`, {
       answer: question.answer,
       asked: question.asked,
       correct: question.correct,

@@ -43,6 +43,8 @@ export class QuestionsService {
         return this.databank = "BO";
       case "DAF - Patrol":
         return this.databank = "DAFPT";
+      case "Confinement":
+        return this.databank = "CO";
     }
   }
 
