@@ -77,7 +77,7 @@ export class QuestionsService {
     this.wrongAnswerArray = [];
     let params = this.databank;
     return this.http.get(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/${params}/${params}.json`).subscribe((response: any) => {
+      `https://qc-database-e638d-default-rtdb.firebaseio.com/${params}/${params}.json`).subscribe((response: any) => {
         this.fetchedQuestions = response;
         this.filterQuestions();
       });
@@ -92,7 +92,7 @@ export class QuestionsService {
     let params = this.databank;
     let rand = Math.floor(Math.random() * this.fetchedQuestions.length);
     return this.http.get(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/${params}/${params}/${rand}.json`)
+      `https://qc-database-e638d-default-rtdb.firebaseio.com/${params}/${params}/${rand}.json`)
   }
 
   /**
@@ -104,7 +104,7 @@ export class QuestionsService {
     let params = this.databank;
     let id = form.id;
     return this.http.patch(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/${params}/${params}/${id}.json`, {
+      `https://qc-database-e638d-default-rtdb.firebaseio.com/${params}/${params}/${id}.json`, {
       question: form.question,
       answer: form.answer,
       ref: form.ref,
@@ -127,7 +127,7 @@ export class QuestionsService {
     let params = this.databank;
     let id = exam.id - 1;
     return this.http.patch(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/${params}/${params}/${id}.json`, {
+      `https://qc-database-e638d-default-rtdb.firebaseio.com/${params}/${params}/${id}.json`, {
       question: exam.question,
       answer: exam.answer,
       ref: exam.ref,
@@ -147,7 +147,7 @@ export class QuestionsService {
     let params = this.databank;
     let id = exam.id - 1;
     return this.http.patch(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/${params}/${params}/${id}.json`, {
+      `https://qc-database-e638d-default-rtdb.firebaseio.com/${params}/${params}/${id}.json`, {
       question: exam.question,
       answer: exam.answer,
       ref: exam.ref,
@@ -166,7 +166,7 @@ export class QuestionsService {
    */
   completedVerbal(score: number, exam: any) {
     return this.http.put(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedVerbals/${exam.id}.json`, {
+      `https://qc-database-e638d-default-rtdb.firebaseio.com/completedVerbals/${exam.id}.json`, {
       exam: exam,
       date: new Date(),
       score: score,
@@ -183,7 +183,7 @@ export class QuestionsService {
    */
   deleteVerbalCompleted(exam: any) {
     return this.http.delete(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedVerbals/${exam}.json`).subscribe(() => {
+      `https://qc-database-e638d-default-rtdb.firebaseio.com/completedVerbals/${exam}.json`).subscribe(() => {
         this.getCompletedQCs();
       });
   }
@@ -196,7 +196,7 @@ export class QuestionsService {
    */
   completedPractical(exam: any) {
     return this.http.post(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`, {
+      `https://qc-database-e638d-default-rtdb.firebaseio.com/completedQCs.json`, {
       exam: exam,
       state: 'GO',
       practical: 'GO',
@@ -205,7 +205,7 @@ export class QuestionsService {
 
   failPractical(exam: any) {
     return this.http.post(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`, {
+      `https://qc-database-e638d-default-rtdb.firebaseio.com/completedQCs.json`, {
       exam: exam,
       state: 'NO-GO',
       practical: 'NO-GO',
@@ -220,7 +220,7 @@ export class QuestionsService {
    */
   onCancelQC(score: number, exam: any) {
     return this.http.patch(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`, {
+      `https://qc-database-e638d-default-rtdb.firebaseio.com/completedQCs.json`, {
       exam: exam,
       score: score,
       state: 'Cancel'
@@ -234,7 +234,7 @@ export class QuestionsService {
    */
   onFailQC(score: number, exam: any) {
     return this.http.put(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedVerbals/${exam.id}.json`, {
+      `https://qc-database-e638d-default-rtdb.firebaseio.com/completedVerbals/${exam.id}.json`, {
       exam: exam,
       date: new Date(),
       score: score,
@@ -253,7 +253,7 @@ export class QuestionsService {
   deleteQC(exam: any) {
     let id = exam.id;
     return this.http.delete(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs/${id}.json`).subscribe((res) => {
+      `https://qc-database-e638d-default-rtdb.firebaseio.com/completedQCs/${id}.json`).subscribe((res) => {
         console.log(res)
       });
   }
@@ -266,7 +266,7 @@ export class QuestionsService {
    */
   getVerbalCompleted() {
     return this.http.get(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedVerbals.json`).subscribe((response: any) => {
+      `https://qc-database-e638d-default-rtdb.firebaseio.com/completedVerbals.json`).subscribe((response: any) => {
         let arr = [];
         for (let key in response) {
           arr.push(response[key]);
@@ -285,7 +285,7 @@ export class QuestionsService {
    */
   getCompletedQCs() {
     return this.http.get(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`).subscribe((res: any) => {
+      `https://qc-database-e638d-default-rtdb.firebaseio.com/completedQCs.json`).subscribe((res: any) => {
         let arr = [];
         for (let key in res) {
           arr.push(res[key]);
@@ -296,7 +296,7 @@ export class QuestionsService {
 
   deleteAllQCs() {
     return this.http.delete(
-      `https://qc-database-aee15-default-rtdb.firebaseio.com/completedQCs.json`).subscribe(() => {
+      `https://qc-database-e638d-default-rtdb.firebaseio.com/completedQCs.json`).subscribe(() => {
         this.getCompletedQCs();
       });
   }
