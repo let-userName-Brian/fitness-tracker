@@ -34,7 +34,7 @@ export class EditService {
   getSelectedQuestionBank(qc: string) {
     this.getNameofQuestionBank(qc);
     console.log('testing',this.databank);
-    return this.http.get(`https://qc-database-e638d-default-rtdb.firebaseio.com/${this.databank}/${this.databank === "Confinement" ? 'CO' : this.databank}.json`).subscribe(
+    return this.http.get(`https://qc-database-e638d-default-rtdb.firebaseio.com/${this.databank}/${this.databank}.json`).subscribe(
       (response: any) => {
         this.selectedQuesitonsBank = response;
       }
