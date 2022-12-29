@@ -115,7 +115,13 @@ export class CurrentTrainingComponent implements OnInit {
 
   onStart() {
     this.currentQuestions = this.questionService.fetchedQuestions;
-    this.currentQuestions = this.currentQuestions.filter((question: any) => question !== null);
+    this.currentQuestions.forEach((question: any, index: number) => {
+      if (question === null) {
+        this.questionService.getNewSingleQuestion().subscribe((newQ: any) => {
+          this.currentQuestions.splice(index, 1, newQ)
+        });
+      }
+    });
     this.questionsHaveBeenFetched = true;
   }
 
